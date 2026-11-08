@@ -565,13 +565,13 @@ html_template = f'''<!DOCTYPE html>
               src="${{p.image_url}}" 
               alt="${{p.clean_title}}" 
               loading="lazy" 
-              class="absolute inset-0 w-full h-full object-cover filter brightness-[0.6] group-hover:brightness-[0.72] group-hover:scale-105 transition-all duration-700 ease-out"
+              class="absolute inset-0 w-full h-full object-cover filter brightness-[0.55] group-hover:brightness-[0.7] group-hover:scale-105 transition-all duration-700 ease-out"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/50 to-[#000000]/30"></div>
 
             <!-- Top Row: Category label & Copy link -->
             <div class="relative z-10 flex items-center justify-between">
-              <span class="text-[11px] text-[#898989] uppercase tracking-[0.06em] font-normal">
+              <span class="text-[11px] text-[#ffffff]/70 uppercase tracking-[0.08em] font-normal">
                 ${{p.need_pill}}
               </span>
               <button 
