@@ -107,11 +107,23 @@ CLEAN_NAMES = {
     100: ("Glad2Glow Waterproof Coverage Cushion", "Tutup noda bekas jerawat tahan air seharian"),
 }
 
+# Fix broken image URLs
+IMAGE_FIXES = {
+    23: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=80",
+    28: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
+    36: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=80",
+    62: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
+    65: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
+    82: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=600&q=80",
+}
+
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     products = json.load(f)
 
 for p in products:
     pid = p["id"]
+    if pid in IMAGE_FIXES:
+        p["image_url"] = IMAGE_FIXES[pid]
     if pid in CLEAN_NAMES:
         clean_title, clean_hook = CLEAN_NAMES[pid]
         p["clean_title"] = clean_title
@@ -119,6 +131,10 @@ for p in products:
     else:
         p["clean_title"] = p["name"][:40]
         p["clean_hook"] = p.get("hook", "")[:45]
+
+# Save back enriched products with fixed image URLs
+with open(DATA_FILE, "w", encoding="utf-8") as f:
+    json.dump(products, f, ensure_ascii=False, indent=2)
 
 # Top 3 Viral Bento Picks
 viral_ids = [2, 44, 23] # Goojodoq Kipas (Hero), Aroma Diffuser, Tawas Deodorant
@@ -789,28 +805,30 @@ html_template = f'''<!DOCTYPE html>
             </div>
 
             <!-- Clean Metadata below card (Always Visible on Mobile/Desktop) -->
-            <div class="mt-3.5 flex items-baseline justify-between gap-2 px-1 w-full min-w-0">
-              <div class="min-w-0 flex-1">
-                <h3 class="font-bold text-sm sm:text-base uppercase editorial-text group-hover:text-[#C84B2F] transition-colors truncate font-display">
+            <div class="mt-3.5 space-y-1.5 px-1 w-full min-w-0">
+              <!-- Row 1: Full Title & Copy Link Button -->
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-bold text-sm sm:text-base uppercase editorial-text group-hover:text-[#C84B2F] transition-colors leading-snug line-clamp-1 font-display flex-1">
                   ${{p.clean_title}}
                 </h3>
-                <p class="text-xs font-mono editorial-muted truncate mt-0.5">
-                  ${{p.clean_hook}}
-                </p>
-              </div>
-              
-              <div class="flex items-center gap-2 shrink-0">
-                <span class="font-mono font-bold text-xs sm:text-sm editorial-text">
-                  ${{p.price_formatted}}
-                </span>
                 <button 
                   onclick="event.stopPropagation(); copyLink('${{p.affiliate_url}}')" 
                   aria-label="Salin Link"
-                  class="p-1 rounded-md text-gray-400 hover:editorial-text transition-colors"
+                  class="p-0.5 rounded text-gray-400 hover:text-[#C84B2F] transition-colors shrink-0"
                   title="Salin Link Shopee"
                 >
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                 </button>
+              </div>
+
+              <!-- Row 2: Hook (Left) & Price (Right in JetBrains Mono) -->
+              <div class="flex items-center justify-between gap-2 font-mono">
+                <p class="editorial-muted truncate text-[11px] sm:text-xs flex-1">
+                  ${{p.clean_hook}}
+                </p>
+                <span class="font-bold text-xs sm:text-sm editorial-text shrink-0">
+                  ${{p.price_formatted}}
+                </span>
               </div>
             </div>
           </article>

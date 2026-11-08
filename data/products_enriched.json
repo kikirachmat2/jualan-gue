@@ -18,7 +18,9 @@
     "curator_note": "Pedas renyah daun jeruk bikin melek instan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Basreng Daun Jeruk Pedas 100g",
+    "clean_hook": "Camilan melek jam revisi numpuk"
   },
   {
     "id": 2,
@@ -39,7 +41,9 @@
     "curator_note": "Angin kencang 100 gear, baterai awet seharian.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Budak Korporat",
-    "is_hero": true
+    "is_hero": true,
+    "clean_title": "Goojodoq Turbo Fan 100-Gear",
+    "clean_hook": "Penyelamat gerah desak-desakan di KRL"
   },
   {
     "id": 3,
@@ -60,7 +64,9 @@
     "curator_note": "Bentuk 3D duckbill gak nempel bibir / makeup.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Masker Duckbill 3-Ply (50 Pcs)",
+    "clean_hook": "Napas lega, proteksi polusi harian"
   },
   {
     "id": 4,
@@ -81,7 +87,9 @@
     "curator_note": "Remote bluetooth + lampu LED 4-in-1 praktis.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Budak Korporat",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Tripod Selfie Stick 4-in-1 LED",
+    "clean_hook": "Setup konten & zoom meeting praktis"
   },
   {
     "id": 5,
@@ -102,7 +110,9 @@
     "curator_note": "Angin kencang 100 gear, baterai awet seharian.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Budak Korporat",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Goojodoq Pocket Mini Fan 3000mAh",
+    "clean_hook": "Angin sejuk compact muat di saku"
   },
   {
     "id": 6,
@@ -123,7 +133,9 @@
     "curator_note": "Hemat isi 5 sachet, busa melimpah gak apek.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Detergen Bubuk Sayang (5 Pack)",
+    "clean_hook": "Baju wangi segar jemuran kosan"
   },
   {
     "id": 7,
@@ -144,7 +156,9 @@
     "curator_note": "Bahan hard EVA anti-bentur & shockproof.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Budak Korporat",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Uneed Gadget & Harddisk Hardcase",
+    "clean_hook": "Kabel charger & SSD rapi di ransel"
   },
   {
     "id": 8,
@@ -165,7 +179,9 @@
     "curator_note": "Set lengkap spiral + cover kepala charger awet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Pelindung Kabel Spiral 4-in-1",
+    "clean_hook": "Ujung kabel iPhone gak gampang sobek"
   },
   {
     "id": 9,
@@ -186,7 +202,9 @@
     "curator_note": "Buket handmade rapi tahan lama selamanya.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Buket Bunga Thumbelina Aesthetic",
+    "clean_hook": "Kado wisuda & anniversary awet"
   },
   {
     "id": 10,
@@ -207,7 +225,9 @@
     "curator_note": "Silicone tebal + lens protector kamera aman.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "4D Wave Soft Silicone iPhone Case",
+    "clean_hook": "Bodi HP aman benturan, grip mantap"
   },
   {
     "id": 11,
@@ -228,7 +248,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Inara Formal Shoulder Sling Bag",
+    "clean_hook": "Slingbag ringkas buat kerja & ngopi"
   },
   {
     "id": 12,
@@ -249,7 +271,9 @@
     "curator_note": "Aroma vanilla coffee / fresh tahan 8-12 jam.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Calme Extrait De Parfum Vanilla Coffee",
+    "clean_hook": "Aroma vanilla coffee tahan seharian"
   },
   {
     "id": 13,
@@ -270,7 +294,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Clara Minimalist Leather Bag",
+    "clean_hook": "Tas bahu clean muat HP & dompet"
   },
   {
     "id": 14,
@@ -291,7 +317,9 @@
     "curator_note": "Panduan praktis bangun kebiasaan produktif.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Buku: Is It Bad Or Good Habits",
+    "clean_hook": "Panduan bangun rutinitas positif"
   },
   {
     "id": 15,
@@ -312,7 +340,9 @@
     "curator_note": "Aesthetic liontin cloud cocok buat casing & kunci.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Cloud Star Phone Charm Strap",
+    "clean_hook": "Gantungan HP aesthetic anti jatuh"
   },
   {
     "id": 16,
@@ -333,7 +363,9 @@
     "curator_note": "Set lengkap spiral + cover kepala charger awet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "3D Cute Charger Adapter Protector",
+    "clean_hook": "Kepala charger aman dari lecet"
   },
   {
     "id": 17,
@@ -354,7 +386,9 @@
     "curator_note": "Sandal empuk tebal, anti selip pas lantai basah.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Achava Yuri Flat Casual Sandals",
+    "clean_hook": "Sandal empuk anti lecet jalan santai"
   },
   {
     "id": 18,
@@ -375,7 +409,9 @@
     "curator_note": "Silicone tebal + lens protector kamera aman.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Magsafe Plating Metallic iPhone Case",
+    "clean_hook": "Proteksi ramping support wireless charge"
   },
   {
     "id": 19,
@@ -396,7 +432,9 @@
     "curator_note": "Silicone tebal + lens protector kamera aman.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "BiuBiu Clear Magnetic Magsafe Case",
+    "clean_hook": "Tampil bening tanpa kuning berbulan"
   },
   {
     "id": 20,
@@ -417,7 +455,9 @@
     "curator_note": "Bahan silicone lembut gak bikin gatal di kulit.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Silicone Sport Band for Apple Watch",
+    "clean_hook": "Strap lentur nyaman buat olahraga"
   },
   {
     "id": 21,
@@ -438,7 +478,9 @@
     "curator_note": "Map display 20/40 pocket tahan air tebal.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Organeez Clear Display Folder F4",
+    "clean_hook": "Dokumen kerja & sertifikat tersimpan rapi"
   },
   {
     "id": 22,
@@ -459,7 +501,9 @@
     "curator_note": "Dermatologist approved, lembut buat kulit sensitif.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Laboré Barrier Revive Cream BiomeRepair",
+    "clean_hook": "Perbaiki skin barrier kering & kemerahan"
   },
   {
     "id": 23,
@@ -475,12 +519,14 @@
     "commission": "Rp480",
     "product_url": "https://shopee.co.id/product/431200900/28920677024",
     "affiliate_url": "https://s.shopee.co.id/qkuJsCHLe",
-    "image_url": "https://images.unsplash.com/photo-1608248597359-598d1a123f99?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=80",
     "hook": "Bebas bau badan seharian tanpa noda kuning kemeja",
     "curator_note": "Tawas organik alami 100% aman gak bikin hitam.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Deodorant Tawas Organik Spray 100ml",
+    "clean_hook": "Ketiak kering wangi alami tanpa residu"
   },
   {
     "id": 24,
@@ -501,7 +547,9 @@
     "curator_note": "Aroma vanilla coffee / fresh tahan 8-12 jam.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Octarine Scandalusy Fruity Eau De Parfum",
+    "clean_hook": "Wangi fruity manis segar tahan lama"
   },
   {
     "id": 25,
@@ -522,7 +570,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Lem Perekat Kuku Palsu (24 Pcs)",
+    "clean_hook": "Nail art praktis tanpa ke salon"
   },
   {
     "id": 26,
@@ -543,7 +593,9 @@
     "curator_note": "Angin kencang 800W hemat listrik gak ngerusak rambut.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Han River Hair Dryer 800W",
+    "clean_hook": "Rambut kering kilat 5 menit hemat daya"
   },
   {
     "id": 27,
@@ -564,7 +616,9 @@
     "curator_note": "SPF 40 PA+++ matte finish ringan tanpa whitecast.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Facetology Triple Care Sunscreen SPF40",
+    "clean_hook": "Sunscreen matte seringan air tanpa whitecast"
   },
   {
     "id": 28,
@@ -580,12 +634,14 @@
     "commission": "Rp480",
     "product_url": "https://shopee.co.id/product/431200900/17697974453",
     "affiliate_url": "https://s.shopee.co.id/1BnKLFS2Z",
-    "image_url": "https://images.unsplash.com/photo-1608248597359-598d1a123f99?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
     "hook": "Bebas bau badan seharian tanpa noda kuning kemeja",
     "curator_note": "Tawas organik alami 100% aman gak bikin hitam.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Deodorant Tawas Essential Oil Spray",
+    "clean_hook": "Penghilang bau badan formula essential oil"
   },
   {
     "id": 29,
@@ -606,7 +662,9 @@
     "curator_note": "Blurring effect bebas minyak tahan 24 jam.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Luxcrime Blur & Cover Two Way Cake",
+    "clean_hook": "Samarkan pori instan bebas kilap seharian"
   },
   {
     "id": 30,
@@ -627,7 +685,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Hanasui Mattedorable Lip Cream Boba",
+    "clean_hook": "Lip cream matte transferproof wangi boba"
   },
   {
     "id": 31,
@@ -648,7 +708,9 @@
     "curator_note": "Kandungan serum melembapkan kulit seharian.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Dove Pro-Ceramide Serum Body Wash",
+    "clean_hook": "Kulit lembab kenyal sehabis mandi"
   },
   {
     "id": 32,
@@ -669,7 +731,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Glow fx Beauty Serum Glow Bomb",
+    "clean_hook": "Serum pencerah bekas jerawat & kusam"
   },
   {
     "id": 33,
@@ -690,7 +754,9 @@
     "curator_note": "Kandungan serum melembapkan kulit seharian.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Giv White Mulberry Body Wash 800ml",
+    "clean_hook": "Sabun mandi wangi mewah refill hemat"
   },
   {
     "id": 34,
@@ -711,7 +777,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "OMG Oh My Glam Mattelast Lip Cream",
+    "clean_hook": "Lip cream ringan tahan 12 jam no transfer"
   },
   {
     "id": 35,
@@ -732,7 +800,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Hanasui Blurry Tint Watery Stain",
+    "clean_hook": "Efek bibir blurry alami ala Korea"
   },
   {
     "id": 36,
@@ -748,12 +818,14 @@
     "commission": "Rp121",
     "product_url": "https://shopee.co.id/product/48382819/15797714467",
     "affiliate_url": "https://s.shopee.co.id/1LhAunANKx",
-    "image_url": "https://images.unsplash.com/photo-1608248597359-598d1a123f99?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=80",
     "hook": "Bebas bau badan seharian tanpa noda kuning kemeja",
     "curator_note": "Tawas organik alami 100% aman gak bikin hitam.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "MBK Deodorant Roll On & Bedak",
+    "clean_hook": "Bedak legendaris basmi keringat berlebih"
   },
   {
     "id": 37,
@@ -774,7 +846,9 @@
     "curator_note": "Dermatologist approved, lembut buat kulit sensitif.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "White Inc Alpha Glowhite Body Lotion",
+    "clean_hook": "Lotion pencerah kulit belang & kering"
   },
   {
     "id": 38,
@@ -795,7 +869,9 @@
     "curator_note": "Aroma vanilla coffee / fresh tahan 8-12 jam.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Braven Code Masculine Eau De Parfum",
+    "clean_hook": "Wangi maskulin karismatik buat ngantor"
   },
   {
     "id": 39,
@@ -816,7 +892,9 @@
     "curator_note": "Aroma vanilla coffee / fresh tahan 8-12 jam.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Miniso Natural Body Mist 150ml",
+    "clean_hook": "Semprot segar sehabis commute harian"
   },
   {
     "id": 40,
@@ -837,7 +915,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Kudan Halal Peel-Off Nail Polish",
+    "clean_hook": "Kutek mudah dikelupas tanpa aseton"
   },
   {
     "id": 41,
@@ -858,7 +938,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Sunny Travel Cosmetic Organizer Pouch",
+    "clean_hook": "Skincare & makeup rapi saat travelling"
   },
   {
     "id": 42,
@@ -879,7 +961,9 @@
     "curator_note": "Aroma vanilla coffee / fresh tahan 8-12 jam.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Vitalis Extra Bloom Eau De Parfum",
+    "clean_hook": "Floral elegan tahan sampai sore"
   },
   {
     "id": 43,
@@ -900,7 +984,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Plastik Vacuum Sealer Embossed",
+    "clean_hook": "Makanan & frozen food kedap udara awet"
   },
   {
     "id": 44,
@@ -921,7 +1007,9 @@
     "curator_note": "Aroma wangi tahan sebulan bikin tidur nyenyak.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Ultrasonic Aroma Diffuser 500ml",
+    "clean_hook": "Kamar kosan wangi hotel bintang lima"
   },
   {
     "id": 45,
@@ -942,7 +1030,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": true
+    "is_hero": true,
+    "clean_title": "Paper Lunch Box Eco Kraft (50 Pcs)",
+    "clean_hook": "Kotak bekal ramah lingkungan anti bocor"
   },
   {
     "id": 46,
@@ -963,7 +1053,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Cup Plastik Minuman Tebal Starindo",
+    "clean_hook": "Gelas kopi dingin tebal anti tumpah"
   },
   {
     "id": 47,
@@ -984,7 +1076,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Standing Pouch Foil Ziplock",
+    "clean_hook": "Kemas snack & kopi kedap udara rapi"
   },
   {
     "id": 48,
@@ -1005,7 +1099,9 @@
     "curator_note": "Tahan es batu dingin 12-24 jam stainless food grade.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Tumbler Thermos SUS316 Stainless",
+    "clean_hook": "Air es tahan dingin 12 jam hemat jajan"
   },
   {
     "id": 49,
@@ -1026,7 +1122,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Plastik Polymailer Packing Tebal",
+    "clean_hook": "Paket jualan aman dari hujan & sobek"
   },
   {
     "id": 50,
@@ -1047,7 +1145,9 @@
     "curator_note": "100% katun tebal lembut di kulit ukuran pas.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Handuk Mandi Merah Putih Katun",
+    "clean_hook": "Super serap air lembut di kulit"
   },
   {
     "id": 51,
@@ -1068,7 +1168,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "🔥 Kualitas premium harga pabrik Shopee",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Yonezawa Meja Setrika Duduk Lipat",
+    "clean_hook": "Setrika baju kosan hemat tempat"
   },
   {
     "id": 52,
@@ -1089,7 +1191,9 @@
     "curator_note": "Tahan es batu dingin 12-24 jam stainless food grade.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Tumbler Smart LED Temperature Display",
+    "clean_hook": "Pantau suhu kopi hangat real-time"
   },
   {
     "id": 53,
@@ -1110,7 +1214,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Keset Kamar Mandi Memory Foam Diatomite",
+    "clean_hook": "Serap air seketika, lantai anti becek"
   },
   {
     "id": 54,
@@ -1131,7 +1237,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Venetian Horizontal Blind Minimalis",
+    "clean_hook": "Tirai jendela kosan estetik anti silau"
   },
   {
     "id": 55,
@@ -1152,7 +1260,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Nice Facial Tissue 2-Ply 180s",
+    "clean_hook": "Tisu lembut serbaguna meja kerja"
   },
   {
     "id": 56,
@@ -1173,7 +1283,9 @@
     "curator_note": "Bahan food grade BPA free dapat set 8 gelas.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Technoplast Water Pitcher + 4 Gelas",
+    "clean_hook": "Teko air minum dingin siap sedia di kulkas"
   },
   {
     "id": 57,
@@ -1194,7 +1306,9 @@
     "curator_note": "Filter kapas kerapatan tinggi saring karat & lumut.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Filter Kran Air Kapas Sekali Pakai",
+    "clean_hook": "Saring karat & kotoran air pam kosan"
   },
   {
     "id": 58,
@@ -1215,7 +1329,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Kain Lap Microfiber Halus Serbaguna",
+    "clean_hook": "Lap layar laptop & meja tanpa baret"
   },
   {
     "id": 59,
@@ -1236,7 +1352,9 @@
     "curator_note": "Kayu jati perhutani kuat gak gampang berjamur.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Talenan Kayu Jati Perhutani Asli",
+    "clean_hook": "Alas potong dapur kuat awet anti jamur"
   },
   {
     "id": 60,
@@ -1257,7 +1375,9 @@
     "curator_note": "Stainless steel tebal anti karat muat banyak.",
     "value_anchor": "🔥 Kualitas premium harga pabrik Shopee",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Lazzen Rak Piring Wastafel Stainless",
+    "clean_hook": "Wastafel rapi, piring basah cepat tiris"
   },
   {
     "id": 61,
@@ -1278,7 +1398,9 @@
     "curator_note": "Sistem peras otomatis kain microfiber angkat debu.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Goto Abel Alat Pel Peras Otomatis",
+    "clean_hook": "Ngepel lantai bersih tanpa peras tangan"
   },
   {
     "id": 62,
@@ -1294,12 +1416,14 @@
     "commission": "Rp4.175",
     "product_url": "https://shopee.co.id/product/466935959/41566803663",
     "affiliate_url": "https://s.shopee.co.id/7pueejld9d",
-    "image_url": "https://images.unsplash.com/photo-1608248597359-598d1a123f99?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
     "hook": "Kasur & sprei bebas tungau dan wangi segar tahan lama",
     "curator_note": "Semprot langsung ke kain hilangkan bakteri & apek.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Linen & Room Spray Anti Bakteri 250ml",
+    "clean_hook": "Kasur wangi segar bebas bau apek"
   },
   {
     "id": 63,
@@ -1320,7 +1444,9 @@
     "curator_note": "Bahan plush empuk bentuk biskuit estetik.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Bantal Duduk Biskuit Memory Foam",
+    "clean_hook": "Alas kursi kerja anti pegal tulang ekor"
   },
   {
     "id": 64,
@@ -1341,7 +1467,9 @@
     "curator_note": "Sandal empuk tebal, anti selip pas lantai basah.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Kotak Sepatu Transparan Stackable",
+    "clean_hook": "Sepatu tersusun rapi bebas debu kosan"
   },
   {
     "id": 65,
@@ -1357,12 +1485,14 @@
     "commission": "Rp6.880",
     "product_url": "https://shopee.co.id/product/753427958/52755877292",
     "affiliate_url": "https://s.shopee.co.id/70LXfConqW",
-    "image_url": "https://images.unsplash.com/photo-1584990347449-399a6132f8a4?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
     "hook": "Masak mie / sup di kosan anti lengket gampang dicuci",
     "curator_note": "Lapisan granite tebal elegan panas merata.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Tifale Granite Milk Saucepan 20cm",
+    "clean_hook": "Panci mie rebus anti lengket mudah dicuci"
   },
   {
     "id": 66,
@@ -1383,7 +1513,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Technoplast Lovelo Punch Bowl Set",
+    "clean_hook": "Wadah es buah segar buat kumpul santai"
   },
   {
     "id": 67,
@@ -1404,7 +1536,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Netpot Jaring Hidroponik Tebal",
+    "clean_hook": "Pot tanaman sayur mini di balkon"
   },
   {
     "id": 68,
@@ -1425,7 +1559,9 @@
     "curator_note": "Wadah kaca kedap udara bonus sendok sarapan.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Overnight Oat & Salad Jar Portable",
+    "clean_hook": "Wadah sarapan sehat lengkap sendok"
   },
   {
     "id": 69,
@@ -1446,7 +1582,9 @@
     "curator_note": "Susun 3 tingkat muat bumbu, saus & skincare.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Rak Bumbu Dapur Susun 3 Minimalis",
+    "clean_hook": "Bumbu dapur terorganisir rapi gak berantakan"
   },
   {
     "id": 70,
@@ -1467,7 +1605,9 @@
     "curator_note": "Formula jeruk nipis anti bau amis wajan piring.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Mama Lemon Jeruk Nipis 920g (Isi 2)",
+    "clean_hook": "Rontokkan minyak piring sekali bilas"
   },
   {
     "id": 71,
@@ -1488,7 +1628,9 @@
     "curator_note": "Daya serap air instan anti-selip di lantai.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Keset Dapur Long Runner 2-in-1",
+    "clean_hook": "Alas dapur anti selip tahan cipratan minyak"
   },
   {
     "id": 72,
@@ -1509,7 +1651,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Hiasan Dinding Metal Geometris",
+    "clean_hook": "Wall art modern hias ruang tamu kosan"
   },
   {
     "id": 73,
@@ -1530,7 +1674,9 @@
     "curator_note": "Crunchy coklat asli lumer di mulut mantap.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Collins Crunchy Chocolate Spread 1kg",
+    "clean_hook": "Selai coklat renyah nagih buat sarapan"
   },
   {
     "id": 74,
@@ -1551,7 +1697,9 @@
     "curator_note": "Pedas renyah daun jeruk bikin melek instan.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Makaroni Pipa Bantat Gurih 1kg",
+    "clean_hook": "Camilan renyah teman nonton film"
   },
   {
     "id": 75,
@@ -1572,7 +1720,9 @@
     "curator_note": "100% sari lemon murni tanpa gula tinggal seduh.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Nutrifarm Sari Lemon Murni 500ml",
+    "clean_hook": "Detox vitamin C alami setiap pagi"
   },
   {
     "id": 76,
@@ -1593,7 +1743,9 @@
     "curator_note": "Wadah kaca kedap udara bonus sendok sarapan.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Safiya Muesli Oatmeal Almond Apple 1kg",
+    "clean_hook": "Sarapan serat tinggi kenyang lebih lama"
   },
   {
     "id": 77,
@@ -1614,7 +1766,9 @@
     "curator_note": "100% pure matcha tanpa pemanis tambahan.",
     "value_anchor": "🔥 Kualitas premium harga pabrik Shopee",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "PikuLabs Pure Ceremonial Matcha 100g",
+    "clean_hook": "Matcha murni tanpa gula booster fokus"
   },
   {
     "id": 78,
@@ -1635,7 +1789,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Kanzler Crispy Chicken Nugget 450g",
+    "clean_hook": "Nugget renyah ekstra daging penyelamat lapar"
   },
   {
     "id": 79,
@@ -1656,7 +1812,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Nutrifarm Organic Chia Seeds 70g",
+    "clean_hook": "Superfood kaya omega-3 untuk smoothies"
   },
   {
     "id": 80,
@@ -1677,7 +1835,9 @@
     "curator_note": "Troli 4 susun fleksibel buat kamar & dapur.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Troli Rak Susun Roda Serbaguna",
+    "clean_hook": "Rak beroda fleksibel geser sudut kosan"
   },
   {
     "id": 81,
@@ -1698,7 +1858,9 @@
     "curator_note": "Formula jeruk nipis anti bau amis wajan piring.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Camilan & Stress",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Mama Lemon Sabun Cuci Piring Yuzu",
+    "clean_hook": "Basmi bau amis & sisa lemak bandel"
   },
   {
     "id": 82,
@@ -1714,12 +1876,14 @@
     "commission": "Rp752",
     "product_url": "https://shopee.co.id/product/1132754224/44511772875",
     "affiliate_url": "https://s.shopee.co.id/9pfj2Pe16L",
-    "image_url": "https://images.unsplash.com/photo-1584990347449-399a6132f8a4?auto=format&fit=crop&w=600&q=80",
+    "image_url": "https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=600&q=80",
     "hook": "Kulkas kosan rapi gak ada sachet bumbu tumpah",
     "curator_note": "Organizer gantung pintu kulkas transparan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Organizer Pintu Kulkas Akrilik",
+    "clean_hook": "Rak botol saus kulkas tersusun rapi"
   },
   {
     "id": 83,
@@ -1740,7 +1904,9 @@
     "curator_note": "Bisa dilipat pocket-size kokoh di atas meja.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Chair Shape Mobile Phone Stand",
+    "clean_hook": "Dudukan HP estetik nonton santai di meja"
   },
   {
     "id": 84,
@@ -1761,7 +1927,9 @@
     "curator_note": "Troli 4 susun fleksibel buat kamar & dapur.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": true
+    "is_hero": true,
+    "clean_title": "Rak Dapur Sudut Portable 3 Tingkat",
+    "clean_hook": "Maksimalkan ruang sudut sempit kosan"
   },
   {
     "id": 85,
@@ -1782,7 +1950,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Pure Water Baby Wipes Bebas Alkohol",
+    "clean_hook": "Tisu basah lembut ramah kulit sensitif"
   },
   {
     "id": 86,
@@ -1803,7 +1973,9 @@
     "curator_note": "Filter kapas kerapatan tinggi saring karat & lumut.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Joodutp Filter Kran Air Kain 10 Pcs",
+    "clean_hook": "Air mandi lebih jernih bebas sedimen"
   },
   {
     "id": 87,
@@ -1824,7 +1996,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Nano Double Tape Bening Serbaguna",
+    "clean_hook": "Tempel hiasan dinding tanpa paku"
   },
   {
     "id": 88,
@@ -1845,7 +2019,9 @@
     "curator_note": "Busa aktif rontokkan noda kerak & hilangkan bau.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Foam Cleaner Pembersih Kerak Toilet",
+    "clean_hook": "Rontokkan kerak kloset tanpa sikat capek"
   },
   {
     "id": 89,
@@ -1866,7 +2042,9 @@
     "curator_note": "Bahan kulit sintetis awet, model clean elegan.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Stainless Ear Pick Set 6-in-1 + Pouch",
+    "clean_hook": "Korek kuping higienis tersimpan rapi"
   },
   {
     "id": 90,
@@ -1887,7 +2065,9 @@
     "curator_note": "Filter kapas kerapatan tinggi saring karat & lumut.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Minyak Goreng Sunco Pouch Higienis",
+    "clean_hook": "Minyak goreng bening gorengan lebih crispy"
   },
   {
     "id": 91,
@@ -1908,7 +2088,9 @@
     "curator_note": "Matte transferproof ringan di bibir gak bikin kering.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Foldable Desktop Phone & Tablet Stand",
+    "clean_hook": "Tinggi & sudut HP bisa diatur fleksibel"
   },
   {
     "id": 92,
@@ -1929,7 +2111,9 @@
     "curator_note": "Hemat isi 5 sachet, busa melimpah gak apek.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "SoSoft Sweet Peony Liquid Detergent",
+    "clean_hook": "Cucian wangi floral mewah ramah serat kain"
   },
   {
     "id": 93,
@@ -1950,7 +2134,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Elodie Rayon High-Waist Casual Pants",
+    "clean_hook": "Celana santai adem nyaman harian"
   },
   {
     "id": 94,
@@ -1971,7 +2157,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Ciptadent Maxi 12 Pasta Gigi 225g (Isi 2)",
+    "clean_hook": "Napas segar perlindungan gigi berlubang"
   },
   {
     "id": 95,
@@ -1992,7 +2180,9 @@
     "curator_note": "Bahan empuk slow-rising super gemas anti-stress.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Dumpling Squishy Jumbo Anti Stress",
+    "clean_hook": "Mainan pencet pereda penat jam deadline"
   },
   {
     "id": 96,
@@ -2013,7 +2203,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "✨ Modal sekali makan siang, kepake berbulan-bulan",
     "need_pill": "Penyelamat Kosan",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Hohoisyou Self-Adhesive Eyelashes",
+    "clean_hook": "Bulu mata lentik natural tanpa lem repot"
   },
   {
     "id": 97,
@@ -2034,7 +2226,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "⚡ Lebih murah dari 1x parkir mobil",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Sandrinna Fine Fragrance Mist 90ml",
+    "clean_hook": "Parfum semprot fresh harian wangi mewah"
   },
   {
     "id": 98,
@@ -2055,7 +2249,9 @@
     "curator_note": "Rating tinggi terbukti dipakai banyak warganet.",
     "value_anchor": "💸 Lebih murah dari segelas kopi susu",
     "need_pill": "Di Bawah 20rb",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Mlan C-Curl Natural False Eyelashes",
+    "clean_hook": "Mata berdimensi natural ala douyin"
   },
   {
     "id": 99,
@@ -2076,7 +2272,9 @@
     "curator_note": "Cover bekas jerawat tahan keringat & air seharian.",
     "value_anchor": "🔥 Kualitas premium harga pabrik Shopee",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Wardah Colorfit Perfect Glow Cushion",
+    "clean_hook": "Coverage flawless hasil glowing natural"
   },
   {
     "id": 100,
@@ -2097,6 +2295,8 @@
     "curator_note": "Cover bekas jerawat tahan keringat & air seharian.",
     "value_anchor": "💎 Investasi kenyamanan hidup sehari-hari",
     "need_pill": "Glow Up Murah",
-    "is_hero": false
+    "is_hero": false,
+    "clean_title": "Glad2Glow Waterproof Coverage Cushion",
+    "clean_hook": "Tutup noda bekas jerawat tahan air seharian"
   }
 ]
