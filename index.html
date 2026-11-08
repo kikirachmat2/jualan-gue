@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Katalog Spill & Rekomendasi Kiki (@kikipunyacerita)</title>
+  <meta name="description" content="Koleksi rekomendasi produk Shopee Affiliate terkurasi oleh Kiki Rachmat (@kikipunyacerita) di Threads. Solusi praktis & anti-pusing untuk budak korporat, anak kos, dan pejuang commute.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <!-- OpenGraph Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Katalog Spill & Rekomendasi Kiki (@kikipunyacerita)">
+  <meta property="og:description" content="100+ Barang Pilihan Solusi Anti-Pusing: Desk Setup, Kosan Hacks, Skincare Murah & Essentials.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+  <meta property="og:site_name" content="Kisah Komisi by Kiki Rachmat">
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          colors: {
+            shopee: {
+              DEFAULT: '#ee4d2d',
+              hover: '#d73211',
+              light: '#fff5f1'
+            },
+            dark: {
+              bg: '#090a10',
+              surface: '#12141f',
+              border: '#1f2335',
+              hover: '#191c2c'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Modern Container Queries & Styling rules adhering to modern-web-guidance */
+    .card-container {
+      container-type: inline-size;
+    }
+    
+    .product-card {
+      position: relative;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(238, 77, 45, 0.15);
+    }
+
+    .product-card a.card-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 1rem;
+    }
+
+    /* Elevated controls above stretched link */
+    .product-card a:not(.card-link), 
+    .product-card button {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Smooth Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090a10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222638;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3b4261;
+    }
+
+    /* Dynamic viewport container */
+    .viewport-box {
+      min-height: 100dvh;
+    }
+
+    /* Glow backdrop */
+    .ambient-glow {
+      background: radial-gradient(circle at 50% 0%, rgba(238, 77, 45, 0.12) 0%, rgba(99, 102, 241, 0.08) 35%, transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-dark-bg text-slate-100 font-sans antialiased selection:bg-shopee selection:text-white viewport-box flex flex-col ambient-glow">
+
+  <!-- Toast Notification -->
+  <aside id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 bg-slate-900/95 backdrop-blur-md text-white border border-slate-700/80 px-4 py-3 rounded-xl shadow-2xl">
+    <span class="text-emerald-400 text-lg">✓</span>
+    <span id="toast-text" class="text-sm font-medium">Link Shopee berhasil disalin!</span>
+  </aside>
+
+  <!-- Sticky Top Banner / Brand -->
+  <header class="border-b border-dark-border/60 bg-dark-bg/80 backdrop-blur-xl sticky top-0 z-40">
+    <div class="max-w-4xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-shopee via-orange-500 to-amber-400 flex items-center justify-center font-bold text-white text-xs shadow-md shadow-shopee/20">
+          KK
+        </div>
+        <div>
+          <h1 class="font-bold text-sm tracking-tight text-white flex items-center gap-1.5">
+            @kikipunyacerita
+            <svg class="w-4 h-4 text-sky-400 fill-current inline-block" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </h1>
+          <p class="text-[11px] text-slate-400">Kurasi Spill & Rekomendasi Threads</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://www.threads.net/@kikipunyacerita" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1.5 rounded-lg bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-200 transition font-medium flex items-center gap-1.5">
+          <span>Threads</span>
+          <span class="text-slate-400 text-[10px]">↗</span>
+        </a>
+        <a href="https://www.threads.net/@kikiirch" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1.5 rounded-lg bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-400 hover:text-slate-200 transition font-medium hidden sm:inline-flex items-center gap-1">
+          <span>Akun Utama</span>
+          <span class="text-slate-400 text-[10px]">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Profile & Hero Bio -->
+  <section class="max-w-4xl mx-auto px-4 pt-8 pb-6 text-center">
+    <div class="relative inline-block mb-4">
+      <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-shopee via-purple-500 to-indigo-500 shadow-xl shadow-shopee/10 mx-auto">
+        <div class="w-full h-full rounded-full bg-dark-surface border-2 border-dark-bg flex items-center justify-center text-2xl font-black text-white">
+          ✨
+        </div>
+      </div>
+      <span class="absolute bottom-1 right-1 bg-emerald-500 w-4 h-4 rounded-full border-2 border-dark-bg" title="Aktif di Threads"></span>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2">
+      Koleksi Spill & Solusi Anti-Pusing
+    </h2>
+    <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto leading-relaxed mb-6">
+      Kurasi 100 barang penunjang hidup anak rantau, pejuang kosan, dan budak korporat. Harga ramah kantong di bawah 100rb, rating toko 4.8+, dan lolos kurasi nyata.
+    </p>
+
+    <!-- Key Metrics Badges -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs">
+      <div class="px-3 py-1.5 rounded-full bg-dark-surface/90 border border-dark-border text-slate-300 flex items-center gap-1.5 shadow-sm">
+        <span class="text-orange-400 font-bold">100</span>
+        <span>Produk Terverifikasi</span>
+      </div>
+      <div class="px-3 py-1.5 rounded-full bg-dark-surface/90 border border-dark-border text-slate-300 flex items-center gap-1.5 shadow-sm">
+        <span class="text-amber-400">★ 4.8+</span>
+        <span>Rating Shopee</span>
+      </div>
+      <div class="px-3 py-1.5 rounded-full bg-dark-surface/90 border border-dark-border text-slate-300 flex items-center gap-1.5 shadow-sm">
+        <span class="text-emerald-400 font-bold">95%</span>
+        <span>Di Bawah Rp 90.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Filter & Search Control Panel -->
+  <section class="sticky top-[57px] z-30 bg-dark-bg/95 backdrop-blur-xl border-y border-dark-border/80 py-3 transition-all">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      
+      <!-- Search Input & Sort Options -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+        <div class="relative flex-1">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input 
+            type="search" 
+            id="searchInput" 
+            placeholder="Cari barang spill (kipas, diffuser, kabel, tawas, snack)..." 
+            class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-dark-surface border border-dark-border focus:border-shopee focus:ring-1 focus:ring-shopee text-sm text-white placeholder-slate-500 outline-none transition"
+            autocomplete="off"
+          >
+          <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 text-xs bg-slate-800 rounded-full w-5 h-5 flex items-center justify-center">✕</button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <select id="sortSelect" class="w-full sm:w-auto px-3 py-2.5 rounded-xl bg-dark-surface border border-dark-border text-xs text-slate-300 focus:border-shopee focus:ring-1 focus:ring-shopee outline-none transition cursor-pointer">
+            <option value="default">Urutkan: Rekomendasi</option>
+            <option value="price_asc">Harga: Termurah</option>
+            <option value="price_desc">Harga: Tertinggi</option>
+            <option value="sales">Terlaris (10RB+)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs">
+        <button data-cat="all" class="cat-pill active px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-shopee text-white shadow-sm shadow-shopee/20">
+          🌟 Semua (100)
+        </button>
+        <button data-cat="Rumah Tangga & Kosan" class="cat-pill px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-300">
+          🏠 Kosan & Kamar (34)
+        </button>
+        <button data-cat="Skincare & Perawatan" class="cat-pill px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-300">
+          💆 Skincare & Grooming (27)
+        </button>
+        <button data-cat="Elektronik & Gadget" class="cat-pill px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-300">
+          💻 Desk & Gadget (14)
+        </button>
+        <button data-cat="Camilan & Makanan" class="cat-pill px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-300">
+          🍿 Camilan & Relaks (14)
+        </button>
+        <button data-cat="Fashion & Outfit" class="cat-pill px-3.5 py-1.5 rounded-lg whitespace-nowrap font-medium transition bg-dark-surface hover:bg-dark-hover border border-dark-border text-slate-300">
+          🎒 Daily Essentials (11)
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Status & Counter -->
+  <div class="max-w-4xl mx-auto px-4 pt-4 flex items-center justify-between text-xs text-slate-400">
+    <span id="resultsCount">Menampilkan 100 rekomendasi</span>
+    <span class="text-[11px] text-slate-500">Klik kartu untuk langsung menuju Shopee</span>
+  </div>
+
+  <!-- Product Catalog Grid -->
+  <main class="max-w-4xl mx-auto px-4 py-4 flex-1">
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 card-container">
+      <!-- Populated via Client-Side JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden py-16 text-center">
+      <div class="text-4xl mb-3">🔍</div>
+      <h3 class="text-base font-bold text-white mb-1">Barang tidak ditemukan</h3>
+      <p class="text-xs text-slate-400 mb-4">Coba cari dengan kata kunci lain (contoh: kipas, sandal, sabun, charger)</p>
+      <button id="resetSearchBtn" class="text-xs px-4 py-2 rounded-lg bg-dark-surface border border-dark-border text-shopee font-medium hover:bg-dark-hover transition">
+        Reset Pencarian
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-dark-border bg-dark-bg py-8 mt-12 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-2">
+      <p class="font-medium text-slate-400">Koleksi Rekomendasi Resmi Kiki Rachmat (@kikipunyacerita)</p>
+      <p class="text-[11px]">Dikurasi dan dipantau secara otomatis oleh <span class="text-slate-300">Zura Personal AI</span> • Shopee Affiliate Program</p>
+      <p class="text-[10px] text-slate-600">Hak Cipta © 2026 Kiki Rachmat. Seluruh hak cipta dilindungi undang-undang.</p>
+    </div>
+  </footer>
+
+  <!-- Raw Products JSON Data -->
+  <script id="product-data" type="application/json">
+    [{"id": 1, "db_id": 132, "product_id": "21938425526", "name": "Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram", "category": "Camilan & Makanan", "badge": "🔥 Super Murah", "price_num": 4300, "price_formatted": "Rp 4.300", "sales": "10RB+ Terjual", "shop": "Followers Ku", "commission": "Rp258", "product_url": "https://shopee.co.id/product/601250583/21938425526", "affiliate_url": "https://s.shopee.co.id/7AexrVoAUW"}, {"id": 2, "db_id": 133, "product_id": "25826460469", "name": "Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan", "category": "Elektronik & Gadget", "badge": "⭐ Best Seller", "price_num": 89900, "price_formatted": "Rp 89.900", "sales": "10RB+ Terjual", "shop": "GOOJODOQ Official Store", "commission": "Rp10.788", "product_url": "https://shopee.co.id/product/297771167/25826460469", "affiliate_url": "https://s.shopee.co.id/70LXfConpV"}, {"id": 3, "db_id": 134, "product_id": "21185747156", "name": "Masker Duckbill Isi 50pcs 3Ply Facemask Earloop Disposable", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 12000, "price_formatted": "Rp 12.000", "sales": "10RB+ Terjual", "shop": "BINTARA STORE", "commission": "Rp720", "product_url": "https://shopee.co.id/product/295626254/21185747156", "affiliate_url": "https://s.shopee.co.id/6q27StpRAU"}, {"id": 4, "db_id": 135, "product_id": "23101985967", "name": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360º", "category": "Elektronik & Gadget", "badge": "⭐ Best Seller", "price_num": 29300, "price_formatted": "Rp 29.300", "sales": "10RB+ Terjual", "shop": "Rapiruma", "commission": "Rp1.758", "product_url": "https://shopee.co.id/product/631135820/23101985967", "affiliate_url": "https://s.shopee.co.id/6fihGaq4VT"}, {"id": 5, "db_id": 136, "product_id": "22946913429", "name": "Goojodoq 3000mAh KIPAS ANGIN MINI GENGGAM Cute / Kipas Lipat PORTABLE / Mini Fan", "category": "Elektronik & Gadget", "badge": "⭐ Best Seller", "price_num": 53300, "price_formatted": "Rp 53.300", "sales": "10RB+ Terjual", "shop": "GOOJODOQ Official Store", "commission": "Rp1.600", "product_url": "https://shopee.co.id/product/297771167/22946913429", "affiliate_url": "https://s.shopee.co.id/9AQ2FBgYQy"}, {"id": 6, "db_id": 137, "product_id": "21685524957", "name": "( PAKET 5 PACK ) detergen sayang bubuk kemasan Rp.5000. 5x180gr", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 19500, "price_formatted": "Rp 19.500", "sales": "10RB+ Terjual", "shop": "SULTAN MUDA 21", "commission": "Rp780", "product_url": "https://shopee.co.id/product/389249461/21685524957", "affiliate_url": "https://s.shopee.co.id/906c2shBlx"}, {"id": 7, "db_id": 138, "product_id": "8316923148", "name": "UNEED Hard Case for Powerbank Earphone Hard Disk SSD Hardcase - UHC402", "category": "Elektronik & Gadget", "badge": "⭐ Best Seller", "price_num": 34700, "price_formatted": "Rp 34.700", "sales": "10RB+ Terjual", "shop": "Uneed Indonesia Official Shop", "commission": "Rp2.429", "product_url": "https://shopee.co.id/product/18856832/8316923148", "affiliate_url": "https://s.shopee.co.id/8pnBqZhp6w"}, {"id": 8, "db_id": 139, "product_id": "20472311247", "name": "1 Set 4 item Pelindung Kabel Charger Kabel Data Kawat Kabel Data HP Untuk Iphone Samsung Xiaomi Oppo Huawei Android Universal Motif Kartun Lucu", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 12400, "price_formatted": "Rp 12.400", "sales": "10RB+ Terjual", "shop": "Davioo.id", "commission": "Rp618", "product_url": "https://shopee.co.id/product/711544477/20472311247", "affiliate_url": "https://s.shopee.co.id/8fTleGiSRv"}, {"id": 9, "db_id": 140, "product_id": "43828218772", "name": "Buket Bunga Thumbelina Buket Hadiah Ulang Tahun Anniversary Lamaran Pernikahan", "category": "Fashion & Outfit", "badge": "💡 Spill Pilihan", "price_num": 85000, "price_formatted": "Rp 85.000", "sales": "3RB+ Terjual", "shop": "Nara Buke", "commission": "Rp4.250", "product_url": "https://shopee.co.id/product/1728820160/43828218772", "affiliate_url": "https://s.shopee.co.id/8VALRxj5mu"}, {"id": 10, "db_id": 141, "product_id": "26910617331", "name": "New! 4D Diagonal Wave Soft Silicone Soft Case", "category": "Elektronik & Gadget", "badge": "⭐ Best Seller", "price_num": 20300, "price_formatted": "Rp 20.300", "sales": "10RB+ Terjual", "shop": "Migun Case", "commission": "Rp2.030", "product_url": "https://shopee.co.id/product/1131373/26910617331", "affiliate_url": "https://s.shopee.co.id/8KqvFejj7t"}, {"id": 11, "db_id": 142, "product_id": "25383956779", "name": "AS Inara Bags - Tas Selempang Wanita Formal Sintetis", "category": "Fashion & Outfit", "badge": "⭐ Best Seller", "price_num": 24400, "price_formatted": "Rp 24.400", "sales": "10RB+ Terjual", "shop": "ASEKI STORE", "commission": "Rp3.660", "product_url": "https://shopee.co.id/product/80932652/25383956779", "affiliate_url": "https://s.shopee.co.id/8AXV3LkMSs"}, {"id": 12, "db_id": 143, "product_id": "22764793830", "name": "Calme Fragrance CALMA Aroma Coffe dan Vanilla Parfum Wanita Tahan Lama dan Wangi Extrait De Perfume Farfum parfume", "category": "Skincare & Perawatan", "badge": "✨ Glow Up Murah", "price_num": 60000, "price_formatted": "Rp 60.000", "sales": "2RB+ Terjual", "shop": "Calme Fragrance", "commission": "Rp9.000", "product_url": "https://shopee.co.id/product/1330050397/22764793830", "affiliate_url": "https://s.shopee.co.id/80E4r2kznr"}, {"id": 13, "db_id": 144, "product_id": "26715281209", "name": "tas clara tas bahu wanita Cewek Kulit Slingbag UI", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 10800, "price_formatted": "Rp 10.800", "sales": "10RB+ Terjual", "shop": "Galeri kompeksi", "commission": "Rp323", "product_url": "https://shopee.co.id/product/1387757639/26715281209", "affiliate_url": "https://s.shopee.co.id/AUvPpdbTjM"}, {"id": 14, "db_id": 145, "product_id": "25213045444", "name": "Is It Bad Or Good Habits", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 47000, "price_formatted": "Rp 47.000", "sales": "1RB+ Terjual", "shop": "Gramedia Official Shop", "commission": "Rp470", "product_url": "https://shopee.co.id/product/63842097/25213045444", "affiliate_url": "https://s.shopee.co.id/AKbzdKc74L"}, {"id": 15, "db_id": 146, "product_id": "27315900862", "name": "Gantungan Kunci Tali Ponsel Liontin Bintang Awan Putih Fungsi Gantungan Kunci Liontin Rantai Gantung Casing Ponsel Universal", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 12900, "price_formatted": "Rp 12.900", "sales": "10RB+ Terjual", "shop": "Oranka.id", "commission": "Rp1.292", "product_url": "https://shopee.co.id/product/78749559/27315900862", "affiliate_url": "https://s.shopee.co.id/AAIZR1ckPK"}, {"id": 16, "db_id": 147, "product_id": "24257974936", "name": "KELONTONG UNIK | CUTE 3D - Set Paket Cover Pelindung Kepala & Kabel Charger Spiral / Cable Set Protector - Compatible for iPhone Rapatech Anker Ugreen Robot Samsung Vivo ,CPSU", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 20000, "price_formatted": "Rp 20.000", "sales": "10RB+ Terjual", "shop": "Kelontong Unik", "commission": "Rp1.000", "product_url": "https://shopee.co.id/product/5387060/24257974936", "affiliate_url": "https://s.shopee.co.id/9zz9EidNkJ"}, {"id": 17, "db_id": 148, "product_id": "16609406499", "name": "Achava Sandal Jepit Wanita Yuri Flat Casual Sandal wanita empuk sandal harian", "category": "Fashion & Outfit", "badge": "💡 Spill Pilihan", "price_num": 78800, "price_formatted": "Rp 78.800", "sales": "2RB+ Terjual", "shop": "Achava Store", "commission": "Rp11.813", "product_url": "https://shopee.co.id/product/321719546/16609406499", "affiliate_url": "https://s.shopee.co.id/9pfj2Pe15I"}, {"id": 18, "db_id": 149, "product_id": "22910187937", "name": "Case Magsafe Electroplating Metalic IPHONE 11 12 13 14 15 16 17 PRO MAX 14+ 15+ 16+ PLUS 17 Air LENS GUARD PROTECTOR FULL COVER", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 11400, "price_formatted": "Rp 11.400", "sales": "10RB+ Terjual", "shop": "Iphonecase.grosir", "commission": "Rp684", "product_url": "https://shopee.co.id/product/349803646/22910187937", "affiliate_url": "https://s.shopee.co.id/9fMIq6eeQH"}, {"id": 19, "db_id": 150, "product_id": "28501721093", "name": "New BIUBIU CASE Magsafe Clear Compatible for iPhone 11 12 13 14 15 PRO MAX 17 Air 7 8 SE 2024 7+ 8+ X XS XR XS MAX 16 17 18 PRO MAX Silikon  Magnetic Wirelles Clear Slim Case", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 16100, "price_formatted": "Rp 16.100", "sales": "10RB+ Terjual", "shop": "BIUBIU CASE Official Store", "commission": "Rp161", "product_url": "https://shopee.co.id/product/1268196803/28501721093", "affiliate_url": "https://s.shopee.co.id/9V2sdnfHlG"}, {"id": 20, "db_id": 151, "product_id": "25909359216", "name": "Soft Silicone Sport Band Strap for iWatch Apple Watch Ultra/Ultra 4 3 2 49mm Series 12 11 10 9 8 7 46mm 41mm 45mm 38 40 42mm 44mm 6 5 4 SE 3 2 Tali jam tangan Smartwatch DT No 1 HW22 W26 IWO T900 T800 Ultra I8 Pro Max S8 S9 Ultra 8 MAX 9 PRO S20 T500", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 9900, "price_formatted": "Rp 9.900", "sales": "10RB+ Terjual", "shop": "APBAND", "commission": "Rp99", "product_url": "https://shopee.co.id/product/1118224551/25909359216", "affiliate_url": "https://s.shopee.co.id/9KjSRUfv6F"}, {"id": 21, "db_id": 152, "product_id": "22790375521", "name": "Organeez Clear Holder 777 Display Book Map Dokumen Folio F4 20 40 60 File Kantor Sekolah", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 10400, "price_formatted": "Rp 10.400", "sales": "2RB+ Terjual", "shop": "Organeez", "commission": "Rp832", "product_url": "https://shopee.co.id/product/1003097414/22790375521", "affiliate_url": "https://s.shopee.co.id/1BNkiUB0fg"}, {"id": 22, "db_id": 153, "product_id": "10055843354", "name": "LABORE Barrier Revive Cream BiomeRepair 100ml 50ml 10ml Dermalab Revolutionaire [DERMGURU PICK GLOBAL DERMATOLOGIST] Sensitive Skin Care - Skincare Moisturizer Melembabkan Kulit Pelembab Wajah Memperbaiki Skin Barrier Prebiotics Probiotics Postbiotics", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 69000, "price_formatted": "Rp 69.000", "sales": "10RB+ Terjual", "shop": "Labore Official Store", "commission": "Rp6.900", "product_url": "https://shopee.co.id/product/524963178/10055843354", "affiliate_url": "https://s.shopee.co.id/114KWBBe0f"}, {"id": 23, "db_id": 154, "product_id": "28920677024", "name": "NATURAL DEODORANT TAWAS SPRAY ORGANIK BY PHARMACIE ORGANICO", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 8000, "price_formatted": "Rp 8.000", "sales": "10RB+ Terjual", "shop": "Pharmacie Organi.co Official Store", "commission": "Rp480", "product_url": "https://shopee.co.id/product/431200900/28920677024", "affiliate_url": "https://s.shopee.co.id/qkuJsCHLe"}, {"id": 24, "db_id": 155, "product_id": "18983269192", "name": "Octarine - Scandalusy Parfum Wanita Aroma Manis Fruity | Perfume Best Seller Minyak Wangi Unisex Pria Tahan Lama", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 29300, "price_formatted": "Rp 29.300", "sales": "10RB+ Terjual", "shop": "Octarine Official Store", "commission": "Rp3.516", "product_url": "https://shopee.co.id/product/854391331/18983269192", "affiliate_url": "https://s.shopee.co.id/gRU7ZCugd"}, {"id": 25, "db_id": 156, "product_id": "23756840175", "name": "[ODS] GB Lem Untuk Kuku Palsu Isi 24pcs / Nail Glue", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 349, "price_formatted": "Rp 349", "sales": "10RB+ Terjual", "shop": "OurDailyShoes.ID", "commission": "Rp7", "product_url": "https://shopee.co.id/product/383322995/23756840175", "affiliate_url": "https://s.shopee.co.id/W83vGDY1c"}, {"id": 26, "db_id": 157, "product_id": "2899413033", "name": "HAN RIVER HRHD01BK Hair dryer 800W Pengering Rambut  Daya tinggi", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 98000, "price_formatted": "Rp 98.000", "sales": "10RB+ Terjual", "shop": "HAN RIVER Official Shop", "commission": "Rp5.880", "product_url": "https://shopee.co.id/product/177266177/2899413033", "affiliate_url": "https://s.shopee.co.id/LodixEBMb"}, {"id": 27, "db_id": 158, "product_id": "29710195554", "name": "[New Matte Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 79900, "price_formatted": "Rp 79.900", "sales": "10RB+ Terjual", "shop": "Facetology Official Shop", "commission": "Rp2.397", "product_url": "https://shopee.co.id/product/684531921/29710195554", "affiliate_url": "https://s.shopee.co.id/BVDWeEoha"}, {"id": 28, "db_id": 159, "product_id": "17697974453", "name": "NATURAL DEODORANT TAWAS SPRAY WITH ESSENTIAL OIL PENGHILANG BAU BADAN BY PHARMACIE ORGANICO", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 8000, "price_formatted": "Rp 8.000", "sales": "10RB+ Terjual", "shop": "Pharmacie Organi.co Official Store", "commission": "Rp480", "product_url": "https://shopee.co.id/product/431200900/17697974453", "affiliate_url": "https://s.shopee.co.id/1BnKLFS2Z"}, {"id": 29, "db_id": 160, "product_id": "23156811300", "name": "NEW Oil Control Luxcrime Blur & Cover Two Way Cake UV Protection - Bedak Foundation Padat High Coverage Untuk Kulit Halus Tanpa Pori Bebas Minyak Tahan 24 Jam", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 49000, "price_formatted": "Rp 49.000", "sales": "10RB+ Terjual", "shop": "Luxcrime Official Shop", "commission": "Rp2.940", "product_url": "https://shopee.co.id/product/3278276/23156811300", "affiliate_url": "https://s.shopee.co.id/2Vt8Iw5vy4"}, {"id": 30, "db_id": 161, "product_id": "5763265297", "name": "HANASUI Mattedorable Lip Cream Matte / Mattedorable Boba Series / Matcha Latte Series Halal", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 26800, "price_formatted": "Rp 26.800", "sales": "10RB+ Terjual", "shop": "Pompurin Store", "commission": "Rp2.680", "product_url": "https://shopee.co.id/product/35017261/5763265297", "affiliate_url": "https://s.shopee.co.id/2LZi6d6ZJ3"}, {"id": 31, "db_id": 162, "product_id": "18443269679", "name": "Dove Serum Body Wash Pro-Ceramide - Moisture Renew 380g", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 26900, "price_formatted": "Rp 26.900", "sales": "10RB+ Terjual", "shop": "Unilever Indonesia Official Shop", "commission": "Rp1.614", "product_url": "https://shopee.co.id/product/14318452/18443269679", "affiliate_url": "https://s.shopee.co.id/2BGHuK7Ce2"}, {"id": 32, "db_id": 163, "product_id": "23403497737", "name": "GLOW fx BEAUTY Serum Glow Bomb - 20ml", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 69000, "price_formatted": "Rp 69.000", "sales": "10RB+ Terjual", "shop": "GLOW FX Official Store", "commission": "Rp3.450", "product_url": "https://shopee.co.id/product/573351606/23403497737", "affiliate_url": "https://s.shopee.co.id/20wri17pz1"}, {"id": 33, "db_id": 164, "product_id": "6989149375", "name": "Giv White Sabun Mandi Cair Mulberry Pouch 800 ml", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 37400, "price_formatted": "Rp 37.400", "sales": "10RB+ Terjual", "shop": "Wings Official Shop", "commission": "Rp1.496", "product_url": "https://shopee.co.id/product/64474495/6989149375", "affiliate_url": "https://s.shopee.co.id/1qdRVi8TK0"}, {"id": 34, "db_id": 165, "product_id": "8431083857", "name": "SUMBER AYU | OMG OH MY GLAM Mattelast Lip Cream - Lip Cream Matte Dengan Warna Intense, Tahan Lama & Ringan", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 25300, "price_formatted": "Rp 25.300", "sales": "10RB+ Terjual", "shop": "Sumber Ayu Cosmetic", "commission": "Rp1.518", "product_url": "https://shopee.co.id/product/119147007/8431083857", "affiliate_url": "https://s.shopee.co.id/1gK1JP96ez"}, {"id": 35, "db_id": 166, "product_id": "25591680399", "name": "[NEW SHADES] Hanasui Next Level Blurry Tint - Lip Tint Watery To Blur Lightweight Tahan Lama Velvet Finish Powdery Tint Blurring Effect Stain Lasting Up to 8H Lip Stain Lipgloss Liptint Lipstik Lipcream Lip Matte Makeup Official Store", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 44500, "price_formatted": "Rp 44.500", "sales": "10RB+ Terjual", "shop": "Hanasui Official Shop", "commission": "Rp5.344", "product_url": "https://shopee.co.id/product/129681299/25591680399", "affiliate_url": "https://s.shopee.co.id/1W0b769jzy"}, {"id": 36, "db_id": 167, "product_id": "15797714467", "name": "[ BELIA ] M.B.K Series | Deodorant Roll On 40 ml | Bedak Jar Tint 60 Gr | Bedak Sachet 13.6 gr MBK", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 12100, "price_formatted": "Rp 12.100", "sales": "10RB+ Terjual", "shop": "Belia Cosmetic", "commission": "Rp121", "product_url": "https://shopee.co.id/product/48382819/15797714467", "affiliate_url": "https://s.shopee.co.id/1LhAunANKx"}, {"id": 37, "db_id": 168, "product_id": "45912956163", "name": "(100ml)WHITE INC Alpha Glowhite Body Lotion Whitening & Moisturizer| Body Cream Body Lotion Menghidrasi Kulit", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 4500, "price_formatted": "Rp 4.500", "sales": "10RB+ Terjual", "shop": "Dunia@kosmetik", "commission": "Rp360", "product_url": "https://shopee.co.id/product/1387278111/45912956163", "affiliate_url": "https://s.shopee.co.id/3qOVtO0rGS"}, {"id": 38, "db_id": 169, "product_id": "25519737155", "name": "Braven Code Eau De Parfum 100ml | Parfum Perfume Minyak Wangi Wanita Pria Tahan Lama - Cedar Wood / Oud Wood / Urban / Cool WTR", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 42600, "price_formatted": "Rp 42.600", "sales": "10RB+ Terjual", "shop": "Evangeline Official Shop", "commission": "Rp4.260", "product_url": "https://shopee.co.id/product/59738787/25519737155", "affiliate_url": "https://s.shopee.co.id/3g55h51UbR"}, {"id": 39, "db_id": 170, "product_id": "3358461317", "name": "MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 34900, "price_formatted": "Rp 34.900", "sales": "10RB+ Terjual", "shop": "MINISO INDONESIA", "commission": "Rp3.141", "product_url": "https://shopee.co.id/product/40847197/3358461317", "affiliate_url": "https://s.shopee.co.id/3VlfUm27wQ"}, {"id": 40, "db_id": 171, "product_id": "29754486072", "name": "BPOM  KUDAN Kutek Kutek Peel Off kuteks halal muslimah Kutek Halal untuk sholat MZ02", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 11000, "price_formatted": "Rp 11.000", "sales": "10RB+ Terjual", "shop": "kudan_shop", "commission": "Rp330", "product_url": "https://shopee.co.id/product/754723635/29754486072", "affiliate_url": "https://s.shopee.co.id/3LSFIT2lHP"}, {"id": 41, "db_id": 172, "product_id": "5448316961", "name": "\"{MO}\"  Tas kosmetik Pouch Sunny Tas Organizer Bag Import # Bisa COD", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 610, "price_formatted": "Rp 610", "sales": "10RB+ Terjual", "shop": "Mitra Online Bersama", "commission": "Rp12", "product_url": "https://shopee.co.id/product/168686019/5448316961", "affiliate_url": "https://s.shopee.co.id/3B8p6A3OcO"}, {"id": 42, "db_id": 173, "product_id": "29386714703", "name": "Vitalis Eau De Parfum 50 ml - Extra Bloom", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 32900, "price_formatted": "Rp 32.900", "sales": "10RB+ Terjual", "shop": "Wipro Unza Official Shop", "commission": "Rp3.619", "product_url": "https://shopee.co.id/product/63682929/29386714703", "affiliate_url": "https://s.shopee.co.id/30pOtr41xN"}, {"id": 43, "db_id": 174, "product_id": "11233377394", "name": "PLASTIK VACUUM VACUM SEALER POLOS DELKOCHOICE UKURAN MEDIUM SATUAN TERMURAH", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 810, "price_formatted": "Rp 810", "sales": "10RB+ Terjual", "shop": "Pabrikpacking", "commission": "Rp41", "product_url": "https://shopee.co.id/product/412435899/11233377394", "affiliate_url": "https://s.shopee.co.id/2qVyhY4fIM"}, {"id": 44, "db_id": 175, "product_id": "11743804839", "name": "Pengharum Ruangan / Pengharum Toilet / Aromaterapi / Reed Diffuser - Summerspring - Pengharum 40ml", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 55700, "price_formatted": "Rp 55.700", "sales": "10RB+ Terjual", "shop": "Summerscent Indonesia Official Shop", "commission": "Rp9.469", "product_url": "https://shopee.co.id/product/201203378/11743804839", "affiliate_url": "https://s.shopee.co.id/2gCYVF5IdL"}, {"id": 45, "db_id": 176, "product_id": "3292113597", "name": "Lunch Box Size S Kotak Makan Kertas Paper Box Kraft Dus Makanan Dimsum Takoyaki Snack Grosir", "category": "Camilan & Makanan", "badge": "🔥 Super Murah", "price_num": 417, "price_formatted": "Rp 417", "sales": "10RB+ Terjual", "shop": "Printing Kemasan Bandung", "commission": "Rp42", "product_url": "https://shopee.co.id/product/106339623/3292113597", "affiliate_url": "https://s.shopee.co.id/5AttTpvmYq"}, {"id": 46, "db_id": 177, "product_id": "4573042566", "name": "SABLON GELAS CUP STARINDO 12 14 16 18 22 OZ KUALITAS TEBAL 7 - 9,5 GRAM BERKUALITAS", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 440, "price_formatted": "Rp 440", "sales": "10RB+ Terjual", "shop": "pwstar.pack", "commission": "Rp9", "product_url": "https://shopee.co.id/product/367507864/4573042566", "affiliate_url": "https://s.shopee.co.id/50aTHWwPtp"}, {"id": 47, "db_id": 178, "product_id": "9615547422", "name": "Standing Pouch Full Metalize Foil Ziplock Plastik Klip Kemasan Makanan", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 600, "price_formatted": "Rp 600", "sales": "10RB+ Terjual", "shop": "dkmpacking", "commission": "Rp54", "product_url": "https://shopee.co.id/product/322851582/9615547422", "affiliate_url": "https://s.shopee.co.id/4qH35Dx3Eo"}, {"id": 48, "db_id": 179, "product_id": "43000125680", "name": "LeDingDing-Tumbler Thermos SUS316 Stainless Bottle Botol Air Minum Tahan Panas Dingin Vacuum Flask Termos Tumblr Sport 750ml Tumbler tahan panas dingin  24 jam Free sikat", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 97300, "price_formatted": "Rp 97.300", "sales": "10RB+ Terjual", "shop": "Le Ding Ding Official Store", "commission": "Rp6.809", "product_url": "https://shopee.co.id/product/1134435162/43000125680", "affiliate_url": "https://s.shopee.co.id/4fxcsuxgZn"}, {"id": 49, "db_id": 180, "product_id": "18841582014", "name": "Plastik Packing Plastik Polymailer Bungkus Kuat dan Lentur ( Satuan )", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 304, "price_formatted": "Rp 304", "sales": "10RB+ Terjual", "shop": "AK Plastic", "commission": "Rp15", "product_url": "https://shopee.co.id/product/851787769/18841582014", "affiliate_url": "https://s.shopee.co.id/4VeCgbyJum"}, {"id": 50, "db_id": 181, "product_id": "28151475364", "name": "Handuk Merah Putih Towel Series New Okto - Handuk Mandi  Dewasa  70 x 135 cm / 50x100 cm / 30x70 cm", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 16900, "price_formatted": "Rp 16.900", "sales": "10RB+ Terjual", "shop": "Merah Putih Official Store", "commission": "Rp845", "product_url": "https://shopee.co.id/product/1209241348/28151475364", "affiliate_url": "https://s.shopee.co.id/4LKmUIyxFl"}, {"id": 51, "db_id": 182, "product_id": "42013927031", "name": "YONEZAWA Meja Setrika Lipat Duduk Meja Setrika Praktis dan Hemat Tempat Papan Setrika Portabel Papan setrika  Alas Setrika Duduk Meja Setrika Berkualitas papan setrika Meja Setrika Lipat Besi Serbaguna", "category": "Fashion & Outfit", "badge": "💡 Spill Pilihan", "price_num": 130900, "price_formatted": "Rp 130.900", "sales": "4RB+ Terjual", "shop": "Yonezawa Official Store", "commission": "Rp5.236", "product_url": "https://shopee.co.id/product/1516493646/42013927031", "affiliate_url": "https://s.shopee.co.id/4B1MHzzaak"}, {"id": 52, "db_id": 183, "product_id": "26979514105", "name": "Cuculemon Tumbler Stainless Digital LED 450ML Bottle Kopi Aesthetic Termos Air Kopi Panas Botol Minum", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 60000, "price_formatted": "Rp 60.000", "sales": "10RB+ Terjual", "shop": "Cuculemon Bottle Store", "commission": "Rp6.000", "product_url": "https://shopee.co.id/product/1479206900/26979514105", "affiliate_url": "https://s.shopee.co.id/40hw5h0Dvj"}, {"id": 53, "db_id": 184, "product_id": "42867084946", "name": "KEEP MAJU Keset Kamar Mandi  Karpet Serap Air Keset Anti-Selip Minimalis Tebal dan Cepat Kering", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 53900, "price_formatted": "Rp 53.900", "sales": "10RB+ Terjual", "shop": "Keep Maju Official Store", "commission": "Rp5.390", "product_url": "https://shopee.co.id/product/1140434639/42867084946", "affiliate_url": "https://s.shopee.co.id/6L5qryrLCC"}, {"id": 54, "db_id": 185, "product_id": "7263840182", "name": "Venetian Blind Sharp Point Kosei EXO / Horizontal Blind / Kerai Aluminium / Tirai Jendela Aesthetic", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 2000, "price_formatted": "Rp 2.000", "sales": "10RB+ Terjual", "shop": "Indodekor Jakarta", "commission": "Rp218", "product_url": "https://shopee.co.id/product/337740226/7263840182", "affiliate_url": "https://s.shopee.co.id/6VPH4HqhrF"}, {"id": 55, "db_id": 186, "product_id": "7633301614", "name": "Tisu NICE Facial Tissue 180 Sheets 2 Ply 360 helai / 320 helai 2 ply | Tisu Wajah Food Safe Tebal Lembut Serba Guna | Bubu Shop", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 6700, "price_formatted": "Rp 6.700", "sales": "10RB+ Terjual", "shop": "Bubu Shop Official Store", "commission": "Rp67", "product_url": "https://shopee.co.id/product/51975820/7633301614", "affiliate_url": "https://s.shopee.co.id/60T0TMsbsA"}, {"id": 56, "db_id": 187, "product_id": "19866867985", "name": "Technoplast Teko Air Pitcher / Water Jug Set Dengan Gelas - 2.2 L +  8 Stacking Cups", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 48200, "price_formatted": "Rp 48.200", "sales": "10RB+ Terjual", "shop": "Technoplast Official Shop", "commission": "Rp3.857", "product_url": "https://shopee.co.id/product/59558660/19866867985", "affiliate_url": "https://s.shopee.co.id/6AmQffryXD"}, {"id": 57, "db_id": 188, "product_id": "44568144204", "name": "Sederha 50PCS Penyaring Keran Air Kapas Filter Sekali Pakai Saring Lumpur Dan Karat Untuk Dapur Rumah Tangga", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 32700, "price_formatted": "Rp 32.700", "sales": "2RB+ Terjual", "shop": "Sederha Official Store", "commission": "Rp3.269", "product_url": "https://shopee.co.id/product/1765454498/44568144204", "affiliate_url": "https://s.shopee.co.id/5fqA4ktsY8"}, {"id": 58, "db_id": 189, "product_id": "17670028005", "name": "Kain Lap Microfiber Serbaguna 30x30cm Kain Lap Mobil Motor 2 Sisi Multifungsi", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 4200, "price_formatted": "Rp 4.200", "sales": "10RB+ Terjual", "shop": "jusshop", "commission": "Rp84", "product_url": "https://shopee.co.id/product/178227098/17670028005", "affiliate_url": "https://s.shopee.co.id/5q9aH3tFDB"}, {"id": 59, "db_id": 190, "product_id": "44072887461", "name": "Talenan Kayu Jati Perhutani Asli 27x14 cm – Alas Potong Dapur, Papan Saji Kayu Estetik Handmade", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 12600, "price_formatted": "Rp 12.600", "sales": "10RB+ Terjual", "shop": "Lakukayu Woodcraft", "commission": "Rp1.134", "product_url": "https://shopee.co.id/product/829231891/44072887461", "affiliate_url": "https://s.shopee.co.id/5LDJg8v9E6"}, {"id": 60, "db_id": 191, "product_id": "29582124038", "name": "LAZZEN - Rak Piring Wastafel Stainless Steel Hitam Cuci Piring Rak Piring Dapur Penyimpanan Dapur Stainless Steel Dish Rack Muat Mangkuk Dan Piring", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 215000, "price_formatted": "Rp 215.000", "sales": "8RB+ Terjual", "shop": "LAZZEN Official Store", "commission": "Rp25.800", "product_url": "https://shopee.co.id/product/1449489467/29582124038", "affiliate_url": "https://s.shopee.co.id/5VWjsRuVt9"}, {"id": 61, "db_id": 192, "product_id": "50950470437", "name": "(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 73800, "price_formatted": "Rp 73.800", "sales": "10RB+ Terjual", "shop": "Goto Living", "commission": "Rp3.690", "product_url": "https://shopee.co.id/product/8459024/50950470437", "affiliate_url": "https://s.shopee.co.id/7fbESQmGUa"}, {"id": 62, "db_id": 193, "product_id": "41566803663", "name": "Pengharum Ruangan & Kain Anti Bau Tahan Lama 12 Jam | Room & Linen Spray Anti Bakteri OVRBODY", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 20900, "price_formatted": "Rp 20.900", "sales": "10RB+ Terjual", "shop": "Ovrbody Official Shop", "commission": "Rp4.175", "product_url": "https://shopee.co.id/product/466935959/41566803663", "affiliate_url": "https://s.shopee.co.id/7pueejld9d"}, {"id": 63, "db_id": 194, "product_id": "27973729053", "name": "Bantal Duduk  Biskuit Bulat / Bantal Sofa / Alas Duduk Bentuk Biskuit / Biscuit Pillow Bahan plush", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 42400, "price_formatted": "Rp 42.400", "sales": "4RB+ Terjual", "shop": "BONEKA MADDA", "commission": "Rp5.090", "product_url": "https://shopee.co.id/product/110059175/27973729053", "affiliate_url": "https://s.shopee.co.id/7KyO3onXAY"}, {"id": 64, "db_id": 195, "product_id": "5249335178", "name": "HC Kotak Sepatu Plastik Transparan Tebal Serbaguna Storage Box Organizer Rak Sepatu Mudah Dilipat Bisa Ditumpuk Dengan Penutup Tempat Penyimpanan Sandal Praktis", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 7600, "price_formatted": "Rp 7.600", "sales": "10RB+ Terjual", "shop": "HERMANCOLLECTION", "commission": "Rp229", "product_url": "https://shopee.co.id/product/26177891/5249335178", "affiliate_url": "https://s.shopee.co.id/7VHoG7mtpb"}, {"id": 65, "db_id": 196, "product_id": "52755877292", "name": "Tifale Saucepan Granite 20 cm Panci Susu Anti Lengket Teflon Minimalis", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 68800, "price_formatted": "Rp 68.800", "sales": "6RB+ Terjual", "shop": "Tifale Official Store", "commission": "Rp6.880", "product_url": "https://shopee.co.id/product/753427958/52755877292", "affiliate_url": "https://s.shopee.co.id/70LXfConqW"}, {"id": 66, "db_id": 197, "product_id": "27777382879", "name": "Technoplast Lovelo Punch Bowl Set | Mangkuk Es Buah | Tempat Es Buah | Mangkok Besar Sop Buah BPA Free - Food Grade", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 47400, "price_formatted": "Rp 47.400", "sales": "10RB+ Terjual", "shop": "Technoplast Official Shop", "commission": "Rp3.792", "product_url": "https://shopee.co.id/product/59558660/27777382879", "affiliate_url": "https://s.shopee.co.id/7AexrVoAVZ"}, {"id": 67, "db_id": 198, "product_id": "4404660166", "name": "Dijamin tebal Netpot Jaring Hitam 5cm - Termurah Berkualitas", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 245, "price_formatted": "Rp 245", "sales": "10RB+ Terjual", "shop": "Wijayahidro", "commission": "Rp12", "product_url": "https://shopee.co.id/product/163975128/4404660166", "affiliate_url": "https://s.shopee.co.id/6fihGaq4WU"}, {"id": 68, "db_id": 199, "product_id": "42623944485", "name": "​Tempat Overnight Oat & Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup​", "category": "Camilan & Makanan", "badge": "🍿 Anti Stress", "price_num": 20600, "price_formatted": "Rp 20.600", "sales": "1RB+ Terjual", "shop": "ok88gq2pz8", "commission": "Rp3.090", "product_url": "https://shopee.co.id/product/799020123/42623944485", "affiliate_url": "https://s.shopee.co.id/6q27StpRBX"}, {"id": 69, "db_id": 200, "product_id": "43350173460", "name": "Rak bumbu Dapur estetik 3 susun multifungsi/ Rak kosmetik serbaguna", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 55000, "price_formatted": "Rp 55.000", "sales": "2RB+ Terjual", "shop": "Syuhada Property", "commission": "Rp4.953", "product_url": "https://shopee.co.id/product/310678964/43350173460", "affiliate_url": "https://s.shopee.co.id/906c2shBmy"}, {"id": 70, "db_id": 201, "product_id": "24519885583", "name": "Mama Lemon Jeruk Nipis 920 gr x2", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 29400, "price_formatted": "Rp 29.400", "sales": "10RB+ Terjual", "shop": "Wings Official Shop", "commission": "Rp1.470", "product_url": "https://shopee.co.id/product/64474495/24519885583", "affiliate_url": "https://s.shopee.co.id/9AQ2FBgYS1"}, {"id": 71, "db_id": 202, "product_id": "28976666458", "name": "ZuoShu - Keset Dapur 2in1 40x60 dan 40x120 Keset kaki teras keset lantai kamar tidur", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 48000, "price_formatted": "Rp 48.000", "sales": "10RB+ Terjual", "shop": "Zuo Shu Official Store", "commission": "Rp4.800", "product_url": "https://shopee.co.id/product/1238205784/28976666458", "affiliate_url": "https://s.shopee.co.id/8fTleGiSSw"}, {"id": 72, "db_id": 203, "product_id": "23763958146", "name": "Eyre Dinding Besi Sofa Ruang Tamu Kreatif Modern Latar Belakang Dinding Wall Decor Hiasan Dinding Frame Metal Gold Daun Leaf Ginko Scandinavian Wall Decor Nordic", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 30000, "price_formatted": "Rp 30.000", "sales": "10RB+ Terjual", "shop": "Birdkemes", "commission": "Rp3.600", "product_url": "https://shopee.co.id/product/1176231624/23763958146", "affiliate_url": "https://s.shopee.co.id/8pnBqZhp7z"}, {"id": 73, "db_id": 204, "product_id": "19184614129", "name": "Collins Crunchy Coklat 1kg Halal BPOM", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 52500, "price_formatted": "Rp 52.500", "sales": "10RB+ Terjual", "shop": "Jenntoys Official Shop", "commission": "Rp3.150", "product_url": "https://shopee.co.id/product/14831233/19184614129", "affiliate_url": "https://s.shopee.co.id/8KqvFejj8u"}, {"id": 74, "db_id": 205, "product_id": "18483378790", "name": "MAKARONI NKS ,MAKARONI PIPA BANTAT 1 BALL (1KG)", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 35900, "price_formatted": "Rp 35.900", "sales": "10RB+ Terjual", "shop": "NDORO KAKOENG SNACK", "commission": "Rp1.436", "product_url": "https://shopee.co.id/product/202785878/18483378790", "affiliate_url": "https://s.shopee.co.id/8VALRxj5nx"}, {"id": 75, "db_id": 206, "product_id": "20522686462", "name": "Nutrifarm Sari Lemon 500 ml", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 36000, "price_formatted": "Rp 36.000", "sales": "10RB+ Terjual", "shop": "Nutrifarm Official Store", "commission": "Rp3.600", "product_url": "https://shopee.co.id/product/815740902/20522686462", "affiliate_url": "https://s.shopee.co.id/80E4r2kzos"}, {"id": 76, "db_id": 207, "product_id": "17364221246", "name": "Safiya Muesli 1 Kg Oatmeal With Almond Freeze Dried Apple Sereal Diet Bulking High Fiber", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 56600, "price_formatted": "Rp 56.600", "sales": "10RB+ Terjual", "shop": "KURMA ALIF Official Store", "commission": "Rp3.962", "product_url": "https://shopee.co.id/product/16892122/17364221246", "affiliate_url": "https://s.shopee.co.id/8AXV3LkMTv"}, {"id": 77, "db_id": 208, "product_id": "26085325064", "name": "OFFICIAL STORE - PikuLabs Pure Matcha Powder 100gr | 100% Pure, No Additives", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 129000, "price_formatted": "Rp 129.000", "sales": "10RB+ Terjual", "shop": "Pikulabs", "commission": "Rp5.160", "product_url": "https://shopee.co.id/product/1464026282/26085325064", "affiliate_url": "https://s.shopee.co.id/AKbzdKc75M"}, {"id": 78, "db_id": 209, "product_id": "29711461274", "name": "PROMO NUGET KANZLER CRISPY 450gr", "category": "Camilan & Makanan", "badge": "🍿 Anti Stress", "price_num": 50000, "price_formatted": "Rp 50.000", "sales": "3RB+ Terjual", "shop": "Es Durian Moka", "commission": "Rp5.000", "product_url": "https://shopee.co.id/product/50043063/29711461274", "affiliate_url": "https://s.shopee.co.id/AUvPpdbTkP"}, {"id": 79, "db_id": 210, "product_id": "20922695248", "name": "Nutrifarm Chia Seeds 70g", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 21000, "price_formatted": "Rp 21.000", "sales": "10RB+ Terjual", "shop": "Nutrifarm Official Store", "commission": "Rp2.100", "product_url": "https://shopee.co.id/product/815740902/20922695248", "affiliate_url": "https://s.shopee.co.id/9zz9EidNlK"}, {"id": 80, "db_id": 211, "product_id": "55667756643", "name": "Rak Troli Dapur 4 Susun Serbaguna Beroda Rak Penyimpanan Portable Organize Kamar Mandi", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 12900, "price_formatted": "Rp 12.900", "sales": "10RB+ Terjual", "shop": "Okira", "commission": "Rp1.290", "product_url": "https://shopee.co.id/product/1930223863/55667756643", "affiliate_url": "https://s.shopee.co.id/AAIZR1ckQN"}, {"id": 81, "db_id": 212, "product_id": "29403782584", "name": "Mama Lemon Sabun Cuci Piring Yuzu & Jeruk Nipis Anti Lemak & Bau Pouch 650 gr x3", "category": "Camilan & Makanan", "badge": "⭐ Best Seller", "price_num": 34900, "price_formatted": "Rp 34.900", "sales": "10RB+ Terjual", "shop": "Wings Official Shop", "commission": "Rp1.745", "product_url": "https://shopee.co.id/product/64474495/29403782584", "affiliate_url": "https://s.shopee.co.id/9fMIq6eeRI"}, {"id": 82, "db_id": 213, "product_id": "44511772875", "name": "Kotak Penyimpanan Pintu Kulkas Serbaguna | Organizer Saos Bumbu Kopi Sachet Keju Slice | Wadah Storage Box Kulkas Multifungsi", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 9400, "price_formatted": "Rp 9.400", "sales": "10RB+ Terjual", "shop": "Jolly Home", "commission": "Rp752", "product_url": "https://shopee.co.id/product/1132754224/44511772875", "affiliate_url": "https://s.shopee.co.id/9pfj2Pe16L"}, {"id": 83, "db_id": 214, "product_id": "19060261073", "name": "Satu Keluarga Stand Holder Bentuk Kursi Warna Macaron Dudukan Multifungsi C728 Tatakan Handphone Phone Holder Hp Untuk Dekorasi Meja", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 2000, "price_formatted": "Rp 2.000", "sales": "10RB+ Terjual", "shop": "Satu Keluarga Official Shop", "commission": "Rp20", "product_url": "https://shopee.co.id/product/494896079/19060261073", "affiliate_url": "https://s.shopee.co.id/9KjSRUfv7G"}, {"id": 84, "db_id": 215, "product_id": "40879162316", "name": "COD Rak Troli Susun Serbaguna 3 & 4 TingkatRak Dapur Plastik Rak Kamar Mandi Dengan Roda danPegangan", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 15600, "price_formatted": "Rp 15.600", "sales": "10RB+ Terjual", "shop": "NusaLiving", "commission": "Rp1.564", "product_url": "https://shopee.co.id/product/1289368650/40879162316", "affiliate_url": "https://s.shopee.co.id/9V2sdnfHmJ"}, {"id": 85, "db_id": 216, "product_id": "25644639751", "name": "{PROMO Buy 4 Grats1}Tisu Basah Bayi Bebas alkohol Pure Water | Tanpa Alkohol & Pewangi | Lembut Aman Kulit Sensitif | Travel Friendly | Best Seller Harga Murah COD", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 11000, "price_formatted": "Rp 11.000", "sales": "10RB+ Terjual", "shop": "mamaTisu", "commission": "Rp1.100", "product_url": "https://shopee.co.id/product/1525769098/25644639751", "affiliate_url": "https://s.shopee.co.id/114KWBBe1g"}, {"id": 86, "db_id": 217, "product_id": "24748209954", "name": "JOODUTP Filter Kran Air Kain (10 pcs) / Saringan Air Kotor / Water Filter", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 9000, "price_formatted": "Rp 9.000", "sales": "10RB+ Terjual", "shop": "Joodutp Official Store", "commission": "Rp1.987", "product_url": "https://shopee.co.id/product/1414571451/24748209954", "affiliate_url": "https://s.shopee.co.id/1BNkiUB0gj"}, {"id": 87, "db_id": 218, "product_id": "22349071634", "name": "[CALCES] Double Tape 3 Meter Nano Selotip Bening 2 Sisi Serbaguna", "category": "Rumah Tangga & Kosan", "badge": "🔥 Super Murah", "price_num": 6900, "price_formatted": "Rp 6.900", "sales": "10RB+ Terjual", "shop": "CALCES", "commission": "Rp344", "product_url": "https://shopee.co.id/product/857540449/22349071634", "affiliate_url": "https://s.shopee.co.id/gRU7ZCuhe"}, {"id": 88, "db_id": 219, "product_id": "52066196149", "name": "[FLASH SALE]Pembersih Toilet Foam Cleaner 500ML Tanpa Disikat Busa Tebal Hilangkan Kerak Membandel Penghilang Bau WC Kamar Mandi Bersih Seperti Baru", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 49000, "price_formatted": "Rp 49.000", "sales": "10RB+ Terjual", "shop": "Glowhome Cleaning Store", "commission": "Rp2.450", "product_url": "https://shopee.co.id/product/1795043281/52066196149", "affiliate_url": "https://s.shopee.co.id/qkuJsCHMh"}, {"id": 89, "db_id": 220, "product_id": "24091343221", "name": "pouch Korek Kuping 6in1 Plus Pouch Stainless Ear Pick 6in1 Set Pembersih Telinga Isi 6 Tas Kulit", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 8600, "price_formatted": "Rp 8.600", "sales": "10RB+ Terjual", "shop": "Ri-Yoor", "commission": "Rp857", "product_url": "https://shopee.co.id/product/1279789721/24091343221", "affiliate_url": "https://s.shopee.co.id/LodixEBNc"}, {"id": 90, "db_id": 221, "product_id": "45469873236", "name": "Minyak Goreng Sunco Kemasan Pouch - Praktis dan Ekonomis halal jernih untuk menggoreng tidak kotor 5x penyaringan netto1liter", "category": "Rumah Tangga & Kosan", "badge": "🏠 Favorit Anak Kos", "price_num": 30100, "price_formatted": "Rp 30.100", "sales": "144 Terjual", "shop": "hujio872", "commission": "Rp602", "product_url": "https://shopee.co.id/product/1633760106/45469873236", "affiliate_url": "https://s.shopee.co.id/W83vGDY2f"}, {"id": 91, "db_id": 222, "product_id": "19075783865", "name": "T&Y Phone Holder Foldable Stand Holder HP Lipat Folding Universal Dudukan Penahan Handphone Meja", "category": "Elektronik & Gadget", "badge": "🔥 Super Murah", "price_num": 8500, "price_formatted": "Rp 8.500", "sales": "10RB+ Terjual", "shop": "Tian & Yi", "commission": "Rp256", "product_url": "https://shopee.co.id/product/491338237/19075783865", "affiliate_url": "https://s.shopee.co.id/1BnKLFS3a"}, {"id": 92, "db_id": 223, "product_id": "26255419853", "name": "Sosoft Deterjen Cair Sweet Peony Natural Perfume Botol 700gr / 700ml x3", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 46600, "price_formatted": "Rp 46.600", "sales": "10RB+ Terjual", "shop": "Wings Official Shop", "commission": "Rp932", "product_url": "https://shopee.co.id/product/64474495/26255419853", "affiliate_url": "https://s.shopee.co.id/BVDWeEoid"}, {"id": 93, "db_id": 224, "product_id": "5058771704", "name": "IsEven ELODIE Pants Rayon Karet Tersedia Dalam Berbagai Warna", "category": "Fashion & Outfit", "badge": "🔥 Super Murah", "price_num": 9300, "price_formatted": "Rp 9.300", "sales": "10RB+ Terjual", "shop": "Iseven Fashion Official Shop", "commission": "Rp93", "product_url": "https://shopee.co.id/product/7208484/5058771704", "affiliate_url": "https://s.shopee.co.id/2LZi6d6ZK4"}, {"id": 94, "db_id": 225, "product_id": "49316279642", "name": "Ciptadent Pasta Gigi Maxi 12 Tube 225 gr (isi 2) x2", "category": "Rumah Tangga & Kosan", "badge": "⭐ Best Seller", "price_num": 39700, "price_formatted": "Rp 39.700", "sales": "10RB+ Terjual", "shop": "Wings Official Shop", "commission": "Rp794", "product_url": "https://shopee.co.id/product/64474495/49316279642", "affiliate_url": "https://s.shopee.co.id/2Vt8Iw5vz7"}, {"id": 95, "db_id": 226, "product_id": "53464652176", "name": "[1 PCS] DUMPLING SQUISY JUMBO Lucu Anti Stress / Mainan Anti Stress Empuk Slow Rising / Squishy Bakpao Imut dalam Box", "category": "Camilan & Makanan", "badge": "🔥 Super Murah", "price_num": 11800, "price_formatted": "Rp 11.800", "sales": "10RB+ Terjual", "shop": "toko_ruci", "commission": "Rp708", "product_url": "https://shopee.co.id/product/143074929/53464652176", "affiliate_url": "https://s.shopee.co.id/20wri17q02"}, {"id": 96, "db_id": 227, "product_id": "48411693406", "name": "HOHOISYOU Bulu Mata tanpa Lem - Model Variatif", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 29900, "price_formatted": "Rp 29.900", "sales": "10RB+ Terjual", "shop": "HOHOISYOU Official Store", "commission": "Rp2.093", "product_url": "https://shopee.co.id/product/1691297701/48411693406", "affiliate_url": "https://s.shopee.co.id/2BGHuK7Cf5"}, {"id": 97, "db_id": 228, "product_id": "40230465240", "name": "TERLARISS - Sandrinna Perfume Inspired Mist 90Ml", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 8000, "price_formatted": "Rp 8.000", "sales": "10RB+ Terjual", "shop": "PARFUME PRAGRANCE", "commission": "Rp400", "product_url": "https://shopee.co.id/product/1495920943/40230465240", "affiliate_url": "https://s.shopee.co.id/1gK1JP96g0"}, {"id": 98, "db_id": 229, "product_id": "52117504839", "name": "[Harga Spesial] MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik Tebal Nyaman Dipakai", "category": "Skincare & Perawatan", "badge": "🔥 Super Murah", "price_num": 11900, "price_formatted": "Rp 11.900", "sales": "10RB+ Terjual", "shop": "MLAN Official Store", "commission": "Rp595", "product_url": "https://shopee.co.id/product/1597760488/52117504839", "affiliate_url": "https://s.shopee.co.id/1qdRVi8TL3"}, {"id": 99, "db_id": 230, "product_id": "14661254286", "name": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment & Skincare-infused CICA + Hydra ß-Glucan - Hasil Akhir Glowing - Makeup", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 109500, "price_formatted": "Rp 109.500", "sales": "10RB+ Terjual", "shop": "Wardah Official Shop", "commission": "Rp13.140", "product_url": "https://shopee.co.id/product/59763733/14661254286", "affiliate_url": "https://s.shopee.co.id/1LhAunANLy"}, {"id": 100, "db_id": 231, "product_id": "43464446853", "name": "Glad2Glow Perfect Cover Cushion Tahan Air Anti Pengelupasan Efek Matte Melembabkan dan Melindungi Kulit", "category": "Skincare & Perawatan", "badge": "⭐ Best Seller", "price_num": 68900, "price_formatted": "Rp 68.900", "sales": "10RB+ Terjual", "shop": "Kliki Beauty", "commission": "Rp6.889", "product_url": "https://shopee.co.id/product/533400837/43464446853", "affiliate_url": "https://s.shopee.co.id/1W0b769k11"}]
+  </script>
+
+  <script>
+    // Client-side Application Logic
+    const rawData = JSON.parse(document.getElementById('product-data').textContent);
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let currentSort = 'default';
+
+    const grid = document.getElementById('productGrid');
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const sortSelect = document.getElementById('sortSelect');
+    const countEl = document.getElementById('resultsCount');
+    const emptyState = document.getElementById('emptyState');
+    const resetBtn = document.getElementById('resetSearchBtn');
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+
+    function showToast(msg) {
+      toastText.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2400);
+    }
+
+    function copyToClipboard(url, name) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast(`Link "${name.slice(0, 25)}..." disalin!`);
+        }).catch(() => {
+          fallbackCopy(url);
+        });
+      } else {
+        fallbackCopy(url);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('Link Shopee berhasil disalin!');
+      } catch (e) {
+        showToast('Gagal menyalin link otomatis.');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function getCategoryIcon(cat) {
+      switch(cat) {
+        case 'Elektronik & Gadget': return '💻';
+        case 'Rumah Tangga & Kosan': return '🏠';
+        case 'Skincare & Perawatan': return '💆';
+        case 'Camilan & Makanan': return '🍿';
+        case 'Fashion & Outfit': return '🎒';
+        default: return '🛍️';
+      }
+    }
+
+    function renderProducts() {
+      let filtered = rawData.filter(p => {
+        const matchCat = currentCategory === 'all' || p.category === currentCategory;
+        const q = searchQuery.toLowerCase();
+        const matchQuery = !q || 
+          p.name.toLowerCase().includes(q) || 
+          p.category.toLowerCase().includes(q) || 
+          p.shop.toLowerCase().includes(q);
+        return matchCat && matchQuery;
+      });
+
+      // Sorting
+      if (currentSort === 'price_asc') {
+        filtered.sort((a, b) => a.price_num - b.price_num);
+      } else if (currentSort === 'price_desc') {
+        filtered.sort((a, b) => b.price_num - a.price_num);
+      } else if (currentSort === 'sales') {
+        filtered.sort((a, b) => (b.sales.includes('10RB+') ? 1 : 0) - (a.sales.includes('10RB+') ? 1 : 0));
+      }
+
+      countEl.textContent = `Menampilkan ${filtered.length} dari ${rawData.length} rekomendasi`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(p => {
+        const icon = getCategoryIcon(p.category);
+        const trackingUrl = p.affiliate_url + (p.affiliate_url.includes('?') ? '&' : '?') + 'sub_id1=katalog_bio';
+        const cleanName = p.name.replace(/"/g, '&quot;');
+
+        return `
+          <article class="product-card group flex flex-col justify-between bg-dark-surface/90 hover:bg-dark-hover border border-dark-border hover:border-shopee/40 rounded-2xl p-4 shadow-sm transition">
+            <div>
+              <!-- Header Region: Badge & Category -->
+              <header class="flex items-center justify-between gap-2 mb-2.5">
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700/60">
+                  <span>${icon}</span>
+                  <span>${p.category.split('&')[0].trim()}</span>
+                </span>
+                <span class="text-[10px] font-bold text-shopee bg-shopee/10 px-2 py-0.5 rounded-md border border-shopee/20 whitespace-nowrap">
+                  ${p.badge}
+                </span>
+              </header>
+
+              <!-- Title & Stretched Card Link -->
+              <h3 class="text-sm font-semibold text-slate-100 group-hover:text-white line-clamp-2 leading-snug mb-2">
+                <a href="${trackingUrl}" target="_blank" rel="noopener noreferrer" class="card-link hover:underline focus:outline-none">
+                  ${p.name}
+                </a>
+              </h3>
+
+              <!-- Shop & Sales Info -->
+              <div class="flex items-center gap-2 text-[11px] text-slate-400 mb-3">
+                <span class="truncate max-w-[140px] text-slate-300 font-medium">🏪 ${p.shop}</span>
+                <span>•</span>
+                <span class="text-amber-400/90 whitespace-nowrap font-mono text-[10px]">${p.sales}</span>
+              </div>
+            </div>
+
+            <!-- Footer Region: Price & Elevated Action Controls -->
+            <footer class="pt-3 border-t border-dark-border/60 flex items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-mono">Harga Spesial</span>
+                <span class="text-base font-extrabold text-emerald-400 font-mono tracking-tight">${p.price_formatted}</span>
+              </div>
+
+              <div class="flex items-center gap-1.5">
+                <button 
+                  onclick="copyToClipboard('${trackingUrl}', '${cleanName}')" 
+                  title="Salin link affiliate"
+                  class="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/60 transition text-xs flex items-center justify-center"
+                  aria-label="Salin Link Shopee"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </button>
+
+                <a 
+                  href="${trackingUrl}" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-shopee to-orange-500 hover:from-shopee-hover hover:to-orange-600 text-white font-bold text-xs shadow-md shadow-shopee/25 transition flex items-center gap-1"
+                >
+                  <span>Beli</span>
+                  <span class="text-[10px]">↗</span>
+                </a>
+              </div>
+            </footer>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Category Pill Event Listeners
+    document.querySelectorAll('.cat-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(b => {
+          b.classList.remove('active', 'bg-shopee', 'text-white', 'shadow-sm', 'shadow-shopee/20');
+          b.classList.add('bg-dark-surface', 'border', 'border-dark-border', 'text-slate-300');
+        });
+        btn.classList.add('active', 'bg-shopee', 'text-white', 'shadow-sm', 'shadow-shopee/20');
+        btn.classList.remove('bg-dark-surface', 'border', 'border-dark-border', 'text-slate-300');
+        currentCategory = btn.getAttribute('data-cat');
+        renderProducts();
+      });
+    });
+
+    // Search Input Listener
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      clearBtn.classList.toggle('hidden', searchQuery.length === 0);
+      renderProducts();
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      searchInput.focus();
+      renderProducts();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      currentCategory = 'all';
+      currentSort = 'default';
+      sortSelect.value = 'default';
+      clearBtn.classList.add('hidden');
+      document.querySelectorAll('.cat-pill').forEach(b => {
+        if (b.getAttribute('data-cat') === 'all') {
+          b.classList.add('active', 'bg-shopee', 'text-white');
+        } else {
+          b.classList.remove('active', 'bg-shopee', 'text-white');
+          b.classList.add('bg-dark-surface', 'text-slate-300');
+        }
+      });
+      renderProducts();
+    });
+
+    // Sort Listener
+    sortSelect.addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      renderProducts();
+    });
+
+    // Keyboard shortcut '/' to search
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>
