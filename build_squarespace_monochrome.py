@@ -534,10 +534,14 @@ html_template = f'''<!DOCTYPE html>
 
         const q = searchQuery.toLowerCase();
         const matchQuery = !q || 
-          p.clean_title.toLowerCase().includes(q) || 
-          p.clean_hook.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q) || 
-          p.shop.toLowerCase().includes(q);
+          (p.clean_title && p.clean_title.toLowerCase().includes(q)) || 
+          (p.clean_hook && p.clean_hook.toLowerCase().includes(q)) ||
+          (p.name && p.name.toLowerCase().includes(q)) || 
+          (p.category && p.category.toLowerCase().includes(q)) || 
+          (p.shop && p.shop.toLowerCase().includes(q)) ||
+          (p.need_pill && p.need_pill.toLowerCase().includes(q)) ||
+          (p.curator_note && p.curator_note.toLowerCase().includes(q)) ||
+          (p.hook && p.hook.toLowerCase().includes(q));
         
         return matchCategory && matchQuery;
       }});
