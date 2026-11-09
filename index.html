@@ -6,30 +6,22 @@
   <title>Jualan Gue — Rekomendasi Produk Shopee Pilihan</title>
   <meta name="description" content="Koleksi kurasi produk Shopee pilihan, terlaris, dan harga terbaik." />
   
-  <!-- Theme Color: Shopee Orange -->
   <meta name="theme-color" content="#EE4D2D" />
-
-  <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Lenis Smooth Scroll, GSAP, ScrollTrigger & GSAP Flip -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js" defer></script>
 
   <style>
-    /* ==========================================================================
-       DESIGN TOKENS (Shopee Orange #EE4D2D on Obsidian Dark)
-       ========================================================================== */
     :root {
       --bg: #0B0B0D;
       --surface: #151518;
@@ -41,7 +33,6 @@
       --text-main: #EDEDEE;
       --text-muted: #8E8E93;
       
-      /* Shopee Official Palette */
       --shopee-orange: #EE4D2D;
       --shopee-gradient: linear-gradient(135deg, #F53D2D 0%, #FF7337 100%);
       --shopee-glow: rgba(238, 77, 45, 0.35);
@@ -52,7 +43,6 @@
       --radius-lg: 20px;
       --radius-full: 9999px;
 
-      /* Motion Tokens */
       --ease-primary: cubic-bezier(0.22, 1, 0.36, 1);
       --duration-press: 120ms;
       --duration-hover: 450ms;
@@ -60,7 +50,6 @@
       --duration-hero: 1100ms;
     }
 
-    /* Top Orange Scroll Progress Line */
     #scroll-progress-bar {
       position: fixed;
       top: 0;
@@ -83,7 +72,6 @@
     }
 
     html {
-      scroll-behavior: auto; /* Managed by Lenis */
       background-color: var(--bg);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -95,22 +83,6 @@
       position: relative;
     }
 
-    /* Screen Reader Only */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* ==========================================================================
-       NAVBAR (Glass Blur + Autohide on scroll down + Category Chips)
-       ========================================================================== */
     .app-header {
       position: sticky;
       top: 0;
@@ -122,7 +94,7 @@
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       transform: translateY(0);
-      transition: transform 0.35s var(--ease-primary), background 0.3s ease, border-color 0.3s ease;
+      transition: transform 0.35s var(--ease-primary);
       will-change: transform;
     }
 
@@ -146,7 +118,6 @@
       gap: 8px;
       overflow-x: auto;
       scrollbar-width: none;
-      -ms-overflow-style: none;
       position: relative;
       padding: 4px 0;
       width: 100%;
@@ -192,9 +163,6 @@
       will-change: transform, width;
     }
 
-    /* ==========================================================================
-       HERO "PRODUK TERLARIS" (Ambient Glow, Instagram-story Progress, 3D Float)
-       ========================================================================== */
     .hero-container {
       max-width: 1440px;
       margin: 24px auto 36px;
@@ -230,7 +198,6 @@
       box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
     }
 
-    /* Ambient Dynamic Glow */
     .hero-ambient-glow {
       position: absolute;
       top: -30%;
@@ -243,6 +210,7 @@
       z-index: 0;
       transition: background 0.8s var(--ease-primary);
       will-change: background;
+      background: radial-gradient(circle, rgb(132,58,19) 0%, rgba(238,77,45,0.4) 40%, transparent 70%);
     }
 
     .hero-slide-stage {
@@ -284,7 +252,7 @@
       border-radius: var(--radius-md);
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transform: translateY(0) rotateX(0) rotateY(0);
+      transform: translateY(0);
       transition: transform 0.6s var(--ease-primary);
       will-change: transform;
     }
@@ -309,7 +277,6 @@
       color: transparent;
       -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28);
       letter-spacing: -0.04em;
-      transition: -webkit-text-stroke-color 0.3s ease;
     }
 
     .hero-category-tag {
@@ -369,7 +336,6 @@
       box-shadow: 0 8px 24px rgba(238, 77, 45, 0.6);
     }
 
-    /* Instagram-Story Style Multi-Segment Progress Bars */
     .hero-story-progress {
       display: flex;
       gap: 8px;
@@ -401,9 +367,6 @@
       transition: width 0.1s linear;
     }
 
-    /* ==========================================================================
-       CATEGORY SECTIONS & GRID (2 cols Mobile, 3 Tablet, 4 Desktop)
-       ========================================================================== */
     .content-container {
       max-width: 1440px;
       margin: 0 auto;
@@ -457,9 +420,6 @@
       }
     }
 
-    /* ==========================================================================
-       PRODUCT CARD (Glass, Tilt 3D, Spotlight Radial Glow, 4:5 Aspect Ratio)
-       ========================================================================== */
     .product-card {
       position: relative;
       background: var(--surface);
@@ -479,7 +439,6 @@
       --my: 50%;
     }
 
-    /* Radial Spotlight Glow following cursor */
     .product-card::before {
       content: '';
       position: absolute;
@@ -506,7 +465,6 @@
       transition-duration: var(--duration-press);
     }
 
-    /* 4:5 Media Container */
     .card-media {
       position: relative;
       width: 100%;
@@ -528,7 +486,6 @@
       transform: scale(1.06);
     }
 
-    /* Information Section */
     .card-info {
       padding: 14px;
       display: flex;
@@ -597,9 +554,6 @@
       stroke-linejoin: round;
     }
 
-    /* ==========================================================================
-       PREFERS-REDUCED-MOTION SUPPORT
-       ========================================================================== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -615,10 +569,8 @@
 </head>
 <body>
 
-  <!-- Top Orange Scroll Progress Bar -->
   <div id="scroll-progress-bar"></div>
 
-  <!-- SVG Defs for Icons -->
   <svg style="display: none;">
     <defs>
       <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
@@ -628,21 +580,23 @@
     </defs>
   </svg>
 
-  <!-- Sticky Navbar with Category Chips -->
   <header class="app-header" id="app-header">
     <div class="header-inner">
       <nav class="category-scroll-container" id="category-nav">
         <div class="chip-sliding-pill" id="chip-pill"></div>
         <button class="category-chip active" data-cat="all">Semua</button>
+        <button class="category-chip" data-cat="Camilan &amp; Makanan">Camilan &amp; Makanan</button>
+        <button class="category-chip" data-cat="Elektronik &amp; Gadget">Elektronik &amp; Gadget</button>
+        <button class="category-chip" data-cat="Fashion &amp; Outfit">Fashion &amp; Outfit</button>
+        <button class="category-chip" data-cat="Rumah Tangga &amp; Kosan">Rumah Tangga &amp; Kosan</button>
+        <button class="category-chip" data-cat="Skincare &amp; Perawatan">Skincare &amp; Perawatan</button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero "Produk Terlaris" -->
   <main>
     <section class="hero-container">
       <div class="hero-section-title">
-        <!-- SVG Api yang presisi -->
         <svg class="hero-fire-icon" viewBox="0 0 24 24">
           <path d="M12 23c-4.97 0-9-3.8-9-8.5 0-3.1 1.7-6 4.3-8.8.7-.7 1.7-.5 2.1.3.4.9.4 1.9.1 2.8 1.4-1.6 2.5-3.5 2.5-5.8 0-.6.5-1 1-1 .2 0 .4.1.6.2C17.2 6.1 21 10.4 21 14.5 21 19.2 16.97 23 12 23zM9.5 13.5c-.8.9-1.5 2-1.5 3 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.5-.9-2.9-2-4-.4-.4-1.1-.3-1.4.2-.6 1.1-1.6 1.6-2.5 1.4-.4-.1-.7-.3-.6-.6z"/>
         </svg>
@@ -652,18 +606,18 @@
       <div class="hero-slider-wrap" id="hero-slider-wrap">
         <div class="hero-ambient-glow" id="hero-ambient"></div>
         
-        <a id="hero-slide-link" class="hero-slide-stage" href="#" target="_blank" rel="noopener sponsored">
+        <a id="hero-slide-link" class="hero-slide-stage" href="https://s.shopee.co.id/7AexrVoAUW" target="_blank" rel="noopener sponsored">
           <div class="hero-image-wrap">
-            <img id="hero-img" class="hero-product-img" src="" alt="Produk Terlaris" loading="eager" />
+            <img id="hero-img" class="hero-product-img" src="assets/products_real/md/1.webp" alt="Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram" loading="eager" width="380" height="380" />
           </div>
           <div class="hero-content">
             <div class="hero-header-row">
               <span id="hero-order" class="hero-order-num">01</span>
-              <span id="hero-category" class="hero-category-tag">Kategori</span>
+              <span id="hero-category" class="hero-category-tag">Camilan &amp; Makanan</span>
             </div>
-            <h1 id="hero-title" class="hero-title">Nama Produk</h1>
+            <h1 id="hero-title" class="hero-title">Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram</h1>
             <div class="hero-price-row">
-              <span id="hero-price" class="hero-price">Rp 0</span>
+              <span id="hero-price" class="hero-price">Rp 4.300</span>
             </div>
             <div class="hero-cta">
               <span>Beli di Shopee</span>
@@ -675,91 +629,1417 @@
           </div>
         </a>
 
-        <!-- Instagram Story Progress Bars -->
-        <div class="hero-story-progress" id="hero-progress-container"></div>
+        <div class="hero-story-progress" id="hero-progress-container">
+          <div class="story-segment" data-idx="0"><div class="story-fill" id="story-fill-0"></div></div><div class="story-segment" data-idx="1"><div class="story-fill" id="story-fill-1"></div></div><div class="story-segment" data-idx="2"><div class="story-fill" id="story-fill-2"></div></div><div class="story-segment" data-idx="3"><div class="story-fill" id="story-fill-3"></div></div><div class="story-segment" data-idx="4"><div class="story-fill" id="story-fill-4"></div></div>
+        </div>
       </div>
     </section>
 
-    <!-- Category Sections Container -->
-    <div class="content-container" id="grid-container"></div>
+    <div class="content-container" id="grid-container">
+      
+      <section class="category-section" id="cat-camilan--makanan" data-cat="Camilan &amp; Makanan">
+        <div class="category-header">
+          <h2 class="category-name">Camilan &amp; Makanan</h2>
+          <span class="category-count">13 Produk</span>
+        </div>
+        <div class="product-grid">
+          
+          <a href="https://s.shopee.co.id/7AexrVoAUW" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/1.webp" alt="Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 4.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/40hw5h0Dvj" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/52.webp" alt="Cuculemon Tumbler Stainless Digital LED 450ML Bottle Kopi Aesthetic Termos Air Kopi Panas Botol Minum" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Cuculemon Tumbler Stainless Digital LED 450ML Bottle Kopi Aesthetic Termos Air Kopi Panas Botol Minum</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 60.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/6q27StpRBX" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/68.webp" alt="​Tempat Overnight Oat &amp; Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup​" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">​Tempat Overnight Oat &amp; Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup​</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 20.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9AQ2FBgYS1" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/70.webp" alt="Mama Lemon Jeruk Nipis 920 gr x2" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Mama Lemon Jeruk Nipis 920 gr x2</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 29.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8KqvFejj8u" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/73.webp" alt="Collins Crunchy Coklat 1kg Halal BPOM" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Collins Crunchy Coklat 1kg Halal BPOM</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 52.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8VALRxj5nx" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/74.webp" alt="MAKARONI NKS ,MAKARONI PIPA BANTAT 1 BALL (1KG)" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">MAKARONI NKS ,MAKARONI PIPA BANTAT 1 BALL (1KG)</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 35.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/80E4r2kzos" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/75.webp" alt="Nutrifarm Sari Lemon 500 ml" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Nutrifarm Sari Lemon 500 ml</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 36.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8AXV3LkMTv" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/76.webp" alt="Safiya Muesli 1 Kg Oatmeal With Almond Freeze Dried Apple Sereal Diet Bulking High Fiber" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Safiya Muesli 1 Kg Oatmeal With Almond Freeze Dried Apple Sereal Diet Bulking High Fiber</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 56.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AKbzdKc75M" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/77.webp" alt="OFFICIAL STORE - PikuLabs Pure Matcha Powder 100gr | 100% Pure, No Additives" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">OFFICIAL STORE - PikuLabs Pure Matcha Powder 100gr | 100% Pure, No Additives</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 129.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AUvPpdbTkP" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/78.webp" alt="PROMO NUGET KANZLER CRISPY 450gr" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">PROMO NUGET KANZLER CRISPY 450gr</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 50.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9zz9EidNlK" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/79.webp" alt="Nutrifarm Chia Seeds 70g" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Nutrifarm Chia Seeds 70g</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 21.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9fMIq6eeRI" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/81.webp" alt="Mama Lemon Sabun Cuci Piring Yuzu &amp; Jeruk Nipis Anti Lemak &amp; Bau Pouch 650 gr x3" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Mama Lemon Sabun Cuci Piring Yuzu &amp; Jeruk Nipis Anti Lemak &amp; Bau Pouch 650 gr x3</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 34.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/20wri17q02" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Camilan &amp; Makanan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/95.webp" alt="[1 PCS] DUMPLING SQUISY JUMBO Lucu Anti Stress / Mainan Anti Stress Empuk Slow Rising / Squishy Bakpao Imut dalam Box" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[1 PCS] DUMPLING SQUISY JUMBO Lucu Anti Stress / Mainan Anti Stress Empuk Slow Rising / Squishy Bakpao Imut dalam Box</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 11.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="category-section" id="cat-elektronik--gadget" data-cat="Elektronik &amp; Gadget">
+        <div class="category-header">
+          <h2 class="category-name">Elektronik &amp; Gadget</h2>
+          <span class="category-count">13 Produk</span>
+        </div>
+        <div class="product-grid">
+          
+          <a href="https://s.shopee.co.id/70LXfConpV" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/2.webp" alt="Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 89.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/6fihGaq4VT" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/4.webp" alt="Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360º" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360º</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 29.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9AQ2FBgYQy" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/5.webp" alt="Goojodoq 3000mAh KIPAS ANGIN MINI GENGGAM Cute / Kipas Lipat PORTABLE / Mini Fan" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Goojodoq 3000mAh KIPAS ANGIN MINI GENGGAM Cute / Kipas Lipat PORTABLE / Mini Fan</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 53.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8pnBqZhp6w" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/7.webp" alt="UNEED Hard Case for Powerbank Earphone Hard Disk SSD Hardcase - UHC402" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">UNEED Hard Case for Powerbank Earphone Hard Disk SSD Hardcase - UHC402</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 34.700</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8fTleGiSRv" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/8.webp" alt="1 Set 4 item Pelindung Kabel Charger Kabel Data Kawat Kabel Data HP Untuk Iphone Samsung Xiaomi Oppo Huawei Android Universal Motif Kartun Lucu" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">1 Set 4 item Pelindung Kabel Charger Kabel Data Kawat Kabel Data HP Untuk Iphone Samsung Xiaomi Oppo Huawei Android Universal Motif Kartun Lucu</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8KqvFejj7t" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/10.webp" alt="New! 4D Diagonal Wave Soft Silicone Soft Case" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">New! 4D Diagonal Wave Soft Silicone Soft Case</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 20.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9zz9EidNkJ" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/16.webp" alt="KELONTONG UNIK | CUTE 3D - Set Paket Cover Pelindung Kepala &amp; Kabel Charger Spiral / Cable Set Protector - Compatible for iPhone Rapatech Anker Ugreen Robot Samsung Vivo ,CPSU" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">KELONTONG UNIK | CUTE 3D - Set Paket Cover Pelindung Kepala &amp; Kabel Charger Spiral / Cable Set Protector - Compatible for iPhone Rapatech Anker Ugreen Robot Samsung Vivo ,CPSU</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 20.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9fMIq6eeQH" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/18.webp" alt="Case Magsafe Electroplating Metalic IPHONE 11 12 13 14 15 16 17 PRO MAX 14+ 15+ 16+ PLUS 17 Air LENS GUARD PROTECTOR FULL COVER" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Case Magsafe Electroplating Metalic IPHONE 11 12 13 14 15 16 17 PRO MAX 14+ 15+ 16+ PLUS 17 Air LENS GUARD PROTECTOR FULL COVER</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 11.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9V2sdnfHlG" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/19.webp" alt="New BIUBIU CASE Magsafe Clear Compatible for iPhone 11 12 13 14 15 PRO MAX 17 Air 7 8 SE 2024 7+ 8+ X XS XR XS MAX 16 17 18 PRO MAX Silikon  Magnetic Wirelles Clear Slim Case" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">New BIUBIU CASE Magsafe Clear Compatible for iPhone 11 12 13 14 15 PRO MAX 17 Air 7 8 SE 2024 7+ 8+ X XS XR XS MAX 16 17 18 PRO MAX Silikon  Magnetic Wirelles Clear Slim Case</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 16.100</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9KjSRUfv6F" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/20.webp" alt="Soft Silicone Sport Band Strap for iWatch Apple Watch Ultra/Ultra 4 3 2 49mm Series 12 11 10 9 8 7 46mm 41mm 45mm 38 40 42mm 44mm 6 5 4 SE 3 2 Tali jam tangan Smartwatch DT No 1 HW22 W26 IWO T900 T800 Ultra I8 Pro Max S8 S9 Ultra 8 MAX 9 PRO S20 T500" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Soft Silicone Sport Band Strap for iWatch Apple Watch Ultra/Ultra 4 3 2 49mm Series 12 11 10 9 8 7 46mm 41mm 45mm 38 40 42mm 44mm 6 5 4 SE 3 2 Tali jam tangan Smartwatch DT No 1 HW22 W26 IWO T900 T800 Ultra I8 Pro Max S8 S9 Ultra 8 MAX 9 PRO S20 T500</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 9.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1BNkiUB0fg" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/21.webp" alt="Organeez Clear Holder 777 Display Book Map Dokumen Folio F4 20 40 60 File Kantor Sekolah" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Organeez Clear Holder 777 Display Book Map Dokumen Folio F4 20 40 60 File Kantor Sekolah</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 10.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9KjSRUfv7G" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/83.webp" alt="Satu Keluarga Stand Holder Bentuk Kursi Warna Macaron Dudukan Multifungsi C728 Tatakan Handphone Phone Holder Hp Untuk Dekorasi Meja" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Satu Keluarga Stand Holder Bentuk Kursi Warna Macaron Dudukan Multifungsi C728 Tatakan Handphone Phone Holder Hp Untuk Dekorasi Meja</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 2.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1BnKLFS3a" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Elektronik &amp; Gadget">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/91.webp" alt="T&amp;Y Phone Holder Foldable Stand Holder HP Lipat Folding Universal Dudukan Penahan Handphone Meja" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">T&amp;Y Phone Holder Foldable Stand Holder HP Lipat Folding Universal Dudukan Penahan Handphone Meja</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 8.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="category-section" id="cat-fashion--outfit" data-cat="Fashion &amp; Outfit">
+        <div class="category-header">
+          <h2 class="category-name">Fashion &amp; Outfit</h2>
+          <span class="category-count">9 Produk</span>
+        </div>
+        <div class="product-grid">
+          
+          <a href="https://s.shopee.co.id/8VALRxj5mu" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/9.webp" alt="Buket Bunga Thumbelina Buket Hadiah Ulang Tahun Anniversary Lamaran Pernikahan" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Buket Bunga Thumbelina Buket Hadiah Ulang Tahun Anniversary Lamaran Pernikahan</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 85.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8AXV3LkMSs" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/11.webp" alt="AS Inara Bags - Tas Selempang Wanita Formal Sintetis" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">AS Inara Bags - Tas Selempang Wanita Formal Sintetis</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 24.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AUvPpdbTjM" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/13.webp" alt="tas clara tas bahu wanita Cewek Kulit Slingbag UI" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">tas clara tas bahu wanita Cewek Kulit Slingbag UI</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 10.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AAIZR1ckPK" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/15.webp" alt="Gantungan Kunci Tali Ponsel Liontin Bintang Awan Putih Fungsi Gantungan Kunci Liontin Rantai Gantung Casing Ponsel Universal" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Gantungan Kunci Tali Ponsel Liontin Bintang Awan Putih Fungsi Gantungan Kunci Liontin Rantai Gantung Casing Ponsel Universal</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9pfj2Pe15I" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/17.webp" alt="Achava Sandal Jepit Wanita Yuri Flat Casual Sandal wanita empuk sandal harian" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Achava Sandal Jepit Wanita Yuri Flat Casual Sandal wanita empuk sandal harian</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 78.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/4B1MHzzaak" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/51.webp" alt="YONEZAWA Meja Setrika Lipat Duduk Meja Setrika Praktis dan Hemat Tempat Papan Setrika Portabel Papan setrika  Alas Setrika Duduk Meja Setrika Berkualitas papan setrika Meja Setrika Lipat Besi Serbaguna" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">YONEZAWA Meja Setrika Lipat Duduk Meja Setrika Praktis dan Hemat Tempat Papan Setrika Portabel Papan setrika  Alas Setrika Duduk Meja Setrika Berkualitas papan setrika Meja Setrika Lipat Besi Serbaguna</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 130.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/7VHoG7mtpb" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/64.webp" alt="HC Kotak Sepatu Plastik Transparan Tebal Serbaguna Storage Box Organizer Rak Sepatu Mudah Dilipat Bisa Ditumpuk Dengan Penutup Tempat Penyimpanan Sandal Praktis" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">HC Kotak Sepatu Plastik Transparan Tebal Serbaguna Storage Box Organizer Rak Sepatu Mudah Dilipat Bisa Ditumpuk Dengan Penutup Tempat Penyimpanan Sandal Praktis</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 7.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/LodixEBNc" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/89.webp" alt="pouch Korek Kuping 6in1 Plus Pouch Stainless Ear Pick 6in1 Set Pembersih Telinga Isi 6 Tas Kulit" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">pouch Korek Kuping 6in1 Plus Pouch Stainless Ear Pick 6in1 Set Pembersih Telinga Isi 6 Tas Kulit</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 8.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2LZi6d6ZK4" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Fashion &amp; Outfit">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/93.webp" alt="IsEven ELODIE Pants Rayon Karet Tersedia Dalam Berbagai Warna" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">IsEven ELODIE Pants Rayon Karet Tersedia Dalam Berbagai Warna</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 9.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="category-section" id="cat-rumah-tangga--kosan" data-cat="Rumah Tangga &amp; Kosan">
+        <div class="category-header">
+          <h2 class="category-name">Rumah Tangga &amp; Kosan</h2>
+          <span class="category-count">30 Produk</span>
+        </div>
+        <div class="product-grid">
+          
+          <a href="https://s.shopee.co.id/906c2shBlx" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/6.webp" alt="( PAKET 5 PACK ) detergen sayang bubuk kemasan Rp.5000. 5x180gr" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">( PAKET 5 PACK ) detergen sayang bubuk kemasan Rp.5000. 5x180gr</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 19.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AKbzdKc74L" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/14.webp" alt="Is It Bad Or Good Habits" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Is It Bad Or Good Habits</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 47.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1qdRVi8TK0" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/33.webp" alt="Giv White Sabun Mandi Cair Mulberry Pouch 800 ml" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Giv White Sabun Mandi Cair Mulberry Pouch 800 ml</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 37.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2gCYVF5IdL" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/44.webp" alt="Pengharum Ruangan / Pengharum Toilet / Aromaterapi / Reed Diffuser - Summerspring - Pengharum 40ml" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Pengharum Ruangan / Pengharum Toilet / Aromaterapi / Reed Diffuser - Summerspring - Pengharum 40ml</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 55.700</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/4fxcsuxgZn" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/48.webp" alt="LeDingDing-Tumbler Thermos SUS316 Stainless Bottle Botol Air Minum Tahan Panas Dingin Vacuum Flask Termos Tumblr Sport 750ml Tumbler tahan panas dingin  24 jam Free sikat" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">LeDingDing-Tumbler Thermos SUS316 Stainless Bottle Botol Air Minum Tahan Panas Dingin Vacuum Flask Termos Tumblr Sport 750ml Tumbler tahan panas dingin  24 jam Free sikat</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 97.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/4LKmUIyxFl" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/50.webp" alt="Handuk Merah Putih Towel Series New Okto - Handuk Mandi  Dewasa  70 x 135 cm / 50x100 cm / 30x70 cm" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Handuk Merah Putih Towel Series New Okto - Handuk Mandi  Dewasa  70 x 135 cm / 50x100 cm / 30x70 cm</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 16.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/6L5qryrLCC" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/53.webp" alt="KEEP MAJU Keset Kamar Mandi  Karpet Serap Air Keset Anti-Selip Minimalis Tebal dan Cepat Kering" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">KEEP MAJU Keset Kamar Mandi  Karpet Serap Air Keset Anti-Selip Minimalis Tebal dan Cepat Kering</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 53.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/6VPH4HqhrF" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/54.webp" alt="Venetian Blind Sharp Point Kosei EXO / Horizontal Blind / Kerai Aluminium / Tirai Jendela Aesthetic" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Venetian Blind Sharp Point Kosei EXO / Horizontal Blind / Kerai Aluminium / Tirai Jendela Aesthetic</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 2.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/6AmQffryXD" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/56.webp" alt="Technoplast Teko Air Pitcher / Water Jug Set Dengan Gelas - 2.2 L +  8 Stacking Cups" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Technoplast Teko Air Pitcher / Water Jug Set Dengan Gelas - 2.2 L +  8 Stacking Cups</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 48.200</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/5fqA4ktsY8" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/57.webp" alt="Sederha 50PCS Penyaring Keran Air Kapas Filter Sekali Pakai Saring Lumpur Dan Karat Untuk Dapur Rumah Tangga" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Sederha 50PCS Penyaring Keran Air Kapas Filter Sekali Pakai Saring Lumpur Dan Karat Untuk Dapur Rumah Tangga</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 32.700</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/5q9aH3tFDB" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/58.webp" alt="Kain Lap Microfiber Serbaguna 30x30cm Kain Lap Mobil Motor 2 Sisi Multifungsi" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Kain Lap Microfiber Serbaguna 30x30cm Kain Lap Mobil Motor 2 Sisi Multifungsi</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 4.200</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/5LDJg8v9E6" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/59.webp" alt="Talenan Kayu Jati Perhutani Asli 27x14 cm – Alas Potong Dapur, Papan Saji Kayu Estetik Handmade" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Talenan Kayu Jati Perhutani Asli 27x14 cm – Alas Potong Dapur, Papan Saji Kayu Estetik Handmade</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/5VWjsRuVt9" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/60.webp" alt="LAZZEN - Rak Piring Wastafel Stainless Steel Hitam Cuci Piring Rak Piring Dapur Penyimpanan Dapur Stainless Steel Dish Rack Muat Mangkuk Dan Piring" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">LAZZEN - Rak Piring Wastafel Stainless Steel Hitam Cuci Piring Rak Piring Dapur Penyimpanan Dapur Stainless Steel Dish Rack Muat Mangkuk Dan Piring</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 215.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/7fbESQmGUa" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/61.webp" alt="(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 73.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/7pueejld9d" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/62.webp" alt="Pengharum Ruangan &amp; Kain Anti Bau Tahan Lama 12 Jam | Room &amp; Linen Spray Anti Bakteri OVRBODY" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Pengharum Ruangan &amp; Kain Anti Bau Tahan Lama 12 Jam | Room &amp; Linen Spray Anti Bakteri OVRBODY</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 20.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/7KyO3onXAY" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/63.webp" alt="Bantal Duduk  Biskuit Bulat / Bantal Sofa / Alas Duduk Bentuk Biskuit / Biscuit Pillow Bahan plush" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Bantal Duduk  Biskuit Bulat / Bantal Sofa / Alas Duduk Bentuk Biskuit / Biscuit Pillow Bahan plush</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 42.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/70LXfConqW" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/65.webp" alt="Tifale Saucepan Granite 20 cm Panci Susu Anti Lengket Teflon Minimalis" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Tifale Saucepan Granite 20 cm Panci Susu Anti Lengket Teflon Minimalis</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 68.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/7AexrVoAVZ" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/66.webp" alt="Technoplast Lovelo Punch Bowl Set | Mangkuk Es Buah | Tempat Es Buah | Mangkok Besar Sop Buah BPA Free - Food Grade" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Technoplast Lovelo Punch Bowl Set | Mangkuk Es Buah | Tempat Es Buah | Mangkok Besar Sop Buah BPA Free - Food Grade</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 47.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/906c2shBmy" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/69.webp" alt="Rak bumbu Dapur estetik 3 susun multifungsi/ Rak kosmetik serbaguna" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Rak bumbu Dapur estetik 3 susun multifungsi/ Rak kosmetik serbaguna</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 55.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8fTleGiSSw" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/71.webp" alt="ZuoShu - Keset Dapur 2in1 40x60 dan 40x120 Keset kaki teras keset lantai kamar tidur" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">ZuoShu - Keset Dapur 2in1 40x60 dan 40x120 Keset kaki teras keset lantai kamar tidur</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 48.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/8pnBqZhp7z" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/72.webp" alt="Eyre Dinding Besi Sofa Ruang Tamu Kreatif Modern Latar Belakang Dinding Wall Decor Hiasan Dinding Frame Metal Gold Daun Leaf Ginko Scandinavian Wall Decor Nordic" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Eyre Dinding Besi Sofa Ruang Tamu Kreatif Modern Latar Belakang Dinding Wall Decor Hiasan Dinding Frame Metal Gold Daun Leaf Ginko Scandinavian Wall Decor Nordic</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 30.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/AAIZR1ckQN" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/80.webp" alt="Rak Troli Dapur 4 Susun Serbaguna Beroda Rak Penyimpanan Portable Organize Kamar Mandi" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Rak Troli Dapur 4 Susun Serbaguna Beroda Rak Penyimpanan Portable Organize Kamar Mandi</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9pfj2Pe16L" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/82.webp" alt="Kotak Penyimpanan Pintu Kulkas Serbaguna | Organizer Saos Bumbu Kopi Sachet Keju Slice | Wadah Storage Box Kulkas Multifungsi" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Kotak Penyimpanan Pintu Kulkas Serbaguna | Organizer Saos Bumbu Kopi Sachet Keju Slice | Wadah Storage Box Kulkas Multifungsi</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 9.400</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/9V2sdnfHmJ" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/84.webp" alt="COD Rak Troli Susun Serbaguna 3 &amp; 4 TingkatRak Dapur Plastik Rak Kamar Mandi Dengan Roda danPegangan" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">COD Rak Troli Susun Serbaguna 3 &amp; 4 TingkatRak Dapur Plastik Rak Kamar Mandi Dengan Roda danPegangan</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 15.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/114KWBBe1g" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/85.webp" alt="{PROMO Buy 4 Grats1}Tisu Basah Bayi Bebas alkohol Pure Water | Tanpa Alkohol &amp; Pewangi | Lembut Aman Kulit Sensitif | Travel Friendly | Best Seller Harga Murah COD" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">{PROMO Buy 4 Grats1}Tisu Basah Bayi Bebas alkohol Pure Water | Tanpa Alkohol &amp; Pewangi | Lembut Aman Kulit Sensitif | Travel Friendly | Best Seller Harga Murah COD</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 11.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1BNkiUB0gj" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/86.webp" alt="JOODUTP Filter Kran Air Kain (10 pcs) / Saringan Air Kotor / Water Filter" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">JOODUTP Filter Kran Air Kain (10 pcs) / Saringan Air Kotor / Water Filter</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 9.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/gRU7ZCuhe" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/87.webp" alt="[CALCES] Double Tape 3 Meter Nano Selotip Bening 2 Sisi Serbaguna" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[CALCES] Double Tape 3 Meter Nano Selotip Bening 2 Sisi Serbaguna</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 6.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/qkuJsCHMh" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/88.webp" alt="[FLASH SALE]Pembersih Toilet Foam Cleaner 500ML Tanpa Disikat Busa Tebal Hilangkan Kerak Membandel Penghilang Bau WC Kamar Mandi Bersih Seperti Baru" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[FLASH SALE]Pembersih Toilet Foam Cleaner 500ML Tanpa Disikat Busa Tebal Hilangkan Kerak Membandel Penghilang Bau WC Kamar Mandi Bersih Seperti Baru</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 49.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/W83vGDY2f" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/90.webp" alt="Minyak Goreng Sunco Kemasan Pouch - Praktis dan Ekonomis halal jernih untuk menggoreng tidak kotor 5x penyaringan netto1liter" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Minyak Goreng Sunco Kemasan Pouch - Praktis dan Ekonomis halal jernih untuk menggoreng tidak kotor 5x penyaringan netto1liter</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 30.100</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2Vt8Iw5vz7" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Rumah Tangga &amp; Kosan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/94.webp" alt="Ciptadent Pasta Gigi Maxi 12 Tube 225 gr (isi 2) x2" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Ciptadent Pasta Gigi Maxi 12 Tube 225 gr (isi 2) x2</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 39.700</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="category-section" id="cat-skincare--perawatan" data-cat="Skincare &amp; Perawatan">
+        <div class="category-header">
+          <h2 class="category-name">Skincare &amp; Perawatan</h2>
+          <span class="category-count">27 Produk</span>
+        </div>
+        <div class="product-grid">
+          
+          <a href="https://s.shopee.co.id/6q27StpRAU" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/3.webp" alt="Masker Duckbill Isi 50pcs 3Ply Facemask Earloop Disposable" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Masker Duckbill Isi 50pcs 3Ply Facemask Earloop Disposable</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/80E4r2kznr" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/12.webp" alt="Calme Fragrance CALMA Aroma Coffe dan Vanilla Parfum Wanita Tahan Lama dan Wangi Extrait De Perfume Farfum parfume" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Calme Fragrance CALMA Aroma Coffe dan Vanilla Parfum Wanita Tahan Lama dan Wangi Extrait De Perfume Farfum parfume</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 60.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/114KWBBe0f" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/22.webp" alt="LABORE Barrier Revive Cream BiomeRepair 100ml 50ml 10ml Dermalab Revolutionaire [DERMGURU PICK GLOBAL DERMATOLOGIST] Sensitive Skin Care - Skincare Moisturizer Melembabkan Kulit Pelembab Wajah Memperbaiki Skin Barrier Prebiotics Probiotics Postbiotics" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">LABORE Barrier Revive Cream BiomeRepair 100ml 50ml 10ml Dermalab Revolutionaire [DERMGURU PICK GLOBAL DERMATOLOGIST] Sensitive Skin Care - Skincare Moisturizer Melembabkan Kulit Pelembab Wajah Memperbaiki Skin Barrier Prebiotics Probiotics Postbiotics</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 69.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/qkuJsCHLe" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/23.webp" alt="NATURAL DEODORANT TAWAS SPRAY ORGANIK BY PHARMACIE ORGANICO" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">NATURAL DEODORANT TAWAS SPRAY ORGANIK BY PHARMACIE ORGANICO</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 8.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/gRU7ZCugd" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/24.webp" alt="Octarine - Scandalusy Parfum Wanita Aroma Manis Fruity | Perfume Best Seller Minyak Wangi Unisex Pria Tahan Lama" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Octarine - Scandalusy Parfum Wanita Aroma Manis Fruity | Perfume Best Seller Minyak Wangi Unisex Pria Tahan Lama</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 29.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/LodixEBMb" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/26.webp" alt="HAN RIVER HRHD01BK Hair dryer 800W Pengering Rambut  Daya tinggi" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">HAN RIVER HRHD01BK Hair dryer 800W Pengering Rambut  Daya tinggi</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 98.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/BVDWeEoha" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/27.webp" alt="[New Matte Formula] Facetology Triple Care Sunscreen For Acne &amp; Oily Skin SPF 40 PA+++ 40ML" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[New Matte Formula] Facetology Triple Care Sunscreen For Acne &amp; Oily Skin SPF 40 PA+++ 40ML</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 79.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1BnKLFS2Z" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/28.webp" alt="NATURAL DEODORANT TAWAS SPRAY WITH ESSENTIAL OIL PENGHILANG BAU BADAN BY PHARMACIE ORGANICO" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">NATURAL DEODORANT TAWAS SPRAY WITH ESSENTIAL OIL PENGHILANG BAU BADAN BY PHARMACIE ORGANICO</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 8.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2Vt8Iw5vy4" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/29.webp" alt="NEW Oil Control Luxcrime Blur &amp; Cover Two Way Cake UV Protection - Bedak Foundation Padat High Coverage Untuk Kulit Halus Tanpa Pori Bebas Minyak Tahan 24 Jam" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">NEW Oil Control Luxcrime Blur &amp; Cover Two Way Cake UV Protection - Bedak Foundation Padat High Coverage Untuk Kulit Halus Tanpa Pori Bebas Minyak Tahan 24 Jam</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 49.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2LZi6d6ZJ3" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/30.webp" alt="HANASUI Mattedorable Lip Cream Matte / Mattedorable Boba Series / Matcha Latte Series Halal" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">HANASUI Mattedorable Lip Cream Matte / Mattedorable Boba Series / Matcha Latte Series Halal</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 26.800</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2BGHuK7Ce2" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/31.webp" alt="Dove Serum Body Wash Pro-Ceramide - Moisture Renew 380g" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Dove Serum Body Wash Pro-Ceramide - Moisture Renew 380g</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 26.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/20wri17pz1" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/32.webp" alt="GLOW fx BEAUTY Serum Glow Bomb - 20ml" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">GLOW fx BEAUTY Serum Glow Bomb - 20ml</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 69.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1gK1JP96ez" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/34.webp" alt="SUMBER AYU | OMG OH MY GLAM Mattelast Lip Cream - Lip Cream Matte Dengan Warna Intense, Tahan Lama &amp; Ringan" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">SUMBER AYU | OMG OH MY GLAM Mattelast Lip Cream - Lip Cream Matte Dengan Warna Intense, Tahan Lama &amp; Ringan</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 25.300</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1W0b769jzy" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/35.webp" alt="[NEW SHADES] Hanasui Next Level Blurry Tint - Lip Tint Watery To Blur Lightweight Tahan Lama Velvet Finish Powdery Tint Blurring Effect Stain Lasting Up to 8H Lip Stain Lipgloss Liptint Lipstik Lipcream Lip Matte Makeup Official Store" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[NEW SHADES] Hanasui Next Level Blurry Tint - Lip Tint Watery To Blur Lightweight Tahan Lama Velvet Finish Powdery Tint Blurring Effect Stain Lasting Up to 8H Lip Stain Lipgloss Liptint Lipstik Lipcream Lip Matte Makeup Official Store</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 44.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1LhAunANKx" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/36.webp" alt="[ BELIA ] M.B.K Series | Deodorant Roll On 40 ml | Bedak Jar Tint 60 Gr | Bedak Sachet 13.6 gr MBK" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[ BELIA ] M.B.K Series | Deodorant Roll On 40 ml | Bedak Jar Tint 60 Gr | Bedak Sachet 13.6 gr MBK</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 12.100</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/3qOVtO0rGS" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/37.webp" alt="(100ml)WHITE INC Alpha Glowhite Body Lotion Whitening &amp; Moisturizer| Body Cream Body Lotion Menghidrasi Kulit" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">(100ml)WHITE INC Alpha Glowhite Body Lotion Whitening &amp; Moisturizer| Body Cream Body Lotion Menghidrasi Kulit</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 4.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/3g55h51UbR" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/38.webp" alt="Braven Code Eau De Parfum 100ml | Parfum Perfume Minyak Wangi Wanita Pria Tahan Lama - Cedar Wood / Oud Wood / Urban / Cool WTR" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Braven Code Eau De Parfum 100ml | Parfum Perfume Minyak Wangi Wanita Pria Tahan Lama - Cedar Wood / Oud Wood / Urban / Cool WTR</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 42.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/3VlfUm27wQ" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/39.webp" alt="MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 34.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/3LSFIT2lHP" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/40.webp" alt="BPOM  KUDAN Kutek Kutek Peel Off kuteks halal muslimah Kutek Halal untuk sholat MZ02" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">BPOM  KUDAN Kutek Kutek Peel Off kuteks halal muslimah Kutek Halal untuk sholat MZ02</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 11.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/30pOtr41xN" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/42.webp" alt="Vitalis Eau De Parfum 50 ml - Extra Bloom" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Vitalis Eau De Parfum 50 ml - Extra Bloom</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 32.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/60T0TMsbsA" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/55.webp" alt="Tisu NICE Facial Tissue 180 Sheets 2 Ply 360 helai / 320 helai 2 ply | Tisu Wajah Food Safe Tebal Lembut Serba Guna | Bubu Shop" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Tisu NICE Facial Tissue 180 Sheets 2 Ply 360 helai / 320 helai 2 ply | Tisu Wajah Food Safe Tebal Lembut Serba Guna | Bubu Shop</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 6.700</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/BVDWeEoid" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/92.webp" alt="Sosoft Deterjen Cair Sweet Peony Natural Perfume Botol 700gr / 700ml x3" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Sosoft Deterjen Cair Sweet Peony Natural Perfume Botol 700gr / 700ml x3</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 46.600</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/2BGHuK7Cf5" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/96.webp" alt="HOHOISYOU Bulu Mata tanpa Lem - Model Variatif" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">HOHOISYOU Bulu Mata tanpa Lem - Model Variatif</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 29.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1gK1JP96g0" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/97.webp" alt="TERLARISS - Sandrinna Perfume Inspired Mist 90Ml" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">TERLARISS - Sandrinna Perfume Inspired Mist 90Ml</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 8.000</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1qdRVi8TL3" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/98.webp" alt="[Harga Spesial] MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik Tebal Nyaman Dipakai" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">[Harga Spesial] MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik Tebal Nyaman Dipakai</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 11.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1LhAunANLy" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/99.webp" alt="4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment &amp; Skincare-infused CICA + Hydra ß-Glucan - Hasil Akhir Glowing - Makeup" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment &amp; Skincare-infused CICA + Hydra ß-Glucan - Hasil Akhir Glowing - Makeup</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 109.500</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="https://s.shopee.co.id/1W0b769k11" target="_blank" rel="noopener sponsored" class="product-card" data-cat="Skincare &amp; Perawatan">
+            <div class="card-media">
+              <img class="card-img" src="assets/products_real/md/100.webp" alt="Glad2Glow Perfect Cover Cushion Tahan Air Anti Pengelupasan Efek Matte Melembabkan dan Melindungi Kulit" loading="lazy" decoding="async" width="480" height="600" />
+            </div>
+            <div class="card-info">
+              <div class="card-title">Glad2Glow Perfect Cover Cushion Tahan Air Anti Pengelupasan Efek Matte Melembabkan dan Melindungi Kulit</div>
+              <div class="card-bottom-row">
+                <span class="card-price">Rp 68.900</span>
+                <div class="card-buy-btn" aria-label="Beli di Shopee">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script>
-    // Register GSAP Plugins
-    gsap.registerPlugin(ScrollTrigger, Flip);
-
-    // Initialize Lenis with smoothWheel and native mobile touch
-    const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      syncTouch: false // Do NOT hijack native touch scroll on mobile
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-
-    // Top Scroll Progress Line & Navbar Auto-hide
-    const progressBar = document.getElementById('scroll-progress-bar');
-    const header = document.getElementById('app-header');
-    let lastScrollY = 0;
-
-    lenis.on('scroll', (e) => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
-      progressBar.style.width = progress + '%';
-
-      if (scrollY > 120) {
-        if (scrollY > lastScrollY + 6) {
-          header.classList.add('nav-hidden');
-        } else if (scrollY < lastScrollY - 6) {
-          header.classList.remove('nav-hidden');
-        }
-      } else {
-        header.classList.remove('nav-hidden');
-      }
-      lastScrollY = scrollY;
-    });
-
-    // Main App Data Initialization
-    let verifiedProducts = [];
-    let heroItems = [];
+    const heroItems = [{"id": 1, "name": "Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram", "category": "Camilan & Makanan", "price_num": 4300, "price_formatted": "Rp 4.300", "product_url": "https://shopee.co.id/product/601250583/21938425526", "affiliate_url": "https://s.shopee.co.id/7AexrVoAUW", "sales": "10RB+ Terjual", "shop": "Followers Ku", "img_url": "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lub6y79geeaeeb", "og_title": "Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram", "verified": true, "hidden": false, "images": ["assets/products_real/md/1.webp"], "image_count": 1, "primary_image": "assets/products_real/md/1.webp", "is_featured": true, "clean_title": "Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram", "image_url": "assets/products_real/md/1.webp", "is_hero": true, "glow_color": "rgb(132,58,19)"}, {"id": 2, "name": "Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan", "category": "Elektronik & Gadget", "price_num": 89900, "price_formatted": "Rp 89.900", "product_url": "https://shopee.co.id/product/297771167/25826460469", "affiliate_url": "https://s.shopee.co.id/70LXfConpV", "sales": "10RB+ Terjual", "shop": "GOOJODOQ Official Store", "img_url": "https://down-id.img.susercontent.com/file/id-11134207-81ztk-musono6waz2951", "og_title": "Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan", "verified": true, "hidden": false, "images": ["assets/products_real/md/2.webp"], "image_count": 1, "primary_image": "assets/products_real/md/2.webp", "is_featured": true, "clean_title": "Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan", "image_url": "assets/products_real/md/2.webp", "is_hero": true, "glow_color": "rgb(187,73,143)"}, {"id": 11, "name": "AS Inara Bags - Tas Selempang Wanita Formal Sintetis", "category": "Fashion & Outfit", "price_num": 24400, "price_formatted": "Rp 24.400", "product_url": "https://shopee.co.id/product/80932652/25383956779", "affiliate_url": "https://s.shopee.co.id/8AXV3LkMSs", "sales": "10RB+ Terjual", "shop": "ASEKI STORE", "img_url": "https://down-id.img.susercontent.com/file/id-11134207-7r990-ly51tjv68c9s5c", "og_title": "AS Inara bags - tas selempang wanita terbaru", "verified": true, "hidden": false, "images": ["assets/products_real/md/11.webp"], "image_count": 1, "primary_image": "assets/products_real/md/11.webp", "is_featured": true, "clean_title": "AS Inara Bags - Tas Selempang Wanita Formal Sintetis", "image_url": "assets/products_real/md/11.webp", "is_hero": true, "glow_color": "rgb(227,218,205)"}, {"id": 27, "name": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML", "category": "Skincare & Perawatan", "price_num": 79900, "price_formatted": "Rp 79.900", "product_url": "https://shopee.co.id/product/684531921/29710195554", "affiliate_url": "https://s.shopee.co.id/BVDWeEoha", "sales": "10RB+ Terjual", "shop": "Facetology Official Shop", "img_url": "https://down-id.img.susercontent.com/file/id-11134207-822wu-mlpv1aphagox6d", "og_title": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne &amp; Oily Skin SPF 40 PA+++ 40ML", "verified": true, "hidden": false, "images": ["assets/products_real/md/27.webp"], "image_count": 1, "primary_image": "assets/products_real/md/27.webp", "is_featured": true, "clean_title": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML", "image_url": "assets/products_real/md/27.webp", "is_hero": true, "glow_color": "rgb(149,202,239)"}, {"id": 61, "name": "(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra", "category": "Rumah Tangga & Kosan", "price_num": 73800, "price_formatted": "Rp 73.800", "product_url": "https://shopee.co.id/product/8459024/50950470437", "affiliate_url": "https://s.shopee.co.id/7fbESQmGUa", "sales": "10RB+ Terjual", "shop": "Goto Living", "img_url": "https://down-id.img.susercontent.com/file/sg-11134201-821f0-mh1q24f75zwsda", "og_title": "(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra", "verified": true, "hidden": false, "images": ["assets/products_real/md/61.webp"], "image_count": 1, "primary_image": "assets/products_real/md/61.webp", "is_featured": true, "clean_title": "(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra", "image_url": "assets/products_real/md/61.webp", "is_hero": true, "glow_color": "rgb(237,29,36)"}];
     let currentHeroIndex = 0;
     let heroTimer = null;
     let heroProgress = 0;
     let isHeroPaused = false;
+    let lenisInstance = null;
 
-    async function initCatalog() {
-      try {
-        const res = await fetch('data/products_verified.json');
-        verifiedProducts = await res.json();
-      } catch (err) {
-        console.error('Failed to load products data:', err);
-        return;
-      }
-
-      // Filter featured products for hero
-      heroItems = verifiedProducts.filter(p => p.is_hero);
-      if (heroItems.length === 0) heroItems = verifiedProducts.slice(0, 5);
-
+    document.addEventListener('DOMContentLoaded', () => {
       setupHeroStorySlider();
-      setupCategoriesAndGrid();
+      setupChipNavigation();
       setupCardInteractions();
-    }
 
-    // Hero Instagram Story Progress Slider
+      if (typeof Lenis !== 'undefined') {
+        lenisInstance = new Lenis({
+          duration: 1.1,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true,
+          syncTouch: false
+        });
+
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+          gsap.registerPlugin(ScrollTrigger, Flip);
+          lenisInstance.on('scroll', ScrollTrigger.update);
+          gsap.ticker.add((time) => {
+            lenisInstance.raf(time * 1000);
+          });
+          gsap.ticker.lagSmoothing(0);
+        } else {
+          function raf(time) {
+            lenisInstance.raf(time);
+            requestAnimationFrame(raf);
+          }
+          requestAnimationFrame(raf);
+        }
+
+        const progressBar = document.getElementById('scroll-progress-bar');
+        const header = document.getElementById('app-header');
+        let lastScrollY = 0;
+
+        lenisInstance.on('scroll', () => {
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+          if (progressBar) progressBar.style.width = progress + '%';
+
+          if (scrollY > 120) {
+            if (scrollY > lastScrollY + 6) {
+              header.classList.add('nav-hidden');
+            } else if (scrollY < lastScrollY - 6) {
+              header.classList.remove('nav-hidden');
+            }
+          } else {
+            header.classList.remove('nav-hidden');
+          }
+          lastScrollY = scrollY;
+        });
+      }
+    });
+
     function setupHeroStorySlider() {
       const container = document.getElementById('hero-progress-container');
-      container.innerHTML = heroItems.map((_, i) => `
-        <div class="story-segment" data-idx="${i}">
-          <div class="story-fill" id="story-fill-${i}"></div>
-        </div>
-      `).join('');
+      if (!container) return;
 
       container.querySelectorAll('.story-segment').forEach(seg => {
         seg.addEventListener('click', () => {
@@ -768,14 +2048,15 @@
         });
       });
 
-      renderHeroSlide(currentHeroIndex);
       startHeroStoryTimer();
 
       const heroWrap = document.getElementById('hero-slider-wrap');
-      heroWrap.addEventListener('mouseenter', () => { isHeroPaused = true; });
-      heroWrap.addEventListener('mouseleave', () => { isHeroPaused = false; });
-      heroWrap.addEventListener('touchstart', () => { isHeroPaused = true; }, { passive: true });
-      heroWrap.addEventListener('touchend', () => { isHeroPaused = false; });
+      if (heroWrap) {
+        heroWrap.addEventListener('mouseenter', () => { isHeroPaused = true; });
+        heroWrap.addEventListener('mouseleave', () => { isHeroPaused = false; });
+        heroWrap.addEventListener('touchstart', () => { isHeroPaused = true; }, { passive: true });
+        heroWrap.addEventListener('touchend', () => { isHeroPaused = false; });
+      }
     }
 
     function renderHeroSlide(index) {
@@ -800,21 +2081,21 @@
       const glow = p.glow_color || 'rgb(238, 77, 45)';
       ambient.style.background = `radial-gradient(circle, ${glow} 0%, rgba(238,77,45,0.4) 40%, transparent 70%)`;
 
-      // Animate text entry
-      gsap.fromTo([order, cat, title, price], 
-        { opacity: 0, y: 14 }, 
-        { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: "power2.out" }
-      );
-      gsap.fromTo(img, 
-        { opacity: 0.4, scale: 0.94 }, 
-        { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
-      );
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo([order, cat, title, price], 
+          { opacity: 0, y: 14 }, 
+          { opacity: 1, y: 0, duration: 0.5, stagger: 0.06, ease: "power2.out" }
+        );
+        gsap.fromTo(img, 
+          { opacity: 0.4, scale: 0.95 }, 
+          { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }
+        );
+      }
     }
 
     function goToHeroSlide(index) {
       currentHeroIndex = index;
       heroProgress = 0;
-      // Reset all bars
       heroItems.forEach((_, i) => {
         const bar = document.getElementById(`story-fill-${i}`);
         if (bar) bar.style.width = i < currentHeroIndex ? '100%' : '0%';
@@ -839,71 +2120,12 @@
       }, 100);
     }
 
-    // Categories and Grid
-    function setupCategoriesAndGrid() {
-      const categories = [...new Set(verifiedProducts.map(p => p.category))];
-      const navContainer = document.getElementById('category-nav');
-      const gridContainer = document.getElementById('grid-container');
-
-      // Add Category Chips
-      categories.forEach(cat => {
-        const btn = document.createElement('button');
-        btn.className = 'category-chip';
-        btn.dataset.cat = cat;
-        btn.textContent = cat;
-        navContainer.appendChild(btn);
-      });
-
-      // Render Category Sections
-      let html = '';
-      categories.forEach(cat => {
-        const items = verifiedProducts.filter(p => p.category === cat);
-        html += `
-          <section class="category-section" id="cat-${slugify(cat)}" data-cat="${cat}">
-            <div class="category-header">
-              <h2 class="category-name">${cat}</h2>
-              <span class="category-count">${items.length} Produk</span>
-            </div>
-            <div class="product-grid">
-              ${items.map(p => renderProductCard(p)).join('')}
-            </div>
-          </section>
-        `;
-      });
-      gridContainer.innerHTML = html;
-
-      setupChipNavigation();
-    }
-
-    function renderProductCard(p) {
-      return `
-        <a href="${p.affiliate_url}" target="_blank" rel="noopener sponsored" class="product-card" data-cat="${p.category}">
-          <div class="card-media">
-            <img class="card-img" src="${p.image_url}" alt="${p.name}" loading="lazy" />
-          </div>
-          <div class="card-info">
-            <div class="card-title">${p.name}</div>
-            <div class="card-bottom-row">
-              <span class="card-price">${p.price_formatted}</span>
-              <div class="card-buy-btn" aria-label="Beli di Shopee">
-                <svg viewBox="0 0 24 24">
-                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <path d="M16 10a4 4 0 0 1-8 0"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </a>
-      `;
-    }
-
     function setupChipNavigation() {
       const chips = document.querySelectorAll('.category-chip');
       const pill = document.getElementById('chip-pill');
 
       function updatePill(activeChip) {
-        if (!activeChip) return;
+        if (!activeChip || !pill) return;
         pill.style.width = activeChip.offsetWidth + 'px';
         pill.style.transform = `translateX(${activeChip.offsetLeft}px)`;
       }
@@ -922,57 +2144,60 @@
       });
     }
 
-    // GSAP Flip Transition on Category Filter
     function filterCategoriesWithFlip(selectedCat) {
       const sections = document.querySelectorAll('.category-section');
-      const state = Flip.getState(sections);
+      
+      if (typeof Flip !== 'undefined') {
+        const state = Flip.getState(sections);
 
-      sections.forEach(sec => {
-        if (selectedCat === 'all' || sec.dataset.cat === selectedCat) {
-          sec.style.display = 'block';
-        } else {
-          sec.style.display = 'none';
-        }
-      });
+        sections.forEach(sec => {
+          if (selectedCat === 'all' || sec.dataset.cat === selectedCat) {
+            sec.style.display = 'block';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
 
-      Flip.from(state, {
-        duration: 0.6,
-        ease: "power2.inOut",
-        stagger: 0.05,
-        onComplete: () => {
-          ScrollTrigger.refresh();
-        }
-      });
+        Flip.from(state, {
+          duration: 0.6,
+          ease: "power2.inOut",
+          stagger: 0.05,
+          onComplete: () => {
+            if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+          }
+        });
+      } else {
+        sections.forEach(sec => {
+          sec.style.display = (selectedCat === 'all' || sec.dataset.cat === selectedCat) ? 'block' : 'none';
+        });
+      }
 
-      if (selectedCat !== 'all') {
+      if (selectedCat !== 'all' && lenisInstance) {
         const targetSec = document.getElementById(`cat-${slugify(selectedCat)}`);
         if (targetSec) {
-          lenis.scrollTo(targetSec, { offset: -70, duration: 1.2 });
+          lenisInstance.scrollTo(targetSec, { offset: -70, duration: 1.1 });
         }
       }
     }
 
-    // 3D Tilt & Magnetic Pointer Glow on Cards
     function setupCardInteractions() {
       const cards = document.querySelectorAll('.product-card');
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
       cards.forEach(card => {
-        // Pointer down haptic
         card.addEventListener('pointerdown', () => {
           if (navigator.vibrate) navigator.vibrate(8);
         });
 
-        if (!isMobileDevice) {
+        if (!isMobile) {
           card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            // Set CSS Variables for spotlight glow
             card.style.setProperty('--mx', `${x}px`);
             card.style.setProperty('--my', `${y}px`);
 
-            // 3D tilt calculation (max 3 degrees)
             const cx = rect.width / 2;
             const cy = rect.height / 2;
             const rx = ((y - cy) / cy) * -2.5;
@@ -996,9 +2221,6 @@
         .replace(/^-+/, '')
         .replace(/-+$/, '');
     }
-
-    // Launch Application
-    initCatalog();
   </script>
 </body>
 </html>
