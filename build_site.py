@@ -31,15 +31,15 @@ for cat in sorted(cats.keys()):
     cards_html = []
     for p in items:
         pid = p["id"]
-        # Use sm for mobile/thumb or md for grid
         img_src = f"assets/products_real/md/{pid}.webp"
         img_src_sm = f"assets/products_real/sm/{pid}.webp"
         p_name = html.escape(p["name"])
         p_price = html.escape(p["price_formatted"])
         p_aff = html.escape(p["affiliate_url"])
+        p_cat = html.escape(cat)
         
         card = f'''
-          <a href="{p_aff}" target="_blank" rel="noopener sponsored" class="product-card" data-cat="{html.escape(cat)}">
+          <a href="{p_aff}" target="_blank" rel="noopener sponsored" class="product-card" data-id="{pid}" data-name="{p_name}" data-cat="{p_cat}">
             <div class="card-media">
               <img class="card-img" 
                    src="{img_src}" 
@@ -89,9 +89,25 @@ html_content = f"""<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Jualan Gue — Rekomendasi Produk Shopee Pilihan</title>
-  <meta name="description" content="Koleksi kurasi produk Shopee pilihan, terlaris, dan harga terbaik." />
+  <title>Jualan Gue — Rekomendasi Produk Pilihan Shopee</title>
+  <meta name="description" content="Koleksi kurasi rekomendasi produk pilihan Shopee terlaris dan harga terbaik dari spill harian Kiki." />
   
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jualan-gue.vercel.app/" />
+  <meta property="og:title" content="Jualan Gue — Rekomendasi Produk Pilihan Shopee" />
+  <meta property="og:description" content="Koleksi kurasi rekomendasi produk pilihan Shopee terlaris dan harga terbaik dari spill harian Kiki." />
+  <meta property="og:image" content="https://jualan-gue.vercel.app/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jualan-gue.vercel.app/" />
+  <meta name="twitter:title" content="Jualan Gue — Rekomendasi Produk Pilihan Shopee" />
+  <meta name="twitter:description" content="Koleksi kurasi rekomendasi produk pilihan Shopee terlaris dan harga terbaik dari spill harian Kiki." />
+  <meta name="twitter:image" content="https://jualan-gue.vercel.app/assets/og-image.jpg" />
+
   <meta name="theme-color" content="#EE4D2D" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
@@ -109,6 +125,12 @@ html_content = f"""<!DOCTYPE html>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js" defer></script>
+
+  <!-- Vercel Web Analytics Script -->
+  <script>
+    window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     :root {{
@@ -696,7 +718,7 @@ html_content = f"""<!DOCTYPE html>
       <div class="hero-slider-wrap" id="hero-slider-wrap">
         <div class="hero-ambient-glow" id="hero-ambient"></div>
         
-        <a id="hero-slide-link" class="hero-slide-stage" href="{html.escape(h0.get('affiliate_url'))}" target="_blank" rel="noopener sponsored">
+        <a id="hero-slide-link" class="hero-slide-stage" href="{html.escape(h0.get('affiliate_url'))}" target="_blank" rel="noopener sponsored" data-id="{h0_id}" data-name="{html.escape(h0.get('name'))}" data-cat="{html.escape(h0.get('category'))}">
           <div class="hero-image-wrap">
             <img id="hero-img" 
                  class="hero-product-img" 
@@ -755,6 +777,7 @@ html_content = f"""<!DOCTYPE html>
       setupHeroStorySlider();
       setupChipNavigation();
       setupCardInteractions();
+      setupAnalyticsTracking();
 
       if (typeof Lenis !== 'undefined') {{
         lenisInstance = new Lenis({{
@@ -838,6 +861,10 @@ html_content = f"""<!DOCTYPE html>
       const ambient = document.getElementById('hero-ambient');
 
       link.href = p.affiliate_url;
+      link.dataset.id = p.id;
+      link.dataset.name = p.name;
+      link.dataset.cat = p.category;
+
       cat.textContent = p.category;
       title.textContent = p.name;
       price.textContent = p.price_formatted;
@@ -851,9 +878,7 @@ html_content = f"""<!DOCTYPE html>
       `;
 
       const imgMd = `assets/products_real/md/${{p.id}}.webp`;
-      const imgLg = `assets/products_real/lg/${{p.id}}.webp`;
       img.src = imgMd;
-      img.srcset = `${{imgMd}} 480w, ${{imgLg}} 800w`;
 
       const glow = p.glow_color || 'rgb(238, 77, 45)';
       ambient.style.background = `radial-gradient(circle, ${{glow}} 0%, rgba(238,77,45,0.4) 40%, transparent 70%)`;
@@ -986,6 +1011,44 @@ html_content = f"""<!DOCTYPE html>
           card.addEventListener('mouseleave', () => {{
             card.style.transform = '';
           }});
+        }}
+      }});
+    }}
+
+    function setupAnalyticsTracking() {{
+      // Track clicks on grid cards and hero CTA
+      document.addEventListener('click', (e) => {{
+        const card = e.target.closest('.product-card');
+        const hero = e.target.closest('#hero-slide-link');
+
+        if (card) {{
+          const pName = card.dataset.name || 'Unknown Product';
+          const pCat = card.dataset.cat || 'General';
+          const pId = card.dataset.id || '';
+          if (window.va) {{
+            window.va('event', {{
+              name: 'click_buy_card',
+              data: {{
+                productId: pId,
+                productName: pName.slice(0, 60),
+                category: pCat
+              }}
+            }});
+          }}
+        }} else if (hero) {{
+          const pName = hero.dataset.name || 'Hero Product';
+          const pCat = hero.dataset.cat || 'Hero';
+          const pId = hero.dataset.id || '';
+          if (window.va) {{
+            window.va('event', {{
+              name: 'click_buy_hero',
+              data: {{
+                productId: pId,
+                productName: pName.slice(0, 60),
+                category: pCat
+              }}
+            }});
+          }}
         }}
       }});
     }}
