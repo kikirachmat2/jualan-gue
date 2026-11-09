@@ -1,18 +1,18 @@
 {
-  "name": "katalog-ceritakiki",
-  "version": "1.0.0",
-  "description": "Koleksi Rekomendasi & Spill Produk Shopee Affiliate Kiki Rachmat (@kikipunyacerita)",
+  "name": "jualan-gue",
+  "version": "2.0.0",
+  "description": "Koleksi Rekomendasi & Spill Produk Shopee Affiliate Kiki Rachmat",
   "scripts": {
+    "build": "python3 build_site.py",
     "start": "npx serve ."
   },
   "keywords": [
-    "threads",
     "affiliate",
     "shopee",
     "katalog-bio",
     "rekomendasi"
   ],
-  "author": "Kiki Rachmat & Zura AI",
+  "author": "Kiki Rachmat",
   "license": "MIT",
   "dependencies": {
     "playwright": "^1.65.0"

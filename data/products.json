@@ -18,7 +18,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/1.webp",
-    "is_featured": true
+    "is_featured": true,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 2,
@@ -39,7 +41,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/2.webp",
-    "is_featured": true
+    "is_featured": true,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 3,
@@ -60,11 +64,13 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/3.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 4,
-    "name": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360\u00ba",
+    "name": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360º",
     "category": "Elektronik & Gadget",
     "price_num": 29300,
     "price_formatted": "Rp 29.300",
@@ -73,7 +79,7 @@
     "sales": "10RB+ Terjual",
     "shop": "Rapiruma",
     "img_url": "https://down-id.img.susercontent.com/file/sg-11134201-7rbn0-lpdtd9nazcjqb9",
-    "og_title": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360\u00ba",
+    "og_title": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360º",
     "verified": true,
     "hidden": false,
     "images": [
@@ -81,7 +87,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/4.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 5,
@@ -102,7 +110,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/5.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 6,
@@ -123,7 +133,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/6.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 7,
@@ -144,7 +156,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/7.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 8,
@@ -165,7 +179,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/8.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 9,
@@ -186,7 +202,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/9.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 10,
@@ -207,7 +225,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/10.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 11,
@@ -228,7 +248,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/11.webp",
-    "is_featured": true
+    "is_featured": true,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 12,
@@ -249,7 +271,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/12.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 13,
@@ -270,7 +294,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/13.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 14,
@@ -291,7 +317,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/14.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 15,
@@ -312,7 +340,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/15.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 16,
@@ -333,7 +363,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/16.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 17,
@@ -354,7 +386,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/17.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 18,
@@ -375,7 +409,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/18.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 19,
@@ -396,7 +432,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/19.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 20,
@@ -417,7 +455,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/20.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 21,
@@ -438,7 +478,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/21.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 22,
@@ -459,7 +501,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/22.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 23,
@@ -480,7 +524,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/23.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 24,
@@ -501,7 +547,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/24.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 25,
@@ -522,7 +570,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/25.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 26,
@@ -543,11 +593,13 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/26.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 27,
-    "name": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML",
+    "name": "[New Matte Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML",
     "category": "Skincare & Perawatan",
     "price_num": 79900,
     "price_formatted": "Rp 79.900",
@@ -556,7 +608,7 @@
     "sales": "10RB+ Terjual",
     "shop": "Facetology Official Shop",
     "img_url": "https://down-id.img.susercontent.com/file/id-11134207-822wu-mlpv1aphagox6d",
-    "og_title": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne &amp; Oily Skin SPF 40 PA+++ 40ML",
+    "og_title": "[New Matte Formula] Facetology Triple Care Sunscreen For Acne &amp; Oily Skin SPF 40 PA+++ 40ML",
     "verified": true,
     "hidden": false,
     "images": [
@@ -564,7 +616,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/27.webp",
-    "is_featured": true
+    "is_featured": true,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 28,
@@ -585,7 +639,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/28.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 29,
@@ -606,7 +662,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/29.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 30,
@@ -627,7 +685,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/30.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 31,
@@ -648,7 +708,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/31.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 32,
@@ -669,7 +731,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/32.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 33,
@@ -690,7 +754,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/33.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 34,
@@ -711,7 +777,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/34.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 35,
@@ -732,7 +800,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/35.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 36,
@@ -753,7 +823,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/36.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 37,
@@ -774,7 +846,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/37.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 38,
@@ -795,7 +869,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/38.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 39,
@@ -816,7 +892,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/39.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 40,
@@ -837,7 +915,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/40.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 41,
@@ -858,7 +938,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/41.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 42,
@@ -879,7 +961,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/42.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 43,
@@ -900,7 +984,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/43.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 44,
@@ -921,7 +1007,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/44.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 45,
@@ -942,7 +1030,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/45.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 46,
@@ -963,7 +1053,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/46.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 47,
@@ -984,7 +1076,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/47.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 48,
@@ -1005,7 +1099,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/48.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 49,
@@ -1016,7 +1112,7 @@
     "product_url": "https://shopee.co.id/product/851787769/18841582014",
     "affiliate_url": "https://s.shopee.co.id/4VeCgbyJum",
     "sales": "10RB+ Terjual",
-    "shop": "AK\u00a0Plastic",
+    "shop": "AK Plastic",
     "img_url": "https://down-id.img.susercontent.com/file/d71932210c7da3c1d55fc3a356228ba9",
     "og_title": "Plastik Packing Plastik Polymailer Bungkus Kuat dan Lentur ( Satuan )",
     "verified": true,
@@ -1026,7 +1122,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/49.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 50,
@@ -1047,7 +1145,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/50.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 51,
@@ -1068,7 +1168,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/51.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 52,
@@ -1089,7 +1191,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/52.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 53,
@@ -1110,7 +1214,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/53.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 54,
@@ -1131,7 +1237,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/54.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 55,
@@ -1152,7 +1260,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/55.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 56,
@@ -1173,7 +1283,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/56.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 57,
@@ -1194,7 +1306,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/57.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 58,
@@ -1215,11 +1329,13 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/58.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 59,
-    "name": "Talenan Kayu Jati Perhutani Asli 27x14 cm \u2013 Alas Potong Dapur, Papan Saji Kayu Estetik Handmade",
+    "name": "Talenan Kayu Jati Perhutani Asli 27x14 cm – Alas Potong Dapur, Papan Saji Kayu Estetik Handmade",
     "category": "Rumah Tangga & Kosan",
     "price_num": 12600,
     "price_formatted": "Rp 12.600",
@@ -1228,7 +1344,7 @@
     "sales": "10RB+ Terjual",
     "shop": "Lakukayu Woodcraft",
     "img_url": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mqapvmr098n6d8",
-    "og_title": "Talenan Kayu Jati Perhutani Asli 27x14 cm \u2013 Alas Potong Dapur, Papan Saji Kayu Estetik Handmade",
+    "og_title": "Talenan Kayu Jati Perhutani Asli 27x14 cm – Alas Potong Dapur, Papan Saji Kayu Estetik Handmade",
     "verified": true,
     "hidden": false,
     "images": [
@@ -1236,7 +1352,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/59.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 60,
@@ -1257,7 +1375,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/60.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 61,
@@ -1278,7 +1398,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/61.webp",
-    "is_featured": true
+    "is_featured": true,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 62,
@@ -1299,7 +1421,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/62.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 63,
@@ -1320,7 +1444,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/63.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 64,
@@ -1341,7 +1467,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/64.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 65,
@@ -1362,7 +1490,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/65.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 66,
@@ -1383,7 +1513,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/66.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 67,
@@ -1404,11 +1536,13 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/67.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 68,
-    "name": "\u200bTempat Overnight Oat & Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup\u200b",
+    "name": "​Tempat Overnight Oat & Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup​",
     "category": "Camilan & Makanan",
     "price_num": 20600,
     "price_formatted": "Rp 20.600",
@@ -1417,7 +1551,7 @@
     "sales": "1RB+ Terjual",
     "shop": "ok88gq2pz8",
     "img_url": "https://down-id.img.susercontent.com/file/sg-11134201-825ab-mqwsp4jvt9fm95",
-    "og_title": "\u200bTempat Overnight Oat &amp; Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup\u200b",
+    "og_title": "​Tempat Overnight Oat &amp; Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup​",
     "verified": true,
     "hidden": false,
     "images": [
@@ -1425,7 +1559,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/68.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 69,
@@ -1446,7 +1582,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/69.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 70,
@@ -1467,7 +1605,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/70.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 71,
@@ -1488,7 +1628,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/71.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 72,
@@ -1509,7 +1651,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/72.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 73,
@@ -1530,7 +1674,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/73.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 74,
@@ -1551,7 +1697,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/74.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 75,
@@ -1572,7 +1720,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/75.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 76,
@@ -1593,7 +1743,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/76.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 77,
@@ -1614,7 +1766,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/77.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 78,
@@ -1635,7 +1789,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/78.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 79,
@@ -1656,7 +1812,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/79.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 80,
@@ -1677,7 +1835,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/80.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 81,
@@ -1698,7 +1858,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/81.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 82,
@@ -1719,7 +1881,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/82.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 83,
@@ -1740,7 +1904,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/83.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 84,
@@ -1761,7 +1927,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/84.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 85,
@@ -1782,7 +1950,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/85.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 86,
@@ -1803,7 +1973,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/86.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 87,
@@ -1824,7 +1996,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/87.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 88,
@@ -1845,7 +2019,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/88.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 89,
@@ -1866,7 +2042,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/89.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 90,
@@ -1887,7 +2065,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/90.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 91,
@@ -1908,7 +2088,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/91.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 92,
@@ -1929,7 +2111,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/92.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 93,
@@ -1950,7 +2134,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/93.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 94,
@@ -1971,7 +2157,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/94.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 95,
@@ -1992,7 +2180,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/95.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 96,
@@ -2013,7 +2203,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/96.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 97,
@@ -2034,7 +2226,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/97.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 98,
@@ -2055,11 +2249,13 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/98.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 99,
-    "name": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment & Skincare-infused CICA + Hydra \u00df-Glucan - Hasil Akhir Glowing - Makeup",
+    "name": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment & Skincare-infused CICA + Hydra ß-Glucan - Hasil Akhir Glowing - Makeup",
     "category": "Skincare & Perawatan",
     "price_num": 109500,
     "price_formatted": "Rp 109.500",
@@ -2068,7 +2264,7 @@
     "sales": "10RB+ Terjual",
     "shop": "Wardah Official Shop",
     "img_url": "https://down-id.img.susercontent.com/file/id-11134207-81ztl-mv6zjzuzb01v61",
-    "og_title": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment &amp; Skincare-infused CICA + Hydra \u00df-Glucan - Hasil Akhir Glowing - Makeup",
+    "og_title": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment &amp; Skincare-infused CICA + Hydra ß-Glucan - Hasil Akhir Glowing - Makeup",
     "verified": true,
     "hidden": false,
     "images": [
@@ -2076,7 +2272,9 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/99.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   },
   {
     "id": 100,
@@ -2097,6 +2295,8 @@
     ],
     "image_count": 1,
     "primary_image": "assets/products_real/md/100.webp",
-    "is_featured": false
+    "is_featured": false,
+    "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+    "priceSource": "Shopee Affiliate Export CSV"
   }
 ]

@@ -5,7 +5,7 @@ import re
 with open("data/products_verified.json") as f:
     products = json.load(f)
 
-# Hero items
+# Hero items (Strictly products with confirmed 10RB+ sales bucket in CSV)
 hero_items = [p for p in products if p.get("is_hero")]
 if not hero_items:
     hero_items = products[:5]
@@ -31,7 +31,9 @@ for cat in sorted(cats.keys()):
     cards_html = []
     for p in items:
         pid = p["id"]
-        img_src = p["image_url"]
+        # Use sm for mobile/thumb or md for grid
+        img_src = f"assets/products_real/md/{pid}.webp"
+        img_src_sm = f"assets/products_real/sm/{pid}.webp"
         p_name = html.escape(p["name"])
         p_price = html.escape(p["price_formatted"])
         p_aff = html.escape(p["affiliate_url"])
@@ -39,7 +41,15 @@ for cat in sorted(cats.keys()):
         card = f'''
           <a href="{p_aff}" target="_blank" rel="noopener sponsored" class="product-card" data-cat="{html.escape(cat)}">
             <div class="card-media">
-              <img class="card-img" src="{img_src}" alt="{p_name}" loading="lazy" decoding="async" width="480" height="600" />
+              <img class="card-img" 
+                   src="{img_src}" 
+                   srcset="{img_src_sm} 240w, {img_src} 480w"
+                   sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 260px"
+                   alt="{p_name}" 
+                   loading="lazy" 
+                   decoding="async" 
+                   width="480" 
+                   height="600" />
             </div>
             <div class="card-info">
               <div class="card-title">{p_name}</div>
@@ -67,6 +77,9 @@ for cat in sorted(cats.keys()):
 
 grid_str = "\n".join(sections_html)
 h0 = hero_items[0]
+h0_id = h0["id"]
+h0_img_md = f"assets/products_real/md/{h0_id}.webp"
+h0_img_lg = f"assets/products_real/lg/{h0_id}.webp"
 hero_json = json.dumps(hero_items)
 
 story_segments = "".join([f'<div class="story-segment" data-idx="{i}"><div class="story-fill" id="story-fill-{i}"></div></div>' for i in range(len(hero_items))])
@@ -85,9 +98,12 @@ html_content = f"""<!DOCTYPE html>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
 
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="{h0_img_md}" fetchpriority="high" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
 
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
@@ -337,19 +353,25 @@ html_content = f"""<!DOCTYPE html>
       z-index: 2;
     }}
 
-    .hero-header-row {{
+    .hero-badges-row {{
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
     }}
 
-    .hero-order-num {{
-      font-size: 54px;
-      font-weight: 800;
-      line-height: 1;
-      color: transparent;
-      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28);
-      letter-spacing: -0.04em;
+    .hero-sales-tag {{
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      background: rgba(238, 77, 45, 0.22);
+      border: 1px solid var(--shopee-border);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }}
 
     .hero-category-tag {{
@@ -357,9 +379,9 @@ html_content = f"""<!DOCTYPE html>
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--shopee-orange);
-      background: rgba(238, 77, 45, 0.12);
-      border: 1px solid var(--shopee-border);
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
       padding: 6px 12px;
       border-radius: var(--radius-full);
     }}
@@ -676,11 +698,24 @@ html_content = f"""<!DOCTYPE html>
         
         <a id="hero-slide-link" class="hero-slide-stage" href="{html.escape(h0.get('affiliate_url'))}" target="_blank" rel="noopener sponsored">
           <div class="hero-image-wrap">
-            <img id="hero-img" class="hero-product-img" src="{h0.get('image_url')}" alt="{html.escape(h0.get('name'))}" loading="eager" width="380" height="380" />
+            <img id="hero-img" 
+                 class="hero-product-img" 
+                 src="{h0_img_md}" 
+                 alt="{html.escape(h0.get('name'))}" 
+                 loading="eager" 
+                 fetchpriority="high"
+                 decoding="async"
+                 width="380" 
+                 height="380" />
           </div>
           <div class="hero-content">
-            <div class="hero-header-row">
-              <span id="hero-order" class="hero-order-num">01</span>
+            <div class="hero-badges-row">
+              <span id="hero-sales" class="hero-sales-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 23c-4.97 0-9-3.8-9-8.5 0-3.1 1.7-6 4.3-8.8.7-.7 1.7-.5 2.1.3.4.9.4 1.9.1 2.8 1.4-1.6 2.5-3.5 2.5-5.8 0-.6.5-1 1-1 .2 0 .4.1.6.2C17.2 6.1 21 10.4 21 14.5 21 19.2 16.97 23 12 23z"/>
+                </svg>
+                {html.escape(h0.get('sales_bucket', '10RB+ Terjual'))}
+              </span>
               <span id="hero-category" class="hero-category-tag">{html.escape(h0.get('category'))}</span>
             </div>
             <h1 id="hero-title" class="hero-title">{html.escape(h0.get('name'))}</h1>
@@ -796,24 +831,35 @@ html_content = f"""<!DOCTYPE html>
 
       const link = document.getElementById('hero-slide-link');
       const img = document.getElementById('hero-img');
-      const order = document.getElementById('hero-order');
+      const sales = document.getElementById('hero-sales');
       const cat = document.getElementById('hero-category');
       const title = document.getElementById('hero-title');
       const price = document.getElementById('hero-price');
       const ambient = document.getElementById('hero-ambient');
 
       link.href = p.affiliate_url;
-      order.textContent = `0${{index + 1}}`;
       cat.textContent = p.category;
       title.textContent = p.name;
       price.textContent = p.price_formatted;
-      img.src = p.image_url;
+      
+      const salesText = p.sales_bucket || '10RB+ Terjual';
+      sales.innerHTML = `
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 23c-4.97 0-9-3.8-9-8.5 0-3.1 1.7-6 4.3-8.8.7-.7 1.7-.5 2.1.3.4.9.4 1.9.1 2.8 1.4-1.6 2.5-3.5 2.5-5.8 0-.6.5-1 1-1 .2 0 .4.1.6.2C17.2 6.1 21 10.4 21 14.5 21 19.2 16.97 23 12 23z"/>
+        </svg>
+        ${{salesText}}
+      `;
+
+      const imgMd = `assets/products_real/md/${{p.id}}.webp`;
+      const imgLg = `assets/products_real/lg/${{p.id}}.webp`;
+      img.src = imgMd;
+      img.srcset = `${{imgMd}} 480w, ${{imgLg}} 800w`;
 
       const glow = p.glow_color || 'rgb(238, 77, 45)';
       ambient.style.background = `radial-gradient(circle, ${{glow}} 0%, rgba(238,77,45,0.4) 40%, transparent 70%)`;
 
       if (typeof gsap !== 'undefined') {{
-        gsap.fromTo([order, cat, title, price], 
+        gsap.fromTo([sales, cat, title, price], 
           {{ opacity: 0, y: 14 }}, 
           {{ opacity: 1, y: 0, duration: 0.5, stagger: 0.06, ease: "power2.out" }}
         );

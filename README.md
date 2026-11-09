@@ -1,52 +1,78 @@
-# Jualan Gue — Premium Curated Affiliate Catalog
+# Jualan Gue — Katalog Shopee Affiliate
 
-Katalog affiliate Shopee yang bersih, mewah, dan berorientasi konversi tinggi.
-
-- **Production URL:** [https://jualan-gue.vercel.app](https://jualan-gue.vercel.app)
-- **Repository:** [https://github.com/kikirachmat2/jualan-gue](https://github.com/kikirachmat2/jualan-gue)
+Website kurasi produk rekomendasi Shopee Affiliate dengan performa tinggi, zero bloat, static pre-rendering, dan motion animasi premium.
 
 ---
 
-## 📁 Struktur Data & Cara Menambah Produk
+## 🛠️ Arsitektur & Build Otomatis
 
-Data produk tersimpan di folder `data/`:
-1. `data/products.json`: Sumber data mentah hasil ekspor link Shopee.
-2. `data/products_enriched.json`: Data yang digunakan langsung oleh `index.html`.
+Website ini menggunakan arsitektur **Static HTML Pre-rendered**:
+- Data master produk berada di `data/products_verified.json`.
+- Skrip generator `build_site.py` membaca data, menyusun markup HTML 92 kartu produk dan slider Hero secara statis ke `index.html`.
+- Setiap kali branch di-push atau di-deploy ke Vercel, Vercel otomatis menjalankan:
+  ```bash
+  python3 build_site.py
+  ```
+  yang terkonfigurasi pada `vercel.json` dan `package.json` (`npm run build`).
 
-### Cara Menambah Produk / Kategori Baru:
-Buka `data/products_enriched.json` lalu tambahkan objek produk:
+---
 
-```json
-{
-  "id": 101,
-  "name": "Nama Produk Lengkap dari Shopee",
-  "clean_title": "Nama Produk Ringkas (1-2 Baris)",
-  "category": "Elektronik & Gadget",
-  "price_num": 149000,
-  "price_formatted": "Rp 149.000",
-  "original_price_num": 199000,
-  "original_price_formatted": "Rp 199.000",
-  "sales": "10RB+ Terjual",
-  "rating": 4.9,
-  "priority": 10,
-  "product_url": "https://shopee.co.id/product/...",
-  "affiliate_url": "https://s.shopee.co.id/...",
-  "image_url": "https://images.unsplash.com/... atau URL foto produk CDN"
-}
-```
+## 💻 Menjalankan & Membangun Secara Lokal
 
-#### Field Keterangan:
-- `clean_title`: Judul pendek bersih (maksimal 2 baris).
-- `category`: Otomatis membuat chip kategori jika nama kategori baru.
-- `priority`: Angka integer (misal `10`, `5`, `1`). Semakin tinggi angkanya, produk akan otomatis naik ke baris teratas dalam kategorinya.
-- `original_price_num` *(opsional)*: Jika diisi lebih besar dari `price_num`, sistem akan otomatis menghitung persen diskon asli dan menampilkan harga coret.
-- `rating` *(opsional)*: Angka rating bintang (misal `4.9`). Jika kosong, sistem hanya menampilkan jumlah terjual tanpa mengarang rating.
-- `sales`: Format teks asli (misal `"10RB+ Terjual"`).
+1. **Jalankan Build Script (menghasilkan `index.html`):**
+   ```bash
+   python3 build_site.py
+   # atau
+   npm run build
+   ```
 
-Setelah mengubah file data, lakukan commit dan push ke GitHub `main`:
-```bash
-git add data/products_enriched.json
-git commit -m "feat: tambah produk baru"
-git push origin main
-```
-Vercel akan otomatis men-deploy versi terbaru dalam hitungan detik.
+2. **Jalankan Lokal Server:**
+   ```bash
+   npm start
+   # atau
+   python3 -m http.server 8080
+   ```
+   Buka peramban di `http://localhost:8080`.
+
+---
+
+## 📦 Menambah / Menyembunyikan Produk
+
+### A. Menyembunyikan Produk (Hide)
+Jika ada produk yang stoknya habis, anomali harga (mis. harga satuan per lembar kardus), atau link tidak aktif:
+1. Buka `data/products.json` dan temukan produk berdasarkan `id`.
+2. Ubah atau tambahkan field:
+   ```json
+   "hidden": true
+   ```
+3. Sinkronkan ke `data/products_verified.json` (hanya produk dengan `"hidden": false` atau tanpa flag hidden yang masuk ke sini).
+4. Jalankan `python3 build_site.py` untuk mengupdate `index.html`.
+
+### B. Menambah Produk Baru
+1. Masukkan entri baru ke `data/products.json` dengan struktur:
+   ```json
+   {
+     "id": 101,
+     "name": "Nama Produk Lengkap Sesuai Shopee",
+     "category": "Elektronik & Gadget",
+     "price": 50000,
+     "price_formatted": "Rp 50.000",
+     "priceCheckedAt": "2026-11-08T19:36:49+07:00",
+     "priceSource": "Shopee Affiliate Export CSV",
+     "affiliate_url": "https://s.shopee.co.id/...",
+     "sales": "10RB+ Terjual",
+     "sales_bucket": "10RB+ Terjual",
+     "glow_color": "rgb(238, 77, 45)",
+     "image_url": "assets/products_real/md/101.webp"
+   }
+   ```
+2. Pastikan file gambar WebP sudah tersedia di `assets/products_real/md/101.webp`, `sm/101.webp`, dan `lg/101.webp`.
+3. Jalankan `python3 build_site.py`.
+
+---
+
+## 🎯 Aturan Kejujuran Data
+
+- **Harga:** Field `priceCheckedAt` mencatat waktu ekspor CSV dari Shopee. Tidak mengklaim harga realtime kecuali jika divalidasi langsung via API/CDP.
+- **Hero "Produk Terlaris":** Hanya menampilkan produk yang memiliki bukti penjualan bucket resmi `10RB+` di data ekspor Shopee. Label bucket ditampilkan apa adanya ("10RB+ Terjual").
+- **Aset Gambar:** 100% foto produk asli yang ditarik dari CDN Shopee. Dilarang memasukkan foto stok / Unsplash.
