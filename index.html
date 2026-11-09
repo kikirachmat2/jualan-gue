@@ -1918,17 +1918,19 @@
       if (!hasSeenSession && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && typeof gsap !== 'undefined') {
         sessionStorage.setItem(STORAGE_KEY_SESSION, '1');
         const tl = gsap.timeline();
-        tl.to('.curtain-logo', { scale: 1.15, opacity: 1, duration: 0.45, ease: 'power2.out' })
+        tl.to('.curtain-logo', { scale: 1.12, opacity: 1, duration: 0.35, ease: 'power2.out' })
           .to(curtain, {
             yPercent: -100,
-            duration: 0.75,
+            duration: 0.65,
             ease: 'expo.inOut',
             onComplete: () => {
-              curtain.style.display = 'none';
+              curtain.remove();
             }
-          }, '+=0.15');
+          }, '+=0.1');
+        // Hard fallback guarantee
+        setTimeout(() => { if (curtain && curtain.parentNode) curtain.remove(); }, 1200);
       } else {
-        curtain.style.display = 'none';
+        curtain.remove();
       }
     });
   </script>
