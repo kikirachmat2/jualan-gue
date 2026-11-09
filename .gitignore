@@ -1,1 +1,5 @@
+.chrome-profile/
+.venv/
 .vercel
+assets/products_real/raw/
+node_modules/

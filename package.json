@@ -5,8 +5,16 @@
   "scripts": {
     "start": "npx serve ."
   },
-  "keywords": ["threads", "affiliate", "shopee", "katalog-bio", "rekomendasi"],
+  "keywords": [
+    "threads",
+    "affiliate",
+    "shopee",
+    "katalog-bio",
+    "rekomendasi"
+  ],
   "author": "Kiki Rachmat & Zura AI",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.65.0"
+  }
 }
-
