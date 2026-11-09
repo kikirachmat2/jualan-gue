@@ -150,21 +150,28 @@
       max-width: 1320px;
       margin: 0 auto;
       padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: nowrap;
+      display: grid !important;
+      grid-template-columns: auto 1fr auto !important;
+      align-items: center !important;
+      gap: 12px !important;
     }
-    
+
+    .brand-mark {
+      grid-column: 1;
+    }
+
     .nav-wrapper {
-      flex: 1;
+      grid-column: 2;
       min-width: 0;
-      position: relative;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      display: block;
+    }
+
+    .header-actions {
+      grid-column: 3;
     }
 
     @media (min-width: 768px) {
