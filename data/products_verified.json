@@ -21,7 +21,8 @@
     "is_featured": true,
     "clean_title": "Basreng Pedas Daun Jeruk/ Original / Balado 100 Gram",
     "image_url": "assets/products_real/md/1.webp",
-    "is_hero": true
+    "is_hero": true,
+    "glow_color": "rgb(132,58,19)"
   },
   {
     "id": 2,
@@ -45,7 +46,8 @@
     "is_featured": true,
     "clean_title": "Goojodoq kipas turbo GFS001 100 Gear Wind hight-speed kipas angin Digital Display adjustable fan",
     "image_url": "assets/products_real/md/2.webp",
-    "is_hero": true
+    "is_hero": true,
+    "glow_color": "rgb(187,73,143)"
   },
   {
     "id": 3,
@@ -69,7 +71,8 @@
     "is_featured": false,
     "clean_title": "Masker Duckbill Isi 50pcs 3Ply Facemask Earloop Disposable",
     "image_url": "assets/products_real/md/3.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(177,186,203)"
   },
   {
     "id": 4,
@@ -93,7 +96,8 @@
     "is_featured": false,
     "clean_title": "Tongsis Selfie Tripod Lampu LED Bluetooth 4 In 1 dengan remote control/ Selfie Stick Portable Flexible lampu LED/ Selfie Stick 360\u00ba",
     "image_url": "assets/products_real/md/4.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(78,125,89)"
   },
   {
     "id": 5,
@@ -117,7 +121,8 @@
     "is_featured": false,
     "clean_title": "Goojodoq 3000mAh KIPAS ANGIN MINI GENGGAM Cute / Kipas Lipat PORTABLE / Mini Fan",
     "image_url": "assets/products_real/md/5.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(133,244,73)"
   },
   {
     "id": 6,
@@ -141,7 +146,8 @@
     "is_featured": false,
     "clean_title": "( PAKET 5 PACK ) detergen sayang bubuk kemasan Rp.5000. 5x180gr",
     "image_url": "assets/products_real/md/6.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(229,114,85)"
   },
   {
     "id": 7,
@@ -165,7 +171,8 @@
     "is_featured": false,
     "clean_title": "UNEED Hard Case for Powerbank Earphone Hard Disk SSD Hardcase - UHC402",
     "image_url": "assets/products_real/md/7.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(255,121,48)"
   },
   {
     "id": 8,
@@ -189,7 +196,8 @@
     "is_featured": false,
     "clean_title": "1 Set 4 item Pelindung Kabel Charger Kabel Data Kawat Kabel Data HP Untuk Iphone Samsung Xiaomi Oppo Huawei Android Universal Motif Kartun Lucu",
     "image_url": "assets/products_real/md/8.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(215,200,191)"
   },
   {
     "id": 9,
@@ -213,7 +221,8 @@
     "is_featured": false,
     "clean_title": "Buket Bunga Thumbelina Buket Hadiah Ulang Tahun Anniversary Lamaran Pernikahan",
     "image_url": "assets/products_real/md/9.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(245,179,24)"
   },
   {
     "id": 10,
@@ -237,7 +246,8 @@
     "is_featured": false,
     "clean_title": "New! 4D Diagonal Wave Soft Silicone Soft Case",
     "image_url": "assets/products_real/md/10.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(193,126,90)"
   },
   {
     "id": 11,
@@ -261,7 +271,8 @@
     "is_featured": true,
     "clean_title": "AS Inara Bags - Tas Selempang Wanita Formal Sintetis",
     "image_url": "assets/products_real/md/11.webp",
-    "is_hero": true
+    "is_hero": true,
+    "glow_color": "rgb(227,218,205)"
   },
   {
     "id": 12,
@@ -285,7 +296,8 @@
     "is_featured": false,
     "clean_title": "Calme Fragrance CALMA Aroma Coffe dan Vanilla Parfum Wanita Tahan Lama dan Wangi Extrait De Perfume Farfum parfume",
     "image_url": "assets/products_real/md/12.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(196,163,126)"
   },
   {
     "id": 13,
@@ -309,7 +321,8 @@
     "is_featured": false,
     "clean_title": "tas clara tas bahu wanita Cewek Kulit Slingbag UI",
     "image_url": "assets/products_real/md/13.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(147,136,126)"
   },
   {
     "id": 14,
@@ -333,7 +346,8 @@
     "is_featured": false,
     "clean_title": "Is It Bad Or Good Habits",
     "image_url": "assets/products_real/md/14.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(250,221,67)"
   },
   {
     "id": 15,
@@ -357,7 +371,8 @@
     "is_featured": false,
     "clean_title": "Gantungan Kunci Tali Ponsel Liontin Bintang Awan Putih Fungsi Gantungan Kunci Liontin Rantai Gantung Casing Ponsel Universal",
     "image_url": "assets/products_real/md/15.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(194,185,172)"
   },
   {
     "id": 16,
@@ -381,7 +396,8 @@
     "is_featured": false,
     "clean_title": "KELONTONG UNIK | CUTE 3D - Set Paket Cover Pelindung Kepala & Kabel Charger Spiral / Cable Set Protector - Compatible for iPhone Rapatech Anker Ugreen Robot Samsung Vivo ,CPSU",
     "image_url": "assets/products_real/md/16.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(240,46,78)"
   },
   {
     "id": 17,
@@ -405,7 +421,8 @@
     "is_featured": false,
     "clean_title": "Achava Sandal Jepit Wanita Yuri Flat Casual Sandal wanita empuk sandal harian",
     "image_url": "assets/products_real/md/17.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(142,150,168)"
   },
   {
     "id": 18,
@@ -429,7 +446,8 @@
     "is_featured": false,
     "clean_title": "Case Magsafe Electroplating Metalic IPHONE 11 12 13 14 15 16 17 PRO MAX 14+ 15+ 16+ PLUS 17 Air LENS GUARD PROTECTOR FULL COVER",
     "image_url": "assets/products_real/md/18.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(178,117,58)"
   },
   {
     "id": 19,
@@ -453,7 +471,8 @@
     "is_featured": false,
     "clean_title": "New BIUBIU CASE Magsafe Clear Compatible for iPhone 11 12 13 14 15 PRO MAX 17 Air 7 8 SE 2024 7+ 8+ X XS XR XS MAX 16 17 18 PRO MAX Silikon  Magnetic Wirelles Clear Slim Case",
     "image_url": "assets/products_real/md/19.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(241,243,242)"
   },
   {
     "id": 20,
@@ -477,7 +496,8 @@
     "is_featured": false,
     "clean_title": "Soft Silicone Sport Band Strap for iWatch Apple Watch Ultra/Ultra 4 3 2 49mm Series 12 11 10 9 8 7 46mm 41mm 45mm 38 40 42mm 44mm 6 5 4 SE 3 2 Tali jam tangan Smartwatch DT No 1 HW22 W26 IWO T900 T800 Ultra I8 Pro Max S8 S9 Ultra 8 MAX 9 PRO S20 T500",
     "image_url": "assets/products_real/md/20.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(243,131,72)"
   },
   {
     "id": 21,
@@ -501,7 +521,8 @@
     "is_featured": false,
     "clean_title": "Organeez Clear Holder 777 Display Book Map Dokumen Folio F4 20 40 60 File Kantor Sekolah",
     "image_url": "assets/products_real/md/21.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(248,173,175)"
   },
   {
     "id": 22,
@@ -525,7 +546,8 @@
     "is_featured": false,
     "clean_title": "LABORE Barrier Revive Cream BiomeRepair 100ml 50ml 10ml Dermalab Revolutionaire [DERMGURU PICK GLOBAL DERMATOLOGIST] Sensitive Skin Care - Skincare Moisturizer Melembabkan Kulit Pelembab Wajah Memperbaiki Skin Barrier Prebiotics Probiotics Postbiotics",
     "image_url": "assets/products_real/md/22.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(246,105,122)"
   },
   {
     "id": 23,
@@ -549,7 +571,8 @@
     "is_featured": false,
     "clean_title": "NATURAL DEODORANT TAWAS SPRAY ORGANIK BY PHARMACIE ORGANICO",
     "image_url": "assets/products_real/md/23.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(35,153,178)"
   },
   {
     "id": 24,
@@ -573,7 +596,8 @@
     "is_featured": false,
     "clean_title": "Octarine - Scandalusy Parfum Wanita Aroma Manis Fruity | Perfume Best Seller Minyak Wangi Unisex Pria Tahan Lama",
     "image_url": "assets/products_real/md/24.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(181,128,160)"
   },
   {
     "id": 26,
@@ -597,7 +621,8 @@
     "is_featured": false,
     "clean_title": "HAN RIVER HRHD01BK Hair dryer 800W Pengering Rambut  Daya tinggi",
     "image_url": "assets/products_real/md/26.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(193,203,216)"
   },
   {
     "id": 27,
@@ -621,7 +646,8 @@
     "is_featured": true,
     "clean_title": "[New Matte\u00a0Formula] Facetology Triple Care Sunscreen For Acne & Oily Skin SPF 40 PA+++ 40ML",
     "image_url": "assets/products_real/md/27.webp",
-    "is_hero": true
+    "is_hero": true,
+    "glow_color": "rgb(149,202,239)"
   },
   {
     "id": 28,
@@ -645,7 +671,8 @@
     "is_featured": false,
     "clean_title": "NATURAL DEODORANT TAWAS SPRAY WITH ESSENTIAL OIL PENGHILANG BAU BADAN BY PHARMACIE ORGANICO",
     "image_url": "assets/products_real/md/28.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(228,124,163)"
   },
   {
     "id": 29,
@@ -669,7 +696,8 @@
     "is_featured": false,
     "clean_title": "NEW Oil Control Luxcrime Blur & Cover Two Way Cake UV Protection - Bedak Foundation Padat High Coverage Untuk Kulit Halus Tanpa Pori Bebas Minyak Tahan 24 Jam",
     "image_url": "assets/products_real/md/29.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(197,72,120)"
   },
   {
     "id": 30,
@@ -693,7 +721,8 @@
     "is_featured": false,
     "clean_title": "HANASUI Mattedorable Lip Cream Matte / Mattedorable Boba Series / Matcha Latte Series Halal",
     "image_url": "assets/products_real/md/30.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(249,186,166)"
   },
   {
     "id": 31,
@@ -717,7 +746,8 @@
     "is_featured": false,
     "clean_title": "Dove Serum Body Wash Pro-Ceramide - Moisture Renew 380g",
     "image_url": "assets/products_real/md/31.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(230,175,45)"
   },
   {
     "id": 32,
@@ -741,7 +771,8 @@
     "is_featured": false,
     "clean_title": "GLOW fx BEAUTY Serum Glow Bomb - 20ml",
     "image_url": "assets/products_real/md/32.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(212,203,245)"
   },
   {
     "id": 33,
@@ -765,7 +796,8 @@
     "is_featured": false,
     "clean_title": "Giv White Sabun Mandi Cair Mulberry Pouch 800 ml",
     "image_url": "assets/products_real/md/33.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(204,0,2)"
   },
   {
     "id": 34,
@@ -789,7 +821,8 @@
     "is_featured": false,
     "clean_title": "SUMBER AYU | OMG OH MY GLAM Mattelast Lip Cream - Lip Cream Matte Dengan Warna Intense, Tahan Lama & Ringan",
     "image_url": "assets/products_real/md/34.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(169,14,28)"
   },
   {
     "id": 35,
@@ -813,7 +846,8 @@
     "is_featured": false,
     "clean_title": "[NEW SHADES] Hanasui Next Level Blurry Tint - Lip Tint Watery To Blur Lightweight Tahan Lama Velvet Finish Powdery Tint Blurring Effect Stain Lasting Up to 8H Lip Stain Lipgloss Liptint Lipstik Lipcream Lip Matte Makeup Official Store",
     "image_url": "assets/products_real/md/35.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(232,183,204)"
   },
   {
     "id": 36,
@@ -837,7 +871,8 @@
     "is_featured": false,
     "clean_title": "[ BELIA ] M.B.K Series | Deodorant Roll On 40 ml | Bedak Jar Tint 60 Gr | Bedak Sachet 13.6 gr MBK",
     "image_url": "assets/products_real/md/36.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(248,101,173)"
   },
   {
     "id": 37,
@@ -861,7 +896,8 @@
     "is_featured": false,
     "clean_title": "(100ml)WHITE INC Alpha Glowhite Body Lotion Whitening & Moisturizer| Body Cream Body Lotion Menghidrasi Kulit",
     "image_url": "assets/products_real/md/37.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(244,9,107)"
   },
   {
     "id": 38,
@@ -885,7 +921,8 @@
     "is_featured": false,
     "clean_title": "Braven Code Eau De Parfum 100ml | Parfum Perfume Minyak Wangi Wanita Pria Tahan Lama - Cedar Wood / Oud Wood / Urban / Cool WTR",
     "image_url": "assets/products_real/md/38.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(214,72,49)"
   },
   {
     "id": 39,
@@ -909,7 +946,8 @@
     "is_featured": false,
     "clean_title": "MINISO Body Mist 150ml fragrance spray tahan lama Natural Series Eau de body spray Parfum Parfum Vanilla Perfum Spray Pengharum Badan Unisex  Hair Mist Parfum Rambut",
     "image_url": "assets/products_real/md/39.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(150,225,255)"
   },
   {
     "id": 40,
@@ -933,7 +971,8 @@
     "is_featured": false,
     "clean_title": "BPOM  KUDAN Kutek Kutek Peel Off kuteks halal muslimah Kutek Halal untuk sholat MZ02",
     "image_url": "assets/products_real/md/40.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(172,135,128)"
   },
   {
     "id": 42,
@@ -957,7 +996,8 @@
     "is_featured": false,
     "clean_title": "Vitalis Eau De Parfum 50 ml - Extra Bloom",
     "image_url": "assets/products_real/md/42.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(72,29,39)"
   },
   {
     "id": 44,
@@ -981,7 +1021,8 @@
     "is_featured": false,
     "clean_title": "Pengharum Ruangan / Pengharum Toilet / Aromaterapi / Reed Diffuser - Summerspring - Pengharum 40ml",
     "image_url": "assets/products_real/md/44.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(235,133,0)"
   },
   {
     "id": 48,
@@ -1005,7 +1046,8 @@
     "is_featured": false,
     "clean_title": "LeDingDing-Tumbler Thermos SUS316 Stainless Bottle Botol Air Minum Tahan Panas Dingin Vacuum Flask Termos Tumblr Sport 750ml Tumbler tahan panas dingin  24 jam Free sikat",
     "image_url": "assets/products_real/md/48.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(239,182,80)"
   },
   {
     "id": 50,
@@ -1029,7 +1071,8 @@
     "is_featured": false,
     "clean_title": "Handuk Merah Putih Towel Series New Okto - Handuk Mandi  Dewasa  70 x 135 cm / 50x100 cm / 30x70 cm",
     "image_url": "assets/products_real/md/50.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(182,168,159)"
   },
   {
     "id": 51,
@@ -1053,7 +1096,8 @@
     "is_featured": false,
     "clean_title": "YONEZAWA Meja Setrika Lipat Duduk Meja Setrika Praktis dan Hemat Tempat Papan Setrika Portabel Papan setrika  Alas Setrika Duduk Meja Setrika Berkualitas papan setrika Meja Setrika Lipat Besi Serbaguna",
     "image_url": "assets/products_real/md/51.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(116,72,30)"
   },
   {
     "id": 52,
@@ -1077,7 +1121,8 @@
     "is_featured": false,
     "clean_title": "Cuculemon Tumbler Stainless Digital LED 450ML Bottle Kopi Aesthetic Termos Air Kopi Panas Botol Minum",
     "image_url": "assets/products_real/md/52.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(171,114,74)"
   },
   {
     "id": 53,
@@ -1101,7 +1146,8 @@
     "is_featured": false,
     "clean_title": "KEEP MAJU Keset Kamar Mandi  Karpet Serap Air Keset Anti-Selip Minimalis Tebal dan Cepat Kering",
     "image_url": "assets/products_real/md/53.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(77,179,231)"
   },
   {
     "id": 54,
@@ -1125,7 +1171,8 @@
     "is_featured": false,
     "clean_title": "Venetian Blind Sharp Point Kosei EXO / Horizontal Blind / Kerai Aluminium / Tirai Jendela Aesthetic",
     "image_url": "assets/products_real/md/54.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(253,0,1)"
   },
   {
     "id": 55,
@@ -1149,7 +1196,8 @@
     "is_featured": false,
     "clean_title": "Tisu NICE Facial Tissue 180 Sheets 2 Ply 360 helai / 320 helai 2 ply | Tisu Wajah Food Safe Tebal Lembut Serba Guna | Bubu Shop",
     "image_url": "assets/products_real/md/55.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(255,237,0)"
   },
   {
     "id": 56,
@@ -1173,7 +1221,8 @@
     "is_featured": false,
     "clean_title": "Technoplast Teko Air Pitcher / Water Jug Set Dengan Gelas - 2.2 L +  8 Stacking Cups",
     "image_url": "assets/products_real/md/56.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(243,101,51)"
   },
   {
     "id": 57,
@@ -1197,7 +1246,8 @@
     "is_featured": false,
     "clean_title": "Sederha 50PCS Penyaring Keran Air Kapas Filter Sekali Pakai Saring Lumpur Dan Karat Untuk Dapur Rumah Tangga",
     "image_url": "assets/products_real/md/57.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(127,149,3)"
   },
   {
     "id": 58,
@@ -1221,7 +1271,8 @@
     "is_featured": false,
     "clean_title": "Kain Lap Microfiber Serbaguna 30x30cm Kain Lap Mobil Motor 2 Sisi Multifungsi",
     "image_url": "assets/products_real/md/58.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(249,224,45)"
   },
   {
     "id": 59,
@@ -1245,7 +1296,8 @@
     "is_featured": false,
     "clean_title": "Talenan Kayu Jati Perhutani Asli 27x14 cm \u2013 Alas Potong Dapur, Papan Saji Kayu Estetik Handmade",
     "image_url": "assets/products_real/md/59.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(145,75,28)"
   },
   {
     "id": 60,
@@ -1269,7 +1321,8 @@
     "is_featured": false,
     "clean_title": "LAZZEN - Rak Piring Wastafel Stainless Steel Hitam Cuci Piring Rak Piring Dapur Penyimpanan Dapur Stainless Steel Dish Rack Muat Mangkuk Dan Piring",
     "image_url": "assets/products_real/md/60.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(225,189,150)"
   },
   {
     "id": 61,
@@ -1293,7 +1346,8 @@
     "is_featured": true,
     "clean_title": "(Special Offer) Goto Abel Alat Pel Lantai Peras Otomatis Spin Mop Ultra",
     "image_url": "assets/products_real/md/61.webp",
-    "is_hero": true
+    "is_hero": true,
+    "glow_color": "rgb(237,29,36)"
   },
   {
     "id": 62,
@@ -1317,7 +1371,8 @@
     "is_featured": false,
     "clean_title": "Pengharum Ruangan & Kain Anti Bau Tahan Lama 12 Jam | Room & Linen Spray Anti Bakteri OVRBODY",
     "image_url": "assets/products_real/md/62.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(224,76,83)"
   },
   {
     "id": 63,
@@ -1341,7 +1396,8 @@
     "is_featured": false,
     "clean_title": "Bantal Duduk  Biskuit Bulat / Bantal Sofa / Alas Duduk Bentuk Biskuit / Biscuit Pillow Bahan plush",
     "image_url": "assets/products_real/md/63.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(172,129,118)"
   },
   {
     "id": 64,
@@ -1365,7 +1421,8 @@
     "is_featured": false,
     "clean_title": "HC Kotak Sepatu Plastik Transparan Tebal Serbaguna Storage Box Organizer Rak Sepatu Mudah Dilipat Bisa Ditumpuk Dengan Penutup Tempat Penyimpanan Sandal Praktis",
     "image_url": "assets/products_real/md/64.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(241,205,81)"
   },
   {
     "id": 65,
@@ -1389,7 +1446,8 @@
     "is_featured": false,
     "clean_title": "Tifale Saucepan Granite 20 cm Panci Susu Anti Lengket Teflon Minimalis",
     "image_url": "assets/products_real/md/65.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(215,187,162)"
   },
   {
     "id": 66,
@@ -1413,7 +1471,8 @@
     "is_featured": false,
     "clean_title": "Technoplast Lovelo Punch Bowl Set | Mangkuk Es Buah | Tempat Es Buah | Mangkok Besar Sop Buah BPA Free - Food Grade",
     "image_url": "assets/products_real/md/66.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(240,97,46)"
   },
   {
     "id": 68,
@@ -1437,7 +1496,8 @@
     "is_featured": false,
     "clean_title": "\u200bTempat Overnight Oat & Salad - Wadah Sehat untuk Sarapan, Bonus Sendok dan Tutup\u200b",
     "image_url": "assets/products_real/md/68.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(216,125,27)"
   },
   {
     "id": 69,
@@ -1461,7 +1521,8 @@
     "is_featured": false,
     "clean_title": "Rak bumbu Dapur estetik 3 susun multifungsi/ Rak kosmetik serbaguna",
     "image_url": "assets/products_real/md/69.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(225,147,36)"
   },
   {
     "id": 70,
@@ -1485,7 +1546,8 @@
     "is_featured": false,
     "clean_title": "Mama Lemon Jeruk Nipis 920 gr x2",
     "image_url": "assets/products_real/md/70.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(190,0,0)"
   },
   {
     "id": 71,
@@ -1509,7 +1571,8 @@
     "is_featured": false,
     "clean_title": "ZuoShu - Keset Dapur 2in1 40x60 dan 40x120 Keset kaki teras keset lantai kamar tidur",
     "image_url": "assets/products_real/md/71.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(151,113,54)"
   },
   {
     "id": 72,
@@ -1533,7 +1596,8 @@
     "is_featured": false,
     "clean_title": "Eyre Dinding Besi Sofa Ruang Tamu Kreatif Modern Latar Belakang Dinding Wall Decor Hiasan Dinding Frame Metal Gold Daun Leaf Ginko Scandinavian Wall Decor Nordic",
     "image_url": "assets/products_real/md/72.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(4,74,89)"
   },
   {
     "id": 73,
@@ -1557,7 +1621,8 @@
     "is_featured": false,
     "clean_title": "Collins Crunchy Coklat 1kg Halal BPOM",
     "image_url": "assets/products_real/md/73.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(255,6,15)"
   },
   {
     "id": 74,
@@ -1581,7 +1646,8 @@
     "is_featured": false,
     "clean_title": "MAKARONI NKS ,MAKARONI PIPA BANTAT 1 BALL (1KG)",
     "image_url": "assets/products_real/md/74.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(227,180,48)"
   },
   {
     "id": 75,
@@ -1605,7 +1671,8 @@
     "is_featured": false,
     "clean_title": "Nutrifarm Sari Lemon 500 ml",
     "image_url": "assets/products_real/md/75.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(232,194,101)"
   },
   {
     "id": 76,
@@ -1629,7 +1696,8 @@
     "is_featured": false,
     "clean_title": "Safiya Muesli 1 Kg Oatmeal With Almond Freeze Dried Apple Sereal Diet Bulking High Fiber",
     "image_url": "assets/products_real/md/76.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(254,207,2)"
   },
   {
     "id": 77,
@@ -1653,7 +1721,8 @@
     "is_featured": false,
     "clean_title": "OFFICIAL STORE - PikuLabs Pure Matcha Powder 100gr | 100% Pure, No Additives",
     "image_url": "assets/products_real/md/77.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(189,188,99)"
   },
   {
     "id": 78,
@@ -1677,7 +1746,8 @@
     "is_featured": false,
     "clean_title": "PROMO NUGET KANZLER CRISPY 450gr",
     "image_url": "assets/products_real/md/78.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(0,120,209)"
   },
   {
     "id": 79,
@@ -1701,7 +1771,8 @@
     "is_featured": false,
     "clean_title": "Nutrifarm Chia Seeds 70g",
     "image_url": "assets/products_real/md/79.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(182,91,0)"
   },
   {
     "id": 80,
@@ -1725,7 +1796,8 @@
     "is_featured": false,
     "clean_title": "Rak Troli Dapur 4 Susun Serbaguna Beroda Rak Penyimpanan Portable Organize Kamar Mandi",
     "image_url": "assets/products_real/md/80.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(235,178,19)"
   },
   {
     "id": 81,
@@ -1749,7 +1821,8 @@
     "is_featured": false,
     "clean_title": "Mama Lemon Sabun Cuci Piring Yuzu & Jeruk Nipis Anti Lemak & Bau Pouch 650 gr x3",
     "image_url": "assets/products_real/md/81.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(252,218,131)"
   },
   {
     "id": 82,
@@ -1773,7 +1846,8 @@
     "is_featured": false,
     "clean_title": "Kotak Penyimpanan Pintu Kulkas Serbaguna | Organizer Saos Bumbu Kopi Sachet Keju Slice | Wadah Storage Box Kulkas Multifungsi",
     "image_url": "assets/products_real/md/82.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(208,161,157)"
   },
   {
     "id": 83,
@@ -1797,7 +1871,8 @@
     "is_featured": false,
     "clean_title": "Satu Keluarga Stand Holder Bentuk Kursi Warna Macaron Dudukan Multifungsi C728 Tatakan Handphone Phone Holder Hp Untuk Dekorasi Meja",
     "image_url": "assets/products_real/md/83.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(196,158,11)"
   },
   {
     "id": 84,
@@ -1821,7 +1896,8 @@
     "is_featured": false,
     "clean_title": "COD Rak Troli Susun Serbaguna 3 & 4 TingkatRak Dapur Plastik Rak Kamar Mandi Dengan Roda danPegangan",
     "image_url": "assets/products_real/md/84.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(218,141,60)"
   },
   {
     "id": 85,
@@ -1845,7 +1921,8 @@
     "is_featured": false,
     "clean_title": "{PROMO Buy 4 Grats1}Tisu Basah Bayi Bebas alkohol Pure Water | Tanpa Alkohol & Pewangi | Lembut Aman Kulit Sensitif | Travel Friendly | Best Seller Harga Murah COD",
     "image_url": "assets/products_real/md/85.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(249,214,8)"
   },
   {
     "id": 86,
@@ -1869,7 +1946,8 @@
     "is_featured": false,
     "clean_title": "JOODUTP Filter Kran Air Kain (10 pcs) / Saringan Air Kotor / Water Filter",
     "image_url": "assets/products_real/md/86.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(216,181,145)"
   },
   {
     "id": 87,
@@ -1893,7 +1971,8 @@
     "is_featured": false,
     "clean_title": "[CALCES] Double Tape 3 Meter Nano Selotip Bening 2 Sisi Serbaguna",
     "image_url": "assets/products_real/md/87.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(107,113,134)"
   },
   {
     "id": 88,
@@ -1917,7 +1996,8 @@
     "is_featured": false,
     "clean_title": "[FLASH SALE]Pembersih Toilet Foam Cleaner 500ML Tanpa Disikat Busa Tebal Hilangkan Kerak Membandel Penghilang Bau WC Kamar Mandi Bersih Seperti Baru",
     "image_url": "assets/products_real/md/88.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(13,79,167)"
   },
   {
     "id": 89,
@@ -1941,7 +2021,8 @@
     "is_featured": false,
     "clean_title": "pouch Korek Kuping 6in1 Plus Pouch Stainless Ear Pick 6in1 Set Pembersih Telinga Isi 6 Tas Kulit",
     "image_url": "assets/products_real/md/89.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(143,247,110)"
   },
   {
     "id": 90,
@@ -1965,7 +2046,8 @@
     "is_featured": false,
     "clean_title": "Minyak Goreng Sunco Kemasan Pouch - Praktis dan Ekonomis halal jernih untuk menggoreng tidak kotor 5x penyaringan netto1liter",
     "image_url": "assets/products_real/md/90.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(228,166,0)"
   },
   {
     "id": 91,
@@ -1989,7 +2071,8 @@
     "is_featured": false,
     "clean_title": "T&Y Phone Holder Foldable Stand Holder HP Lipat Folding Universal Dudukan Penahan Handphone Meja",
     "image_url": "assets/products_real/md/91.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(210,163,67)"
   },
   {
     "id": 92,
@@ -2013,7 +2096,8 @@
     "is_featured": false,
     "clean_title": "Sosoft Deterjen Cair Sweet Peony Natural Perfume Botol 700gr / 700ml x3",
     "image_url": "assets/products_real/md/92.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(2,148,233)"
   },
   {
     "id": 93,
@@ -2037,7 +2121,8 @@
     "is_featured": false,
     "clean_title": "IsEven ELODIE Pants Rayon Karet Tersedia Dalam Berbagai Warna",
     "image_url": "assets/products_real/md/93.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(155,128,111)"
   },
   {
     "id": 94,
@@ -2061,7 +2146,8 @@
     "is_featured": false,
     "clean_title": "Ciptadent Pasta Gigi Maxi 12 Tube 225 gr (isi 2) x2",
     "image_url": "assets/products_real/md/94.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(190,43,13)"
   },
   {
     "id": 95,
@@ -2085,7 +2171,8 @@
     "is_featured": false,
     "clean_title": "[1 PCS] DUMPLING SQUISY JUMBO Lucu Anti Stress / Mainan Anti Stress Empuk Slow Rising / Squishy Bakpao Imut dalam Box",
     "image_url": "assets/products_real/md/95.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(210,144,67)"
   },
   {
     "id": 96,
@@ -2109,7 +2196,8 @@
     "is_featured": false,
     "clean_title": "HOHOISYOU Bulu Mata tanpa Lem - Model Variatif",
     "image_url": "assets/products_real/md/96.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(240,187,203)"
   },
   {
     "id": 97,
@@ -2133,7 +2221,8 @@
     "is_featured": false,
     "clean_title": "TERLARISS - Sandrinna Perfume Inspired Mist 90Ml",
     "image_url": "assets/products_real/md/97.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(194,159,229)"
   },
   {
     "id": 98,
@@ -2157,7 +2246,8 @@
     "is_featured": false,
     "clean_title": "[Harga Spesial] MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik Tebal Nyaman Dipakai",
     "image_url": "assets/products_real/md/98.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(247,207,199)"
   },
   {
     "id": 99,
@@ -2181,7 +2271,8 @@
     "is_featured": false,
     "clean_title": "4 NEW SHADES! Wardah Cushion Glow Colorfit Perfect Glow Cushion 15 g - Medium-High Coverage Hingga 12 Jam Dengan SPF 40 PA - Dilengkapi Dengan Glow Perfecting Pigment & Skincare-infused CICA + Hydra \u00df-Glucan - Hasil Akhir Glowing - Makeup",
     "image_url": "assets/products_real/md/99.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(239,209,198)"
   },
   {
     "id": 100,
@@ -2205,6 +2296,7 @@
     "is_featured": false,
     "clean_title": "Glad2Glow Perfect Cover Cushion Tahan Air Anti Pengelupasan Efek Matte Melembabkan dan Melindungi Kulit",
     "image_url": "assets/products_real/md/100.webp",
-    "is_hero": false
+    "is_hero": false,
+    "glow_color": "rgb(255,194,204)"
   }
 ]

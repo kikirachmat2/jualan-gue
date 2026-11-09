@@ -18,413 +18,401 @@
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Lenis Smooth Scroll & GSAP -->
+  <!-- Lenis Smooth Scroll, GSAP, ScrollTrigger & GSAP Flip -->
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
 
   <style>
     /* ==========================================================================
        DESIGN TOKENS (Shopee Orange #EE4D2D on Obsidian Dark)
        ========================================================================== */
     :root {
-      --bg: #0B0B0D;            /* Clean dark background */
-      --surface: #151518;       /* Elevated dark card */
-      --surface-hover: #1C1C22; /* Card hover state */
-      --surface-glass: rgba(15, 15, 18, 0.78);
+      --bg: #0B0B0D;
+      --surface: #151518;
+      --surface-hover: #1C1C22;
+      --surface-glass: rgba(15, 15, 18, 0.85);
       --border: rgba(255, 255, 255, 0.06);
-      --border-hover: rgba(255, 255, 255, 0.12);
+      --border-hover: rgba(255, 255, 255, 0.14);
       
-      --text-main: #EDEDEE;     /* Off-white primary text */
-      --text-muted: #8E8E93;    /* Tertiary slate */
+      --text-main: #EDEDEE;
+      --text-muted: #8E8E93;
       
-      /* Sole Accent: Shopee Orange */
+      /* Shopee Official Palette */
       --shopee-orange: #EE4D2D;
       --shopee-gradient: linear-gradient(135deg, #F53D2D 0%, #FF7337 100%);
-      --shopee-glow: rgba(238, 77, 45, 0.28);
-      --shopee-border: rgba(238, 77, 45, 0.4);
+      --shopee-glow: rgba(238, 77, 45, 0.35);
+      --shopee-border: rgba(238, 77, 45, 0.45);
 
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
       --radius-full: 9999px;
 
-      --font-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      /* Motion Tokens */
+      --ease-primary: cubic-bezier(0.22, 1, 0.36, 1);
+      --duration-press: 120ms;
+      --duration-hover: 450ms;
+      --duration-reveal: 900ms;
+      --duration-hero: 1100ms;
+    }
+
+    /* Top Orange Scroll Progress Line */
+    #scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--shopee-gradient);
+      box-shadow: 0 0 8px var(--shopee-orange);
+      z-index: 9999;
+      pointer-events: none;
+      transition: width 0.05s linear;
     }
 
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     html {
+      scroll-behavior: auto; /* Managed by Lenis */
       background-color: var(--bg);
       color: var(--text-main);
-      font-family: var(--font-base);
-      font-size: 15px;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     }
 
     body {
       min-height: 100vh;
-      background-color: var(--bg);
-      display: flex;
-      flex-direction: column;
       overflow-x: hidden;
+      position: relative;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      background: none;
-      border: none;
-      font: inherit;
-      color: inherit;
-      cursor: pointer;
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--shopee-orange);
-      outline-offset: 3px;
+    /* Screen Reader Only */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     /* ==========================================================================
-       NAVBAR (Category Chips ONLY + Sliding Pill)
+       NAVBAR (Glass Blur + Autohide on scroll down + Category Chips)
        ========================================================================== */
-    header.site-header {
+    .app-header {
       position: sticky;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       background: var(--surface-glass);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+      transform: translateY(0);
+      transition: transform 0.35s var(--ease-primary), background 0.3s ease, border-color 0.3s ease;
+      will-change: transform;
+    }
+
+    .app-header.nav-hidden {
+      transform: translateY(-100%);
     }
 
     .header-inner {
-      max-width: 1320px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 10px 16px;
+      height: 56px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      padding: 0 20px;
+      gap: 16px;
     }
 
-    @media (min-width: 768px) {
-      .header-inner {
-        padding: 14px 28px;
-      }
-    }
-
-    .nav-wrapper {
-      max-width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+    .category-scroll-container {
       display: flex;
-      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      position: relative;
+      padding: 4px 0;
+      width: 100%;
     }
-    @media (min-width: 768px) {
-      .nav-wrapper {
-        justify-content: center;
-      }
-    }
-    .nav-wrapper::-webkit-scrollbar {
+    .category-scroll-container::-webkit-scrollbar {
       display: none;
     }
 
-    .nav-track {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 2px 4px;
-    }
-
-    .sliding-pill {
-      position: absolute;
-      top: 2px;
-      left: 0;
-      height: calc(100% - 4px);
+    .category-chip {
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 8px 16px;
       border-radius: var(--radius-full);
-      background: var(--shopee-gradient);
-      box-shadow: 0 2px 10px var(--shopee-glow);
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0;
-      transition: width 0.35s var(--transition-smooth), transform 0.35s var(--transition-smooth), opacity 0.2s ease;
-    }
-
-    .chip-btn {
+      cursor: pointer;
+      white-space: nowrap;
       position: relative;
       z-index: 2;
-      padding: 7px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-muted);
-      border-radius: var(--radius-full);
-      white-space: nowrap;
-      transition: color 0.3s ease;
+      transition: color 0.25s ease;
+      user-select: none;
     }
-
-    .chip-btn:hover {
+    .category-chip:hover {
       color: var(--text-main);
     }
-
-    .chip-btn.active {
+    .category-chip.active {
       color: #FFFFFF;
-      font-weight: 700;
+    }
+
+    .chip-sliding-pill {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: calc(100% - 8px);
+      background: var(--shopee-gradient);
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 14px var(--shopee-glow);
+      z-index: 1;
+      pointer-events: none;
+      transition: transform 0.4s var(--ease-primary), width 0.4s var(--ease-primary);
+      will-change: transform, width;
     }
 
     /* ==========================================================================
-       MAIN CONTAINER
+       HERO "PRODUK TERLARIS" (Ambient Glow, Instagram-story Progress, 3D Float)
        ========================================================================== */
-    main.catalog-container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 20px 16px 80px;
-      width: 100%;
-      flex: 1;
+    .hero-container {
+      max-width: 1440px;
+      margin: 24px auto 36px;
+      padding: 0 20px;
+      position: relative;
     }
 
-    @media (min-width: 768px) {
-      main.catalog-container {
-        padding: 32px 28px 100px;
-      }
-    }
-
-    /* ==========================================================================
-       HERO CAROUSEL: "PRODUK TERLARIS" (Top 5-6 sales)
-       ========================================================================== */
-    .hero-section {
-      margin-bottom: 48px;
-    }
-
-    .hero-header {
+    .hero-section-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 16px;
-      padding: 0 4px;
-    }
-
-    .hero-flame-icon {
-      width: 20px;
-      height: 20px;
-      fill: var(--shopee-orange);
-      stroke: var(--shopee-orange);
-    }
-
-    .hero-title {
-      font-size: 16px;
-      font-weight: 700;
       color: var(--text-main);
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    }
+
+    .hero-fire-icon {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      fill: url(#fireGradient);
+      filter: drop-shadow(0 2px 6px rgba(238, 77, 45, 0.6));
     }
 
     .hero-slider-wrap {
       position: relative;
-      width: 100%;
+      border-radius: var(--radius-lg);
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
     }
 
-    .hero-slider-track {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
-    .hero-slider-track::-webkit-scrollbar {
-      display: none;
+    /* Ambient Dynamic Glow */
+    .hero-ambient-glow {
+      position: absolute;
+      top: -30%;
+      left: -20%;
+      width: 140%;
+      height: 160%;
+      opacity: 0.38;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      transition: background 0.8s var(--ease-primary);
+      will-change: background;
     }
 
-    .hero-slide {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
+    .hero-slide-stage {
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1fr;
-      position: relative;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 440px;
+      padding: 40px;
+      gap: 36px;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
-    @media (min-width: 768px) {
-      .hero-slide {
-        grid-template-columns: 46% 54%;
-        min-height: 380px;
-        max-height: 420px;
+    @media (max-width: 860px) {
+      .hero-slide-stage {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 20px;
+        min-height: auto;
       }
     }
 
-    .hero-media {
+    .hero-image-wrap {
       position: relative;
-      aspect-ratio: 4 / 3;
-      background: #101014;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
     }
 
-    @media (min-width: 768px) {
-      .hero-media {
-        aspect-ratio: auto;
-        height: 100%;
-      }
-    }
-
-    .hero-media img {
+    .hero-product-img {
       width: 100%;
-      height: 100%;
+      max-width: 380px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      display: block;
-      transition: transform 0.6s var(--transition-smooth);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transform: translateY(0) rotateX(0) rotateY(0);
+      transition: transform 0.6s var(--ease-primary);
+      will-change: transform;
     }
 
-    .hero-slide:hover .hero-media img {
-      transform: scale(1.04);
-    }
-
-    .hero-details {
-      padding: 24px 20px 28px;
+    .hero-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-      background: linear-gradient(180deg, rgba(21, 21, 24, 0.8) 0%, rgba(21, 21, 24, 1) 100%);
+      gap: 16px;
+      z-index: 2;
     }
 
-    @media (min-width: 768px) {
-      .hero-details {
-        padding: 36px 44px;
-        gap: 16px;
-      }
-    }
-
-    .hero-badge-row {
+    .hero-header-row {
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: space-between;
     }
 
-    .hero-badge-pill {
+    .hero-order-num {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28);
+      letter-spacing: -0.04em;
+      transition: -webkit-text-stroke-color 0.3s ease;
+    }
+
+    .hero-category-tag {
       font-size: 11px;
       font-weight: 700;
-      color: #FFFFFF;
-      background: var(--shopee-gradient);
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
+      color: var(--shopee-orange);
+      background: rgba(238, 77, 45, 0.12);
+      border: 1px solid var(--shopee-border);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
     }
 
-    .hero-sales-tag {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .hero-product-title {
-      font-size: 19px;
+    .hero-title {
+      font-size: 26px;
       font-weight: 700;
+      line-height: 1.35;
       color: #FFFFFF;
-      line-height: 1.3;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
-      .hero-product-title {
-        font-size: 24px;
-      }
-    }
-
-    .hero-pricing-row {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-top: 4px;
-    }
-
-    .hero-price {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--shopee-orange);
       letter-spacing: -0.02em;
     }
 
-    @media (min-width: 768px) {
-      .hero-price {
-        font-size: 32px;
-      }
+    .hero-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
     }
 
-    .hero-cta-btn {
+    .hero-price {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--shopee-orange);
+      letter-spacing: -0.03em;
+    }
+
+    .hero-cta {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      align-self: flex-start;
-      margin-top: 8px;
-      padding: 12px 24px;
-      border-radius: var(--radius-sm);
       background: var(--shopee-gradient);
       color: #FFFFFF;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
-      box-shadow: 0 4px 16px var(--shopee-glow);
-      transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease;
+      padding: 14px 26px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 18px var(--shopee-glow);
+      width: fit-content;
+      transition: transform 0.25s var(--ease-primary), box-shadow 0.25s var(--ease-primary);
     }
 
-    .hero-slide:hover .hero-cta-btn {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(238, 77, 45, 0.45);
+    .hero-slide-stage:hover .hero-cta {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(238, 77, 45, 0.6);
     }
 
-    .hero-cta-btn svg {
-      width: 17px;
-      height: 17px;
-      stroke: #FFFFFF;
-      fill: none;
-      stroke-width: 2.2;
+    /* Instagram-Story Style Multi-Segment Progress Bars */
+    .hero-story-progress {
+      display: flex;
+      gap: 8px;
+      padding: 0 32px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 860px) {
+      .hero-story-progress {
+        padding: 0 20px 16px;
+      }
     }
 
-    /* Hero Progress Bar */
-    .hero-progress-track {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .story-segment {
+      flex: 1;
       height: 3px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
     }
 
-    .hero-progress-fill {
-      height: 100%;
+    .story-fill {
       width: 0%;
+      height: 100%;
       background: var(--shopee-gradient);
+      box-shadow: 0 0 6px var(--shopee-orange);
       transition: width 0.1s linear;
     }
 
     /* ==========================================================================
-       CATEGORY GRID & 4:5 CARDS
+       CATEGORY SECTIONS & GRID (2 cols Mobile, 3 Tablet, 4 Desktop)
        ========================================================================== */
+    .content-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
     .category-section {
-      margin-bottom: 56px;
+      margin-bottom: 48px;
+      scroll-margin-top: 80px;
     }
 
     .category-header {
@@ -432,41 +420,37 @@
       align-items: baseline;
       justify-content: space-between;
       margin-bottom: 20px;
-      padding: 0 4px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .category-title {
+    .category-name {
       font-size: 20px;
       font-weight: 700;
-      color: var(--text-main);
+      color: #FFFFFF;
       letter-spacing: -0.02em;
-    }
-
-    @media (min-width: 768px) {
-      .category-title {
-        font-size: 24px;
-      }
     }
 
     .category-count {
       font-size: 13px;
       color: var(--text-muted);
+      font-weight: 600;
     }
 
     .product-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 14px;
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 768px) {
       .product-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 18px;
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1100px) {
       .product-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 22px;
@@ -474,646 +458,547 @@
     }
 
     /* ==========================================================================
-       PRODUCT CARD (Entire Card is an <a> tag linking to Shopee)
+       PRODUCT CARD (Glass, Tilt 3D, Spotlight Radial Glow, 4:5 Aspect Ratio)
        ========================================================================== */
-    .product-card-link {
-      display: flex;
-      flex-direction: column;
+    .product-card {
+      position: relative;
       background: var(--surface);
       border-radius: var(--radius-md);
-      overflow: hidden;
       border: 1px solid var(--border);
-      position: relative;
-      cursor: pointer;
-      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s var(--transition-smooth);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transform: translateY(0) scale(1);
+      transition: transform var(--duration-hover) var(--ease-primary), 
+                  border-color 0.3s ease, 
+                  box-shadow var(--duration-hover) var(--ease-primary);
+      will-change: transform;
+      --mx: 50%;
+      --my: 50%;
     }
 
-    .product-card-link:hover {
-      background: var(--surface-hover);
+    /* Radial Spotlight Glow following cursor */
+    .product-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(400px circle at var(--mx) var(--my), rgba(238, 77, 45, 0.16), transparent 70%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 3;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
       border-color: var(--shopee-border);
-      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(238, 77, 45, 0.12);
+    }
+    .product-card:hover::before {
+      opacity: 1;
     }
 
-    .product-card-link:active {
-      transform: scale(0.975);
+    .product-card:active {
+      transform: scale(0.97);
+      transition-duration: var(--duration-press);
     }
 
-    /* Multi-Photo Carousel in Card */
-    .card-carousel-wrap {
+    /* 4:5 Media Container */
+    .card-media {
       position: relative;
       width: 100%;
       aspect-ratio: 4 / 5;
-      background: #101014;
+      background: #111114;
       overflow: hidden;
     }
 
-    .carousel-track {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
-    .carousel-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .carousel-slide {
-      flex: 0 0 100%;
-      height: 100%;
-      scroll-snap-align: start;
-      position: relative;
-    }
-
-    .carousel-img {
+    .card-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      transition: transform 0.6s var(--transition-smooth);
+      transform: scale(1);
+      transition: transform var(--duration-hover) var(--ease-primary);
+      will-change: transform;
     }
 
-    .product-card-link:hover .carousel-img {
-      transform: scale(1.05);
+    .product-card:hover .card-img {
+      transform: scale(1.06);
     }
 
-    /* Desktop Navigation Arrows (Visible on card hover) */
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 28px;
-      height: 28px;
-      border-radius: var(--radius-full);
-      background: rgba(11, 11, 13, 0.75);
-      border: 1px solid var(--border);
-      color: #FFFFFF;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 5;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.25s ease, background 0.2s ease;
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      .carousel-arrow {
-        display: flex;
-      }
-      .product-card-link:hover .carousel-arrow {
-        opacity: 1;
-      }
-    }
-
-    .carousel-arrow.prev { left: 8px; }
-    .carousel-arrow.next { right: 8px; }
-    .carousel-arrow:hover { background: rgba(238, 77, 45, 0.85); }
-    .carousel-arrow svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; }
-
-    /* Carousel Dots Indicator */
-    .carousel-dots {
-      position: absolute;
-      bottom: 8px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      gap: 5px;
-      z-index: 4;
-      pointer-events: none;
-    }
-
-    .carousel-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: var(--radius-full);
-      background: rgba(255, 255, 255, 0.35);
-      transition: background 0.3s ease, width 0.3s ease;
-    }
-
-    .carousel-dot.active {
-      width: 14px;
-      background: var(--shopee-orange);
-    }
-
-    /* Badges */
-    .card-top-badges {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      display: flex;
-      gap: 6px;
-      z-index: 4;
-      pointer-events: none;
-    }
-
-    .discount-pill {
-      font-size: 11px;
-      font-weight: 700;
-      color: #FFFFFF;
-      background: var(--shopee-orange);
-      padding: 3px 7px;
-      border-radius: var(--radius-full);
-      line-height: 1;
-    }
-
-    /* Card Details */
+    /* Information Section */
     .card-info {
-      padding: 12px 14px 14px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       flex: 1;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
     }
 
-    @media (min-width: 768px) {
-      .card-info {
-        padding: 14px 16px 16px;
-      }
-    }
-
-    .card-name {
+    .card-title {
       font-size: 13.5px;
       font-weight: 600;
+      line-height: 1.4;
       color: var(--text-main);
-      line-height: 1.35;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      min-height: 2.7em;
       letter-spacing: -0.01em;
     }
 
-    .card-proof {
+    .card-bottom-row {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 11.5px;
-      color: var(--text-muted);
-    }
-
-    .proof-rating {
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      color: #EDEDEE;
-      font-weight: 600;
-    }
-
-    .proof-rating svg {
-      width: 12px;
-      height: 12px;
-      fill: var(--shopee-orange);
-      stroke: var(--shopee-orange);
-    }
-
-    .proof-sales {
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: flex-end;
       justify-content: space-between;
       gap: 8px;
-      padding-top: 4px;
     }
 
-    .price-box {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .final-price {
-      font-size: 16px;
-      font-weight: 700;
+    .card-price {
+      font-size: 17px;
+      font-weight: 800;
       color: var(--shopee-orange);
       letter-spacing: -0.02em;
-      line-height: 1.1;
     }
 
-    @media (min-width: 768px) {
-      .final-price {
-        font-size: 18px;
-      }
-    }
-
-    /* Visual Bag Icon Indicator in Card */
-    .bag-visual-icon {
-      flex-shrink: 0;
+    .card-buy-btn {
       width: 36px;
       height: 36px;
-      border-radius: var(--radius-sm);
-      background: var(--shopee-gradient);
-      color: #FFFFFF;
+      border-radius: var(--radius-full);
+      background: rgba(238, 77, 45, 0.12);
+      border: 1px solid var(--shopee-border);
+      color: var(--shopee-orange);
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.25s var(--ease-primary), background 0.25s ease, color 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .product-card:hover .card-buy-btn {
+      background: var(--shopee-gradient);
+      color: #FFFFFF;
       box-shadow: 0 2px 10px var(--shopee-glow);
-      transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease;
-    }
-
-    .product-card-link:hover .bag-visual-icon {
       transform: scale(1.08);
-      box-shadow: 0 4px 16px rgba(238, 77, 45, 0.5);
     }
 
-    .bag-visual-icon svg {
+    .card-buy-btn svg {
       width: 17px;
       height: 17px;
-      stroke: #FFFFFF;
+      stroke: currentColor;
+      stroke-width: 2.2;
       fill: none;
-      stroke-width: 2.1;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    /* Skeleton Shimmer */
-    .shimmer {
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.02) 0%,
-        rgba(255, 255, 255, 0.06) 50%,
-        rgba(255, 255, 255, 0.02) 100%
-      );
-      background-size: 200% 100%;
-      animation: shimmer 1.8s infinite linear;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
-    /* Reduced Motion */
+    /* ==========================================================================
+       PREFERS-REDUCED-MOTION SUPPORT
+       ========================================================================== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
       }
-      .product-card-link:hover .carousel-img,
-      .hero-slide:hover .hero-media img {
-        transform: none !important;
+      .hero-ambient-glow, .product-card::before {
+        display: none !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1. STICKY NAVBAR: Category Chips Only + Sliding Pill -->
-  <header class="site-header">
+  <!-- Top Orange Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- SVG Defs for Icons -->
+  <svg style="display: none;">
+    <defs>
+      <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#EE4D2D" />
+        <stop offset="100%" stop-color="#FF7337" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Sticky Navbar with Category Chips -->
+  <header class="app-header" id="app-header">
     <div class="header-inner">
-      <nav class="nav-wrapper" aria-label="Kategori Produk">
-        <div class="nav-track" id="category-nav-track">
-          <div class="sliding-pill" id="sliding-pill"></div>
-          <button class="chip-btn active" data-category="all">Semua</button>
-          <button class="chip-btn" data-category="Camilan &amp; Makanan">Camilan &amp; Makanan</button>
-          <button class="chip-btn" data-category="Elektronik &amp; Gadget">Elektronik &amp; Gadget</button>
-          <button class="chip-btn" data-category="Skincare &amp; Perawatan">Skincare &amp; Perawatan</button>
-          <button class="chip-btn" data-category="Rumah Tangga &amp; Kosan">Rumah Tangga &amp; Kosan</button>
-          <button class="chip-btn" data-category="Fashion &amp; Outfit">Fashion &amp; Outfit</button>
-        </div>
+      <nav class="category-scroll-container" id="category-nav">
+        <div class="chip-sliding-pill" id="chip-pill"></div>
+        <button class="category-chip active" data-cat="all">Semua</button>
       </nav>
     </div>
   </header>
 
-  <!-- 2. MAIN CONTAINER -->
-  <main class="catalog-container">
-
-    <!-- HERO CAROUSEL: "PRODUK TERLARIS" -->
-    <section class="hero-section" aria-label="Produk Terlaris">
-      <div class="hero-header">
-        <svg class="hero-flame-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2c1.1 0 2 .9 2 2 0 1.5-1 3.5-2 5-1-1.5-2-3.5-2-5 0-1.1.9-2 2-2zm5.5 6.5c.8 0 1.5.7 1.5 1.5 0 2-1.5 4.5-3 6.5-1-1.5-1.5-3-1.5-4.5 0-1.9 1.3-3.5 3-3.5zm-11 0c1.7 0 3 1.6 3 3.5 0 1.5-.5 3-1.5 4.5-1.5-2-3-4.5-3-6.5 0-.8.7-1.5 1.5-1.5zM12 11c2.8 0 5 2.2 5 5 0 3.3-2.7 6-6 6s-6-2.7-6-6c0-2.8 2.2-5 5-5z"></path>
+  <!-- Hero "Produk Terlaris" -->
+  <main>
+    <section class="hero-container">
+      <div class="hero-section-title">
+        <!-- SVG Api yang presisi -->
+        <svg class="hero-fire-icon" viewBox="0 0 24 24">
+          <path d="M12 23c-4.97 0-9-3.8-9-8.5 0-3.1 1.7-6 4.3-8.8.7-.7 1.7-.5 2.1.3.4.9.4 1.9.1 2.8 1.4-1.6 2.5-3.5 2.5-5.8 0-.6.5-1 1-1 .2 0 .4.1.6.2C17.2 6.1 21 10.4 21 14.5 21 19.2 16.97 23 12 23zM9.5 13.5c-.8.9-1.5 2-1.5 3 0 2.2 1.8 4 4 4s4-1.8 4-4c0-1.5-.9-2.9-2-4-.4-.4-1.1-.3-1.4.2-.6 1.1-1.6 1.6-2.5 1.4-.4-.1-.7-.3-.6-.6z"/>
         </svg>
-        <h1 class="hero-title">Produk Terlaris</h1>
+        <span>Produk Terlaris</span>
       </div>
 
       <div class="hero-slider-wrap" id="hero-slider-wrap">
-        <div class="hero-slider-track" id="hero-slider-track">
-          <!-- Top 5 products injected here -->
-        </div>
-        <div class="hero-progress-track">
-          <div class="hero-progress-fill" id="hero-progress-fill"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CATEGORIES & CARDS ROOT -->
-    <div id="categories-root">
-      <!-- Injected via Python / JavaScript from data/products_verified.json -->
-    </div>
-
-  </main>
-
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      // 1. Lenis Smooth Scroll
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && typeof Lenis !== 'undefined') {
-        const lenis = new Lenis({
-          duration: 1.15,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          orientation: 'vertical',
-          smoothWheel: true,
-          touchMultiplier: 1.8
-        });
-        function raf(time) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-      }
-
-      // 2. Fetch Verified Data
-      let products = [];
-      try {
-        const res = await fetch('data/products_verified.json');
-        products = await res.json();
-      } catch (e) {
-        console.error('Failed loading products_verified.json:', e);
-        return;
-      }
-
-      // 3. Render Hero Carousel (Top 5 items by sales score)
-      const topProducts = [...products].sort((a, b) => b.score - a.score).slice(0, 5);
-      const heroTrack = document.getElementById('hero-slider-track');
-      const progressFill = document.getElementById('hero-progress-fill');
-      
-      heroTrack.innerHTML = topProducts.map((p, idx) => `
-        <a 
-          href="${p.affiliate_url}" 
-          target="_blank" 
-          rel="noopener sponsored" 
-          class="hero-slide" 
-          data-index="${idx}"
-          onclick="trackConversion('${escapeJs(p.clean_title)}', '${escapeJs(p.category)}', 'Hero Slide')"
-        >
-          <div class="hero-media">
-            <img src="${p.image_url}" alt="${escapeHtml(p.clean_title)}" loading="${idx === 0 ? 'eager' : 'lazy'}" />
+        <div class="hero-ambient-glow" id="hero-ambient"></div>
+        
+        <a id="hero-slide-link" class="hero-slide-stage" href="#" target="_blank" rel="noopener sponsored">
+          <div class="hero-image-wrap">
+            <img id="hero-img" class="hero-product-img" src="" alt="Produk Terlaris" loading="eager" />
           </div>
-          <div class="hero-details">
-            <div class="hero-badge-row">
-              <span class="hero-badge-pill">🔥 Top #${idx + 1} Terlaris</span>
-              <span class="hero-sales-tag">${escapeHtml(p.sales)}</span>
+          <div class="hero-content">
+            <div class="hero-header-row">
+              <span id="hero-order" class="hero-order-num">01</span>
+              <span id="hero-category" class="hero-category-tag">Kategori</span>
             </div>
-            <h2 class="hero-product-title">${escapeHtml(p.clean_title)}</h2>
-            <div class="hero-pricing-row">
-              <span class="hero-price">${escapeHtml(p.price_formatted)}</span>
+            <h1 id="hero-title" class="hero-title">Nama Produk</h1>
+            <div class="hero-price-row">
+              <span id="hero-price" class="hero-price">Rp 0</span>
             </div>
-            <div class="hero-cta-btn">
-              <span>Beli Sekarang</span>
-              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            <div class="hero-cta">
+              <span>Beli di Shopee</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
             </div>
           </div>
         </a>
+
+        <!-- Instagram Story Progress Bars -->
+        <div class="hero-story-progress" id="hero-progress-container"></div>
+      </div>
+    </section>
+
+    <!-- Category Sections Container -->
+    <div class="content-container" id="grid-container"></div>
+  </main>
+
+  <script>
+    // Register GSAP Plugins
+    gsap.registerPlugin(ScrollTrigger, Flip);
+
+    // Initialize Lenis with smoothWheel and native mobile touch
+    const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      syncTouch: false // Do NOT hijack native touch scroll on mobile
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    // Top Scroll Progress Line & Navbar Auto-hide
+    const progressBar = document.getElementById('scroll-progress-bar');
+    const header = document.getElementById('app-header');
+    let lastScrollY = 0;
+
+    lenis.on('scroll', (e) => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      progressBar.style.width = progress + '%';
+
+      if (scrollY > 120) {
+        if (scrollY > lastScrollY + 6) {
+          header.classList.add('nav-hidden');
+        } else if (scrollY < lastScrollY - 6) {
+          header.classList.remove('nav-hidden');
+        }
+      } else {
+        header.classList.remove('nav-hidden');
+      }
+      lastScrollY = scrollY;
+    });
+
+    // Main App Data Initialization
+    let verifiedProducts = [];
+    let heroItems = [];
+    let currentHeroIndex = 0;
+    let heroTimer = null;
+    let heroProgress = 0;
+    let isHeroPaused = false;
+
+    async function initCatalog() {
+      try {
+        const res = await fetch('data/products_verified.json');
+        verifiedProducts = await res.json();
+      } catch (err) {
+        console.error('Failed to load products data:', err);
+        return;
+      }
+
+      // Filter featured products for hero
+      heroItems = verifiedProducts.filter(p => p.is_hero);
+      if (heroItems.length === 0) heroItems = verifiedProducts.slice(0, 5);
+
+      setupHeroStorySlider();
+      setupCategoriesAndGrid();
+      setupCardInteractions();
+    }
+
+    // Hero Instagram Story Progress Slider
+    function setupHeroStorySlider() {
+      const container = document.getElementById('hero-progress-container');
+      container.innerHTML = heroItems.map((_, i) => `
+        <div class="story-segment" data-idx="${i}">
+          <div class="story-fill" id="story-fill-${i}"></div>
+        </div>
       `).join('');
 
-      // Hero Autoplay (Every 5s)
-      let currentHeroIndex = 0;
-      let heroInterval = null;
-      let heroProgressVal = 0;
-      let isHeroPaused = false;
+      container.querySelectorAll('.story-segment').forEach(seg => {
+        seg.addEventListener('click', () => {
+          const idx = parseInt(seg.getAttribute('data-idx'));
+          goToHeroSlide(idx);
+        });
+      });
 
-      function startHeroAutoplay() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        clearInterval(heroInterval);
-        heroInterval = setInterval(() => {
-          if (isHeroPaused) return;
-          heroProgressVal += 2;
-          if (heroProgressVal >= 100) {
-            heroProgressVal = 0;
-            currentHeroIndex = (currentHeroIndex + 1) % topProducts.length;
-            const slide = heroTrack.children[currentHeroIndex];
-            if (slide) {
-              heroTrack.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
-            }
-          }
-          progressFill.style.width = `${heroProgressVal}%`;
-        }, 100);
-      }
+      renderHeroSlide(currentHeroIndex);
+      startHeroStoryTimer();
 
       const heroWrap = document.getElementById('hero-slider-wrap');
       heroWrap.addEventListener('mouseenter', () => { isHeroPaused = true; });
       heroWrap.addEventListener('mouseleave', () => { isHeroPaused = false; });
       heroWrap.addEventListener('touchstart', () => { isHeroPaused = true; }, { passive: true });
       heroWrap.addEventListener('touchend', () => { isHeroPaused = false; });
-      startHeroAutoplay();
+    }
 
-      // 4. Render Category Grid Cards with Multi-Photo Swiper
-      const categoriesMap = {};
-      products.forEach(p => {
-        const c = p.category || 'Pilihan';
-        if (!categoriesMap[c]) categoriesMap[c] = [];
-        categoriesMap[c].push(p);
+    function renderHeroSlide(index) {
+      const p = heroItems[index];
+      if (!p) return;
+
+      const link = document.getElementById('hero-slide-link');
+      const img = document.getElementById('hero-img');
+      const order = document.getElementById('hero-order');
+      const cat = document.getElementById('hero-category');
+      const title = document.getElementById('hero-title');
+      const price = document.getElementById('hero-price');
+      const ambient = document.getElementById('hero-ambient');
+
+      link.href = p.affiliate_url;
+      order.textContent = `0${index + 1}`;
+      cat.textContent = p.category;
+      title.textContent = p.name;
+      price.textContent = p.price_formatted;
+      img.src = p.image_url;
+
+      const glow = p.glow_color || 'rgb(238, 77, 45)';
+      ambient.style.background = `radial-gradient(circle, ${glow} 0%, rgba(238,77,45,0.4) 40%, transparent 70%)`;
+
+      // Animate text entry
+      gsap.fromTo([order, cat, title, price], 
+        { opacity: 0, y: 14 }, 
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: "power2.out" }
+      );
+      gsap.fromTo(img, 
+        { opacity: 0.4, scale: 0.94 }, 
+        { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
+      );
+    }
+
+    function goToHeroSlide(index) {
+      currentHeroIndex = index;
+      heroProgress = 0;
+      // Reset all bars
+      heroItems.forEach((_, i) => {
+        const bar = document.getElementById(`story-fill-${i}`);
+        if (bar) bar.style.width = i < currentHeroIndex ? '100%' : '0%';
+      });
+      renderHeroSlide(currentHeroIndex);
+    }
+
+    function startHeroStoryTimer() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      clearInterval(heroTimer);
+      heroTimer = setInterval(() => {
+        if (isHeroPaused) return;
+        heroProgress += 2;
+        const currentBar = document.getElementById(`story-fill-${currentHeroIndex}`);
+        if (currentBar) currentBar.style.width = `${heroProgress}%`;
+
+        if (heroProgress >= 100) {
+          heroProgress = 0;
+          currentHeroIndex = (currentHeroIndex + 1) % heroItems.length;
+          goToHeroSlide(currentHeroIndex);
+        }
+      }, 100);
+    }
+
+    // Categories and Grid
+    function setupCategoriesAndGrid() {
+      const categories = [...new Set(verifiedProducts.map(p => p.category))];
+      const navContainer = document.getElementById('category-nav');
+      const gridContainer = document.getElementById('grid-container');
+
+      // Add Category Chips
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'category-chip';
+        btn.dataset.cat = cat;
+        btn.textContent = cat;
+        navContainer.appendChild(btn);
       });
 
-      const categoriesRoot = document.getElementById('categories-root');
-      let gridHtml = '';
-
-      Object.keys(categoriesMap).forEach(cat => {
-        const items = categoriesMap[cat];
-        gridHtml += `
-          <section class="category-section" data-category="${escapeHtml(cat)}">
+      // Render Category Sections
+      let html = '';
+      categories.forEach(cat => {
+        const items = verifiedProducts.filter(p => p.category === cat);
+        html += `
+          <section class="category-section" id="cat-${slugify(cat)}" data-cat="${cat}">
             <div class="category-header">
-              <h2 class="category-title">${escapeHtml(cat)}</h2>
+              <h2 class="category-name">${cat}</h2>
               <span class="category-count">${items.length} Produk</span>
             </div>
             <div class="product-grid">
-              ${items.map(buildProductCard).join('')}
+              ${items.map(p => renderProductCard(p)).join('')}
             </div>
           </section>
         `;
       });
+      gridContainer.innerHTML = html;
 
-      categoriesRoot.innerHTML = gridHtml;
-      initCarousels();
-      initNavChips();
+      setupChipNavigation();
+    }
 
-      function buildProductCard(p) {
-        const images = (p.images && p.images.length > 0) ? p.images : [p.image_url];
-        const hasMultiple = images.length > 1;
-
-        let slidesHtml = images.map((img, i) => `
-          <div class="carousel-slide">
-            <img class="carousel-img" src="${escapeHtml(img)}" alt="${escapeHtml(p.clean_title)}" loading="${i === 0 ? 'lazy' : 'lazy'}" />
+    function renderProductCard(p) {
+      return `
+        <a href="${p.affiliate_url}" target="_blank" rel="noopener sponsored" class="product-card" data-cat="${p.category}">
+          <div class="card-media">
+            <img class="card-img" src="${p.image_url}" alt="${p.name}" loading="lazy" />
           </div>
-        `).join('');
-
-        let dotsHtml = '';
-        let arrowsHtml = '';
-        if (hasMultiple) {
-          dotsHtml = `<div class="carousel-dots">${images.map((_, i) => `<span class="carousel-dot ${i === 0 ? 'active' : ''}"></span>`).join('')}</div>`;
-          arrowsHtml = `
-            <button class="carousel-arrow prev" aria-label="Foto Sebelumnya" type="button">
-              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button class="carousel-arrow next" aria-label="Foto Berikutnya" type="button">
-              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          `;
-        }
-
-        return `
-          <a 
-            href="${escapeHtml(p.affiliate_url)}" 
-            target="_blank" 
-            rel="noopener sponsored" 
-            class="product-card-link"
-            data-id="${p.id}"
-            onclick="handleCardClick(event, '${escapeJs(p.clean_title)}', '${escapeJs(p.category)}')"
-          >
-            <div class="card-carousel-wrap">
-              <div class="carousel-track">
-                ${slidesHtml}
-              </div>
-              ${arrowsHtml}
-              ${dotsHtml}
-            </div>
-            <div class="card-info">
-              <h3 class="card-name">${escapeHtml(p.clean_title)}</h3>
-              <div class="card-proof">
-                <span class="proof-rating">
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                  ${p.rating || '4.9'}
-                </span>
-                <span class="proof-sales">${escapeHtml(p.sales)}</span>
-              </div>
-              <div class="card-footer">
-                <div class="price-box">
-                  <span class="final-price">${escapeHtml(p.price_formatted)}</span>
-                </div>
-                <div class="bag-visual-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                </div>
+          <div class="card-info">
+            <div class="card-title">${p.name}</div>
+            <div class="card-bottom-row">
+              <span class="card-price">${p.price_formatted}</span>
+              <div class="card-buy-btn" aria-label="Beli di Shopee">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
               </div>
             </div>
-          </a>
-        `;
+          </div>
+        </a>
+      `;
+    }
+
+    function setupChipNavigation() {
+      const chips = document.querySelectorAll('.category-chip');
+      const pill = document.getElementById('chip-pill');
+
+      function updatePill(activeChip) {
+        if (!activeChip) return;
+        pill.style.width = activeChip.offsetWidth + 'px';
+        pill.style.transform = `translateX(${activeChip.offsetLeft}px)`;
       }
 
-      // Drag threshold to prevent accidental link click during swipe
-      let dragStartX = 0;
-      let dragDistance = 0;
-      window.handleCardClick = function (e, title, cat) {
-        if (dragDistance > 12) {
-          e.preventDefault(); // User was swiping carousel
-          dragDistance = 0;
-          return false;
-        }
-        trackConversion(title, cat, 'Card Link');
-      };
+      updatePill(document.querySelector('.category-chip.active'));
 
-      // 5. In-Card Carousel Swipe & Arrows
-      function initCarousels() {
-        document.querySelectorAll('.card-carousel-wrap').forEach(wrap => {
-          const track = wrap.querySelector('.carousel-track');
-          const dots = wrap.querySelectorAll('.carousel-dot');
-          const prev = wrap.querySelector('.carousel-arrow.prev');
-          const next = wrap.querySelector('.carousel-arrow.next');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          updatePill(chip);
 
-          if (!track) return;
-
-          // Track scroll snap to update dots
-          track.addEventListener('scroll', () => {
-            const index = Math.round(track.scrollLeft / track.offsetWidth);
-            dots.forEach((d, i) => d.classList.toggle('active', i === index));
-          }, { passive: true });
-
-          // Drag distance tracking
-          track.addEventListener('touchstart', (e) => {
-            dragStartX = e.touches[0].clientX;
-            dragDistance = 0;
-          }, { passive: true });
-
-          track.addEventListener('touchmove', (e) => {
-            dragDistance = Math.abs(e.touches[0].clientX - dragStartX);
-          }, { passive: true });
-
-          if (prev && next) {
-            prev.addEventListener('click', (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              track.scrollBy({ left: -track.offsetWidth, behavior: 'smooth' });
-            });
-            next.addEventListener('click', (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              track.scrollBy({ left: track.offsetWidth, behavior: 'smooth' });
-            });
-          }
+          const cat = chip.dataset.cat;
+          filterCategoriesWithFlip(cat);
         });
-      }
+      });
+    }
 
-      // 6. Sliding Pill Category Navigation
-      function initNavChips() {
-        const navTrack = document.getElementById('category-nav-track');
-        const slidingPill = document.getElementById('sliding-pill');
-        const chips = navTrack.querySelectorAll('.chip-btn');
+    // GSAP Flip Transition on Category Filter
+    function filterCategoriesWithFlip(selectedCat) {
+      const sections = document.querySelectorAll('.category-section');
+      const state = Flip.getState(sections);
 
-        function positionPill(btn) {
-          if (!btn || !slidingPill) return;
-          slidingPill.style.width = `${btn.offsetWidth}px`;
-          slidingPill.style.transform = `translateX(${btn.offsetLeft}px)`;
-          slidingPill.style.opacity = '1';
+      sections.forEach(sec => {
+        if (selectedCat === 'all' || sec.dataset.cat === selectedCat) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
         }
+      });
 
-        chips.forEach(btn => {
-          btn.addEventListener('click', () => {
-            chips.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            positionPill(btn);
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      Flip.from(state, {
+        duration: 0.6,
+        ease: "power2.inOut",
+        stagger: 0.05,
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        }
+      });
 
-            const cat = btn.dataset.category;
-            filterCategory(cat);
+      if (selectedCat !== 'all') {
+        const targetSec = document.getElementById(`cat-${slugify(selectedCat)}`);
+        if (targetSec) {
+          lenis.scrollTo(targetSec, { offset: -70, duration: 1.2 });
+        }
+      }
+    }
+
+    // 3D Tilt & Magnetic Pointer Glow on Cards
+    function setupCardInteractions() {
+      const cards = document.querySelectorAll('.product-card');
+
+      cards.forEach(card => {
+        // Pointer down haptic
+        card.addEventListener('pointerdown', () => {
+          if (navigator.vibrate) navigator.vibrate(8);
+        });
+
+        if (!isMobileDevice) {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set CSS Variables for spotlight glow
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+
+            // 3D tilt calculation (max 3 degrees)
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const rx = ((y - cy) / cy) * -2.5;
+            const ry = ((x - cx) / cx) * 2.5;
+
+            card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
           });
-        });
 
-        setTimeout(() => positionPill(navTrack.querySelector('.chip-btn.active')), 100);
-      }
-
-      function filterCategory(cat) {
-        const sections = document.querySelectorAll('.category-section');
-        sections.forEach(sec => {
-          const match = (cat === 'all' || sec.dataset.category === cat);
-          sec.style.display = match ? 'block' : 'none';
-        });
-      }
-
-      // Conversion Tracker
-      function trackConversion(name, cat, pos) {
-        if (window.va) {
-          window.va('event', {
-            name: 'Affiliate Click',
-            data: { product: name, category: cat, position: pos, timestamp: new Date().toISOString() }
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
           });
         }
-      }
-      window.trackConversion = trackConversion;
+      });
+    }
 
-      function escapeHtml(s) {
-        if (!s) return '';
-        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-      }
-      function escapeJs(s) {
-        if (!s) return '';
-        return String(s).replace(/'/g, "\\'").replace(/"/g, '\\"');
-      }
-    });
+    function slugify(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+    }
+
+    // Launch Application
+    initCatalog();
   </script>
 </body>
 </html>
